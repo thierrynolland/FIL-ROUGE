@@ -1,0 +1,623 @@
+
+create database villagegreen
+go
+use villagegreen
+create table fournisseur (
+	fournisseur_id 		int identity primary key not null,
+	fournisseur_nom 	varchar(50) not null
+)
+go
+
+create table tva(
+	tva_id int identity primary key,
+	tva_nom varchar(50) not null,
+	tva_taux decimal(12,2) not null
+)
+
+
+create table rubrique(
+	rubrique_id 		int identity primary key not null,
+	rubrique_nom 		varchar(50)  not null
+)
+
+go
+
+create table sous_rubrique(
+	ss_rubrique_id 		int identity primary key not null,
+	ss_rubrique_nom 	varchar(50) not null,
+	rubrique_id int references rubrique(rubrique_id) not null
+)
+go
+create table commercial(
+	commercial_id 		int identity primary key not null,
+	commercial_nom 		varchar (50) not null,
+	commercial_prenom 	varchar(50) 
+)
+go
+
+create table produit (
+	produit_id 			int primary key not null,
+	produit_nomcourt 	varchar(10) not null,
+	produit_nom 		varchar(100) not null,
+	produit_photo 		varchar (25),
+	produit_prixachat	decimal(12,2),
+	produit_etat 		bit not null,
+	produit_prixht 		decimal (12,2),
+	produit_validite 	bit not null,
+	ss_rubrique_id 		int not null references sous_rubrique(ss_rubrique_id),
+	fournisseur_id 		int not null references fournisseur(fournisseur_id),
+	tva_id int references tva(tva_id) not null
+)
+go
+
+create table client(
+	client_id 			int primary key not null,
+	client_categorie 	int not null,
+	client_nom 			varchar(50) not null,
+	client_prenom 		varchar(50),
+	client_reduc		decimal(12,2),
+	client_adresse 		varchar(100),
+	client_ville 		varchar(100),
+	client_cp 			varchar(5),
+	commercial_id 		int references commercial(commercial_id)
+
+)
+go
+
+
+create table commande (
+	commande_id int identity primary key not null,
+	commande_reduc decimal (12,2),
+	commande_etat varchar(20),
+	commande_reglt datetime,
+	commande_date datetime,
+	commande_paye bit,
+	livraison_adr varchar(100) not null,
+	livraison_ville varchar(100) not null,
+	livraison_cp varchar(5) not null,
+	client_id int references client(client_id) not null,
+	facture_id int not null,
+	facture_date datetime not null,
+	facture_montant decimal(12,2) ,
+	facture_adre varchar(100) not null,
+	facture_ville varchar(100) not null,
+	facture_cp varchar(5) not null
+)
+
+go
+
+create table bon_livraison(
+	livraison_id int identity primary key not null,
+	livraison_date datetime,
+	commande_id int references commande(commande_id) not null
+)
+
+go
+
+create table ligne_de_livraison(
+	ligneliv_id int identity primary key not null,
+	ligneliv_qte	int not null,
+	livraison_id int references bon_livraison(livraison_id) not null,
+	produit_id int references produit(produit_id) not null
+)
+go
+
+create table ligne_de_commande (
+	lignecom_id int identity primary key not null,
+	lignecom_qte int not null,
+	prix_fixe decimal(12,2) not null,
+	commande_id int references commande(commande_id) not null,
+	produit_id int references produit(produit_id) not null
+
+)
+go
+
+
+
+/* ____________________  */
+
+
+
+create index indexclient on client(client_id)
+create index indexfournisseur on fournisseur(fournisseur_id)
+create index indexcommande on commande(commande_id)
+create index indexproduit on produit(produit_id)
+
+
+
+go	
+
+
+/* ____________________  */
+
+
+
+
+
+create login ut1 with password ='pwdut1', default_database = [villagegreen], check_expiration= off, check_policy=off
+go	
+create login ut2 with password ='pwdut2', default_database = [villagegreen], check_expiration= off, check_policy=off
+go	
+create login ut3 with password ='pwdut3', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut4 with password ='pwdut4', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut5 with password ='pwdut5', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut6 with password ='pwdut6', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut7 with password ='pwdut7', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut8 with password ='pwdut8', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut9 with password ='pwdut9', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+create login ut10 with password ='pwdut10', default_database = [villagegreen], check_expiration= off, check_policy=off
+go
+
+/* ____________________  */
+
+use villagegreen
+create user ut1 for login ut1
+go
+create user ut2 for login ut2
+go
+create user ut3 for login ut3
+go
+create user ut4 for login ut4
+go
+create user ut5 for login ut5
+go
+create user ut6 for login ut6
+go
+create user ut7 for login ut7
+go
+create user ut8 for login ut8
+go
+create user ut9 for login ut9
+go
+create user ut10 for login ut10
+go
+
+
+/* j'ai remplacé tout ça par le role db_owner  qui existe déjà par défaut, donc pas besoin de le créer
+create role roleadmin
+	grant select on client to roleadmin
+ 	grant select on commande to roleadmin
+ 	grant select on produit to roleadmin
+ 	grant select on commercial to roleadmin
+ 	grant select on fournisseur to roleadmin
+ 	grant select on ligne_de_commande to roleadmin
+ 	grant select on ligne_de_livraison to roleadmin
+ 	grant select on sous_rubrique to roleadmin
+ 	grant select on rubrique to roleadmin
+ 	grant select on bon_livraison to roleadmin
+
+ 	grant update on client to roleadmin
+ 	grant update on commande to roleadmin
+ 	grant update on produit to roleadmin
+ 	grant update on commercial to roleadmin
+ 	grant update on fournisseur to roleadmin
+ 	grant update on ligne_de_commande to roleadmin
+ 	grant update on ligne_de_livraison to roleadmin
+ 	grant update on sous_rubrique to roleadmin
+ 	grant update on rubrique to roleadmin
+ 	grant update on bon_livraison to roleadmin
+
+ 	grant delete on client to roleadmin
+ 	grant delete on commande to roleadmin
+ 	grant delete on produit to roleadmin
+ 	grant delete on commercial to roleadmin
+ 	grant delete on fournisseur to roleadmin
+	grant delete on ligne_de_commande to roleadmin
+ 	grant delete on ligne_de_livraison to roleadmin
+ 	grant delete on sous_rubrique to roleadmin
+ 	grant delete on rubrique to roleadmin
+ 	grant delete on bon_livraison to roleadmin
+
+ 	grant insert on client to roleadmin
+ 	grant insert on commande to roleadmin
+ 	grant insert on produit to roleadmin
+ 	grant insert on commercial to roleadmin
+ 	grant insert on fournisseur to roleadmin
+ 	grant insert on ligne_de_commande to roleadmin
+ 	grant insert on ligne_de_livraison to roleadmin
+ 	grant insert on sous_rubrique to roleadmin
+ 	grant insert on rubrique to roleadmin
+ 	grant insert on bon_livraison to roleadmin
+execute sp_addrolemember 'roleadmin','ut1'
+execute sp_droprolemember 'roleadmin','ut1'
+
+*/
+
+create role roleconsult 
+ 	grant select on client to roleconsult
+ 	grant select on commande to roleconsult
+ 	grant select on produit to roleconsult
+ 	grant select on commercial to roleconsult
+ 	grant select on fournisseur to roleconsult
+ 	grant select on ligne_de_commande to roleconsult
+ 	grant select on ligne_de_livraison to roleconsult
+ 	grant select on sous_rubrique to roleconsult
+ 	grant select on rubrique to roleconsult
+ 	grant select on bon_livraison to roleconsult
+go
+create role rolegestion
+	grant select on client to rolegestion
+	grant update on client to rolegestion
+	grant insert on client to rolegestion
+	grant delete on client to rolegestion
+
+	grant select on  rubrique to rolegestion
+	grant update on  rubrique to rolegestion
+	grant insert on  rubrique to rolegestion
+	grant delete on  rubrique to rolegestion
+
+	grant select on sous_rubrique to rolegestion
+	grant update on sous_rubrique to rolegestion
+	grant insert on sous_rubrique to rolegestion
+	grant delete on sous_rubrique to rolegestion
+
+	grant select on commande to rolegestion
+	grant update on commande to rolegestion
+	grant insert on commande to rolegestion
+	grant delete on commande to rolegestion
+
+	grant select on fournisseur to rolegestion
+	grant update on fournisseur to rolegestion
+	grant insert on fournisseur to rolegestion
+	grant delete on fournisseur to rolegestion
+
+
+	grant select on bon_livraison to rolegestion
+	grant update on bon_livraison to rolegestion
+	grant insert on bon_livraison to rolegestion
+	grant delete on bon_livraison to rolegestion
+
+	grant select on ligne_de_commande to rolegestion
+	grant update on ligne_de_commande to rolegestion
+	grant insert on ligne_de_commande to rolegestion
+	grant delete on ligne_de_commande to rolegestion
+
+	grant select on ligne_de_livraison to rolegestion
+	grant update on ligne_de_livraison to rolegestion
+	grant insert on ligne_de_livraison to rolegestion
+	grant delete on ligne_de_livraison to rolegestion
+
+	grant select on commercial to rolegestion
+	grant update on commercial to rolegestion
+	grant insert on commercial to rolegestion
+	grant delete on commercial to rolegestion
+
+	grant select on produit to rolegestion
+	grant update on produit to rolegestion
+	grant insert on produit to rolegestion
+	grant delete on produit to rolegestion
+
+go
+
+create role roleclient
+	
+	grant update on client to roleclient
+	grant insert on client to roleclient
+	grant delete on client to roleclient
+	
+	grant update on commande to roleclient
+	grant insert on commande to roleclient
+	grant delete on commande to roleclient
+	
+	grant update on ligne_de_commande to roleclient
+	grant insert on ligne_de_commande to roleclient
+	grant delete on ligne_de_commande to roleclient
+
+	grant select on client to roleclient
+ 	grant select on commande to roleclient
+ 	grant select on produit to roleclient
+ 	grant select on commercial to roleclient
+ 	grant select on fournisseur to roleclient
+ 	grant select on ligne_de_commande to roleclient
+ 	grant select on ligne_de_livraison to roleclient
+ 	grant select on sous_rubrique to roleclient
+ 	grant select on rubrique to roleclient
+ 	grant select on bon_livraison to roleclient
+
+
+
+go
+
+execute sp_addrolemember 'db_owner','ut1'
+execute sp_addrolemember 'rolegestion','ut2'
+execute sp_addrolemember 'roleconsult','ut3'
+execute sp_addrolemember 'roleconsult','ut4'
+execute sp_addrolemember 'roleconsult','ut5'
+execute sp_addrolemember 'roleonsult','ut6'
+execute sp_addrolemember 'roleconsult','ut7'
+execute sp_addrolemember 'roleclient','ut8'
+execute sp_addrolemember 'roleclient','ut9'
+execute sp_addrolemember 'roleclient','ut10'
+
+/* -------------------------------------------------------*/
+
+/* j'ai modifié la table produit directement avec un alter pour rajouter la tva*/
+alter table produit
+ add tva_id int references tva(tva_id) not null
+
+ /* -------------------------------------------------------*/
+
+/*__________________FOURNISSEUR_______________________________*/
+insert into fournisseur (fournisseur_nom) values ('les musicos')
+insert into fournisseur (fournisseur_nom) values ('piano and co')
+insert into fournisseur (fournisseur_nom) values ('Tout pour la musique')
+insert into fournisseur (fournisseur_nom) values ('musique love')
+insert into fournisseur (fournisseur_nom) values ('au petit troubadours')
+insert into fournisseur (fournisseur_nom) values ('music boulevard')
+insert into fournisseur (fournisseur_nom) values ('music stor')
+insert into fournisseur (fournisseur_nom) values ('music shop')
+insert into fournisseur (fournisseur_nom) values ('La flute de Pan')
+insert into fournisseur (fournisseur_nom) values ('gear4Music')
+
+/*___________________TVA______________________________*/
+
+insert into tva(tva_nom,tva_taux) values ('normale',20)
+insert into tva(tva_nom,tva_taux) values ('intermédiare',10)
+insert into tva(tva_nom,tva_taux) values ('réduite',5.5)
+insert into tva(tva_nom,tva_taux) values ('super réduitenormale',2.1)
+/*__________________COMMERCIAL_______________________________*/
+
+insert into commercial (commercial_nom,commercial_prenom) values ('DUPONT','paul')
+insert into commercial (commercial_nom,commercial_prenom) values ('DUPUIS','pierre')
+insert into commercial (commercial_nom,commercial_prenom) values ('BIDOCHON','robert')
+insert into commercial (commercial_nom,commercial_prenom) values ('BILOUTE','gustave')
+insert into commercial (commercial_nom,commercial_prenom) values ('LENOTRE','robert')
+insert into commercial (commercial_nom,commercial_prenom) values ('PICOLO','sam')
+insert into commercial (commercial_nom,commercial_prenom) values ('TRINCOT','jean')
+
+/*__________RUBRIQUES_______________________________________*/
+insert into rubrique (rubrique_nom) values ('Pianos et claviers')
+insert into rubrique (rubrique_nom) values ('Guitares')
+insert into rubrique (rubrique_nom) values ('Basse')
+insert into rubrique (rubrique_nom) values ('Instruments à vent')
+insert into rubrique (rubrique_nom) values ('Batteries')
+insert into rubrique (rubrique_nom) values ('Percussions')
+insert into rubrique (rubrique_nom) values ('violons et quator')
+insert into rubrique (rubrique_nom) values ('Enfant Eveil Musical')
+insert into rubrique (rubrique_nom) values ('Accessoires instruments')
+insert into rubrique (rubrique_nom) values ('Méthode Partition et tablature')
+
+
+/*________________SOUS RUBRIQUES_________________________________*/
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Piano acoustique',1) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Piano numérique',1) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Synthétiseur et clavier ',1) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Accordéon électronique ',1) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values (' Accessoire Piano',1) 
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Guitare électrique',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Guitare Folk',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Guitare classique',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Guitare occasion ',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Ampli Guitare ',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Effet Guitare ',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Autres Instruments à corde ',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Housse et étui guitare ',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values (' Cordes guitare',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Accessoires guitare et basse ',2) 
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Pièces détachées ',2) 
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Basse électrique',3)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Basse électro-acoustique',3)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Basse occasion',3)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Ampli Basse',3)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Effet Basse',3)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Saxophone',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Clarinette',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Haubois',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Flûtes',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Cuivres',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Vent élecctronique',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Harmonica et kazoo',4)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Mélodica',4)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Batterie Acoustique',5)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Batterie Electronique',5)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Cymbale',5)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Peau',5)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Hardware',5)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Accessoires batterie',5)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Cajon',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Conjas',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Bongos',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Djembe et derbouka',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Tambourin',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Shaker Maracas',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Clave Woodblock Triangle',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Cloche',6)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Housses et étuis Percu',6)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Violon',7)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Alto',7)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Violoncelle',7)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Contrebasse',7)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Accessoires violon',7)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Clavier Enfant',8)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Guitare Enfant',8)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Instruments à vent Enfant',8)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Percussion Enfant',8)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Accordeur',9)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Métronome',9)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Pupitre',9)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Goodies',9)
+
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Libraireie Piano clavier',10)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie Guitare',10)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie batterie',10)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie violon',10)
+insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie vents',10)
+
+/*_________PRODUIT________________________________________
+ exemple en booléen
+INSERT Boolean(Boolean) VALUES (1);
+INSERT Boolean(Boolean) VALUES (0);
+INSERT Boolean(Boolean) VALUES ('TRUE');
+INSERT Boolean(Boolean) VALUES ('FALSE');
+ 
+SELECT * FROM Boolean
+GO
+/*    ID Boolean     ModifiedDate
+      1     1           2010-10-03
+      2     0           2010-10-03
+      3     1           2010-10-03
+      4     0           2010-10-03 
+*/
+/* 1-1*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (1,'YAMB1PWH','YAMAHA B1PWH - blanc brillant','1.jpg',2500,1, 3000,'true',1,1,1)
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (2,'YAMB1SG','YAMAHA - B1SG2PE - noir brillant','2.jpg',3000,1, 3500,'true',1,1,1)
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (3,'YAMB1-PEBL','YAMAHA - B1-PE - black','3.jpg',3500,1, 4500,'true',1,2,1)
+
+/* 1-2*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	values (4,'YAMB1PWH','YAMAHA - N3X - laqué noir','4.jpg',14500,1, 18000,'true',2,2,1)
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (5,'ROLGP607','ROLAND GP607 - polished white','5.jpg',3500,1, 5000,'true',2,3,1)
+
+
+
+
+/* 1-6*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (6,'GIB1959','GIBSON Custom Shop Ltd 1959 ','6.jpg',8000,1, 9500,'true',6,4,1)
+
+/* 1-7*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (7,'FENDtrio','FENDER Alkaline Trio Malibu - natural','7.jpg',250,1, 320,'true',7,5,1)
+
+/* 1-17*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (17,'FENDEJAP','FENDER Japan Exclusive Jazz Bass Classic','17.jpg',1000,1, 1250,'true',17,5,1)
+
+/* 1-22*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (22,'LEVSS43','LEVANTE SS4305','22.jpg',450,1, 560,'true',22,5,1)
+
+/* 1-39*/
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (39,'WAKDJ3335','WAKA DRUMS DJ3335','39.jpg',150,1,179,'true',39,7,1)
+
+insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values (45,'HERAS134','HERALD AS134','45.jpg',100,1, 115,'true',45,9,1)
+
+
+
+
+
+/*___________CLIENT____________________________________*/
+insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (1,1,'SKYWALKER','luc',5,'2 rue des etoiles', '80000', 'AMIENS',1)
+
+insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (2,1,'KENOBI','obiwan',0,'5 avenue des constellations','80000', 'AMIENS',1)
+
+insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (3,1,'ORGANA','leia',10,'6 boulevard étoilé', '75000', 'PARIS',2)
+
+insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (4,2,'FETT','boba',0,'67 rue des clones', '76000', 'ROUEN',3)
+
+insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (5,2,'LE HUNT','Jabba',5,'36 rue des affaires', '80000', 'AMIENS',4)
+
+insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (6,2,'PALPATINE','Sheev',0,'21 rue des empereurs', '80100', 'ABBEVILLE',5)
+
+
+
+/*___________COMMANDE______________________________________*/
+insert into commande (client_id,commande_etat, commande_reduc,commande_reglt,commande_date,commande_paye, 
+	livraison_adr,livraison_cp,livraison_ville,facture_id,facture_adre,facture_cp,facture_ville, facture_date,facture_montant)
+values ( 1, 'saisie', 0, '01/01/2017', '01/01/2017', 'true', '2 rue des etoiles','80000', 'AMIENS',1,'2 rue des etoiles', '80000', 'AMIENS','01/01/2017',10000)
+
+insert into commande (client_id,commande_etat, commande_reduc,commande_reglt,commande_date,commande_paye, 
+	livraison_adr,livraison_cp,livraison_ville,facture_id,facture_adre,facture_cp,facture_ville, facture_date,facture_montant)
+values ( 2, 'livrée', 0, '11/01/2017', '11/01/2017', 'true', '5 avenue des constellations','80000', 'AMIENS',2,'5 avenue des constellations','80000', 'AMIENS','11/01/2017',20000)
+
+
+insert into commande (client_id,commande_etat, commande_reduc,commande_reglt,commande_date,commande_paye, 
+	livraison_adr,livraison_cp,livraison_ville,facture_id,facture_adre,facture_cp,facture_ville, facture_date,facture_montant)
+values ( 3, 'livrée', 0, '16/01/2017', '16/01/2017', 'true', '6 boulevard étoilé', '75000', 'PARIS',3,'6 boulevard étoilé', '75000','PARIS','16/01/2017',30000)
+
+
+
+/*____________LIGNE_COMMANDE______________________________*/
+insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
+						values 	(1,3000,1,1)
+insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
+						values 	(1,9500,2,6)
+insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
+						values 	(2,320,2,7)
+
+insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
+						values 	(1,115,3,45)
+insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
+						values 	(3,1250,3,17)
+
+
+												)
+
+
+/*_____________BON_LIVRAISON____________________________________*/
+insert into bon_livraison (livraison_date,commande_id)
+	values ('13/01/2017',2)
+
+insert into bon_livraison (livraison_date,commande_id)
+	values ('17/01/2017',3)
+insert into bon_livraison (livraison_date,commande_id)
+	values ('18/01/2017',3)
+
+)
+
+/*______________LIGNE_LIVRAISON___________________________________*/
+
+
+insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
+	values(1,1,6)
+
+insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
+	values(2,1,7)
+insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
+	values(1,2,45)
+
+insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
+	values(3,3,17)
+
+
+
+
+/*__________SAUVEGARDE___*/
+
+exec sp_addumpdevice 'disk','savfilrouge','\\serveur\DL\Thierry\FIL ROUGE\SAUVEGARDEBDD\villagegreen.bak'
+
+
+backup database villagegreen to savfilrouge
+
+restore database villagegreen from savfilrouge with replace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
