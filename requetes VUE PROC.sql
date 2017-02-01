@@ -123,6 +123,16 @@ go
 --puis
 exec ComLivEnCoursParProd
 
+
+
+
+
+/*MOYENNE DES DELAIS ENTRE DATE DE COMMANDE ET DE FACTURATION */
+select avg(datediff(day,commande.commande_date,commande.facture_date)) as 'nb jours'
+from commande
+
+-- ça sort le résultat : 2 jours
+
 /* GERER LES VUES */
 
 create view ProduitFournisseur
