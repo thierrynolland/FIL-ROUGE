@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="f9363fcb-a0a5-452c-b06c-0be8baae4150"
   name="UMLvillagreen" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -743,6 +743,2666 @@
         name="créer et Consulter son compte"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="b5fab0ef-a5c8-4526-a71e-f624b02844a5"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="8f800000-1d00-44e0-b61d-8c3700c603b6">
+            <body>cas alternatif</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="9ed3a52d-a3fd-4b6a-990d-23590f051fbf"
+                LastKnownName="BehaviorExecutionSpecification7"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="bd33271c-d5cb-4540-98ce-119a544edc2d"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e8d1c285-67df-43c8-b2bb-c14748510e1d"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ef75f48e-7941-4e8c-a3ce-96b02bb959ee"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="093da1cc-9291-4e77-882e-debddf4d4b40"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="de386d6b-2593-4079-b638-4e75bd4060d0"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ef75f48e-7941-4e8c-a3ce-96b02bb959ee"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="84f46edb-6dc7-463a-b539-b52e1055f6d9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c5705047-4721-4106-8654-d4e72e5a6739"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="093da1cc-9291-4e77-882e-debddf4d4b40"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="de386d6b-2593-4079-b638-4e75bd4060d0"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8f1a21ad-21e6-4595-8815-d28c3d586659"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e8d1c285-67df-43c8-b2bb-c14748510e1d"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="dd8f6a13-7607-4dd4-aae6-3b49ea73e12c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="513dcc19-c558-432e-86dd-332a57eead41"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="d7c0eb7b-efd1-4ccd-a3a7-e23a37f99859"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7ce0b9d5-ecc5-4964-91ad-cabb137c8f4f"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ec056e72-c6e5-43a1-b5c6-ccd4368b0b71"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c4a53dfb-c7d7-429e-9ed3-5784df5172b2"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7ce0b9d5-ecc5-4964-91ad-cabb137c8f4f"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f0c48637-d097-40ec-b706-d31d81b900af"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ec056e72-c6e5-43a1-b5c6-ccd4368b0b71"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eda6fcac-9017-4844-b7bd-ebf664817a0c"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4ab71a00-c4f6-48bf-a03b-f5bd50c4b1aa"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c4a53dfb-c7d7-429e-9ed3-5784df5172b2"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="d7c0eb7b-efd1-4ccd-a3a7-e23a37f99859"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b14125d3-ecf0-4384-a7bd-1587907e91c4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="3127698f-0f36-476b-929e-555ec356a775"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="97690ac1-778c-4d80-9b95-305187381051"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a651fa5d-1e0e-4b6a-95f9-a348b4793f73"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="43a61ad5-af03-4e89-81ff-28f8f4a9eef3"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1ac07281-4c75-4b24-8949-413c5e8eea4e"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a651fa5d-1e0e-4b6a-95f9-a348b4793f73"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8f2cac13-bddc-4036-8cee-ecf1bd685672"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c384cf36-d0c5-4c12-8f13-30b923853ae4"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="43a61ad5-af03-4e89-81ff-28f8f4a9eef3"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9fc9833e-2846-44d2-9fc6-06528c1928e9"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1ac07281-4c75-4b24-8949-413c5e8eea4e"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="97690ac1-778c-4d80-9b95-305187381051"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="51d36fe3-bed5-42ea-919a-06119e28b650"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <combinedFragment
+            Id="60a209db-2e02-4188-8cd0-1e13b6261abd"
+            name="CombinedFragment1"
+            interactionOperator="Alt"
+            customInteractionOperator="Boucle tant qu'on veut ajouter un produit">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="ae4a4930-b4d7-4264-8d78-e24cc730dcc3"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                    LastKnownName="commercial : Commercial"
+                    LastKnownLocation="UMLvillagreen.uml" />
+                  <lifelineMoniker
+                    Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                    LastKnownName="créer une nouvelle commande"
+                    LastKnownLocation="UMLvillagreen.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="74950597-f1f4-40ef-bc53-ec9542a05240">
+                    <maxInt>
+                      <literalString
+                        Id="a0abf215-c13b-4df7-8610-27b5b8d7bfc0"
+                        name="LiteralString1" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="7410a52a-64e1-4af0-b974-ded2d65ca117"
+                        name="LiteralString2" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="dbb46254-a728-4e94-bf28-be52a27fa5bf"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="UMLvillagreen.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="ac11025b-c081-44c4-972c-ec2cc7f34d19"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="UMLvillagreen.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="e3acdce6-c93c-425c-ba87-a007614bfcfa"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="UMLvillagreen.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="a2bb8d13-8e62-4a89-9d43-515ab24ca962"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="UMLvillagreen.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="e3acdce6-c93c-425c-ba87-a007614bfcfa"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="dbb46254-a728-4e94-bf28-be52a27fa5bf"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="51953965-ba98-45d3-89f5-8fd0c52cca81"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c875eab0-5a28-4680-b6c1-702cbd55e945"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="d8caacdc-0c82-4892-8575-9c5092d8963d"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8dff2234-8fb3-465c-90be-a076f17d41e9"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="73a1b7fe-35d0-40c1-87e6-b6b779f60247"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="d8caacdc-0c82-4892-8575-9c5092d8963d"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="879556ef-75e7-496b-8d92-cd16e284f8fe"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8dff2234-8fb3-465c-90be-a076f17d41e9"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fb864ddb-87bc-45e2-8a24-3e25ff56d0c3"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="73a1b7fe-35d0-40c1-87e6-b6b779f60247"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bdf66b7b-336c-4ab6-82c0-57af83d16f0b"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c875eab0-5a28-4680-b6c1-702cbd55e945"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3ac8180c-20ca-4fbc-abc5-93627f0e5766"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="9ed3a52d-a3fd-4b6a-990d-23590f051fbf"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="6f0c1d45-17ff-4ec4-a8ea-f473ae6621b1"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e06bc95a-2c4c-4bee-86e4-b8fab176a232"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6d447c5-1eca-4d35-8d00-525fffca2fc2"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ae2808f5-9d61-4c4e-8dcd-f3c78483c51e"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e06bc95a-2c4c-4bee-86e4-b8fab176a232"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fa7c4935-9b87-4cdb-b53c-c557995155db"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e6d447c5-1eca-4d35-8d00-525fffca2fc2"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="02996727-655e-4a52-b39f-a2dbd42da62b"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="322bf2fa-c21f-4c32-a57c-86f718e1b79c"
+            name="BehaviorExecutionSpecification15">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2633f1d9-82d3-4736-9f49-890b5044b528"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0ecd33dd-44b1-41a5-a137-8a4fc33c45d4"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b22bbc5-9e77-48ae-8a9b-76774e0faf37"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="70c77b78-0cd8-48e5-b03f-e17e32e819a2"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0ecd33dd-44b1-41a5-a137-8a4fc33c45d4"
+            name="ExecutionOccurrenceSpecification29">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="48e52132-222d-4917-8613-b4191622e00d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2b22bbc5-9e77-48ae-8a9b-76774e0faf37"
+            name="MessageOccurrenceSpecification50">
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="455ec269-af24-495c-93f5-055f0b87d161"
+            name="MessageOccurrenceSpecification49">
+            <covered>
+              <lifelineMoniker
+                Id="13510b2c-fefb-4d3f-9872-7288ce195359"
+                LastKnownName="commercial1 : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="70c77b78-0cd8-48e5-b03f-e17e32e819a2"
+            name="MessageOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="95db414f-5984-4ada-83ac-6e39e526f169"
+            name="MessageOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="13510b2c-fefb-4d3f-9872-7288ce195359"
+                LastKnownName="commercial1 : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2633f1d9-82d3-4736-9f49-890b5044b528"
+            name="ExecutionOccurrenceSpecification30">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="43a0ee9b-d4ea-4c34-96a9-d6a18091266a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="64dab290-e8dc-4557-bf5c-cb0644b9b8ab"
+            name="BehaviorExecutionSpecification16">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7edd7e61-7e71-4c6a-a4a5-2f190a4fb99c"
+                LastKnownName="ExecutionOccurrenceSpecification32"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="4e5d1894-a078-4fb1-a09e-66b32deff045"
+                LastKnownName="ExecutionOccurrenceSpecification31"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="4e44e208-cbad-4c80-b463-90de22df7d47"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8b229f50-ac4d-42d6-9021-1286ed66c1f2"
+                LastKnownName="MessageOccurrenceSpecification55"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="4e5d1894-a078-4fb1-a09e-66b32deff045"
+            name="ExecutionOccurrenceSpecification31">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c6aa4eab-9ff1-4882-8893-0b981cfcd280"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="76931ce0-720b-4a57-8268-2905d69de502"
+            name="MessageOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="13510b2c-fefb-4d3f-9872-7288ce195359"
+                LastKnownName="commercial1 : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4e44e208-cbad-4c80-b463-90de22df7d47"
+            name="MessageOccurrenceSpecification54">
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f5ee1a95-9a6b-44f6-982a-38b46520bc70"
+            name="MessageOccurrenceSpecification56">
+            <covered>
+              <lifelineMoniker
+                Id="13510b2c-fefb-4d3f-9872-7288ce195359"
+                LastKnownName="commercial1 : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8b229f50-ac4d-42d6-9021-1286ed66c1f2"
+            name="MessageOccurrenceSpecification55">
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7edd7e61-7e71-4c6a-a4a5-2f190a4fb99c"
+            name="ExecutionOccurrenceSpecification32">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="53a51ed3-1763-4f7b-8004-9542066ab581"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dc05a09b-c564-40be-b932-045cb27713fb"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ae2808f5-9d61-4c4e-8dcd-f3c78483c51e"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="6f0c1d45-17ff-4ec4-a8ea-f473ae6621b1"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="468694c6-815d-4581-8acc-ce7c13f45748"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="95910035-95f4-41ae-8bca-57a474daa74d"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2f828899-0540-4f2c-a4cd-95bab9f92885"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="2ad62d31-3f83-481c-bc44-cf787aa99151"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="90863a30-09c1-4851-b1e6-1219869412bf"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2c281974-50db-4102-947a-6225d07912ba"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="2ad62d31-3f83-481c-bc44-cf787aa99151"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="13c53b95-2ab1-4d8d-ac2e-4e54d3e602d9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="90863a30-09c1-4851-b1e6-1219869412bf"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="641d0bdb-9b4a-4af1-bf29-11a722c8b520"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2c281974-50db-4102-947a-6225d07912ba"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="49d4b278-7f2d-4f7d-970b-56e385748e07"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2f828899-0540-4f2c-a4cd-95bab9f92885"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="920d3d35-f8c2-4a41-8a29-03d02b5bf793"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a2bb8d13-8e62-4a89-9d43-515ab24ca962"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ac11025b-c081-44c4-972c-ec2cc7f34d19"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="a8c4d8c8-e494-4673-a1bd-776bdb892654"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="d9df74b9-e6d5-4ccf-b39b-2a9da3e9e62d"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="834524e9-3f54-4d9f-a47f-3f6e1178efc2"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="4d86d64a-581f-448d-9873-320d8b2f0857"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1f1cceea-365d-4046-98d1-47b59b21a52f"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="834524e9-3f54-4d9f-a47f-3f6e1178efc2"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="38f63d5f-3839-491d-8941-3973df1c50e8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9addfc98-efb2-41b0-9ea1-a68904038080"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4d86d64a-581f-448d-9873-320d8b2f0857"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1f1cceea-365d-4046-98d1-47b59b21a52f"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8b638e5c-8bca-446b-93a1-c37ec36be6e4"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="d9df74b9-e6d5-4ccf-b39b-2a9da3e9e62d"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5c9622e3-145b-47d4-9f1b-e863c2e7e848"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b14ead27-4a4c-4f8b-9394-834780cab95a"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="34fe576d-ba7f-4f21-a393-ef860411ad85"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8d29ec38-1ddd-49df-8c5f-ad655de82e6e"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e697fa39-2ee8-4c06-ab8b-ce728ad9ef11"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ee00c63f-47ec-4d2c-9f99-021ba3750b70"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8d29ec38-1ddd-49df-8c5f-ad655de82e6e"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="955f98cb-73ae-4aba-86e3-77babfbf340c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e697fa39-2ee8-4c06-ab8b-ce728ad9ef11"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0b17e3c9-11eb-4126-882f-9ceaa1525ead"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7c78a0ca-3d9a-481b-85e3-43b9cba89a16"
+            name="MessageOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ee00c63f-47ec-4d2c-9f99-021ba3750b70"
+            name="MessageOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="34fe576d-ba7f-4f21-a393-ef860411ad85"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3bdc4aae-f0fa-47a4-82d4-6252f170f60f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="61f7fd4c-1b3f-4c72-820d-6db9aa82b6a7"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="037a195e-e9fa-4079-9f7f-194580ff0f28"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="29f0be4a-7080-4515-96e2-18fd0fd855ed"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d0afbfc5-ecb1-43a4-b06b-ebe49c8b5fb4"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a6b35cd4-a997-4339-aa67-b862ef1f935e"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="29f0be4a-7080-4515-96e2-18fd0fd855ed"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="27b88ea5-b160-4665-b5f5-4336fe38ee6a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8a903d0c-bdc1-4c76-944a-cbadc771c53c"
+            name="MessageOccurrenceSpecification37">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d0afbfc5-ecb1-43a4-b06b-ebe49c8b5fb4"
+            name="MessageOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5dbad221-2825-4667-bfb0-abe5d09fcfe9"
+            name="MessageOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a6b35cd4-a997-4339-aa67-b862ef1f935e"
+            name="MessageOccurrenceSpecification39">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="037a195e-e9fa-4079-9f7f-194580ff0f28"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="11900591-c071-4e9e-8376-cb5e5d74b646"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e21cb0cd-5ec5-45a3-b324-5736ad48f5f3"
+            name="MessageOccurrenceSpecification43">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ee4aea99-6399-4b9a-8ee0-778b085df622"
+            name="BehaviorExecutionSpecification13">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="05fbedc2-71bc-4ddb-b3ea-c4589c98d41c"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0f3155f2-a6ab-422f-878d-6f8ef183b468"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="66420cc9-83de-4383-97ac-0202aa326e53"
+                LastKnownName="MessageOccurrenceSpecification44"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6a094b73-4f92-402b-a916-4ac4f4d9258e"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0f3155f2-a6ab-422f-878d-6f8ef183b468"
+            name="ExecutionOccurrenceSpecification25">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ccf11d78-f874-4f6e-89d6-d6aaa15b8bb0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66420cc9-83de-4383-97ac-0202aa326e53"
+            name="MessageOccurrenceSpecification44">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="1b842f96-a2be-4569-8c04-aad70b7c2ee2"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5c986dfb-f501-4e2a-9dcc-ecf676d96374"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="b096857a-2ceb-476e-8f77-1b3dc6590f3d"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="35ef8b48-a184-48c0-9d3a-2738d6f29e58"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="b096857a-2ceb-476e-8f77-1b3dc6590f3d"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cb73edc1-b62f-4dd3-92a0-493adad407d6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="35ef8b48-a184-48c0-9d3a-2738d6f29e58"
+            name="MessageOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6a094b73-4f92-402b-a916-4ac4f4d9258e"
+            name="MessageOccurrenceSpecification41">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="05fbedc2-71bc-4ddb-b3ea-c4589c98d41c"
+            name="ExecutionOccurrenceSpecification26">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="74911cc4-d7d6-4de6-be82-99fbd0796f4b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5c986dfb-f501-4e2a-9dcc-ecf676d96374"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4cf2df41-9136-4812-85f4-b477b1e77595"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+            name="commercial : Commercial"
+            isActor="true"
+            lifelineDisplayName="commercial : Commercial">
+            <represents>
+              <propertyMoniker
+                Id="23ae345f-8b8f-4089-b218-bd5456c72887"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c5705047-4721-4106-8654-d4e72e5a6739"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8f1a21ad-21e6-4595-8815-d28c3d586659"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="eda6fcac-9017-4844-b7bd-ebf664817a0c"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4ab71a00-c4f6-48bf-a03b-f5bd50c4b1aa"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c384cf36-d0c5-4c12-8f13-30b923853ae4"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9fc9833e-2846-44d2-9fc6-06528c1928e9"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="e3acdce6-c93c-425c-ba87-a007614bfcfa"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="fb864ddb-87bc-45e2-8a24-3e25ff56d0c3"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bdf66b7b-336c-4ab6-82c0-57af83d16f0b"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="02996727-655e-4a52-b39f-a2dbd42da62b"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dc05a09b-c564-40be-b932-045cb27713fb"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="641d0bdb-9b4a-4af1-bf29-11a722c8b520"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="49d4b278-7f2d-4f7d-970b-56e385748e07"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="a2bb8d13-8e62-4a89-9d43-515ab24ca962"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9addfc98-efb2-41b0-9ea1-a68904038080"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8b638e5c-8bca-446b-93a1-c37ec36be6e4"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0b17e3c9-11eb-4126-882f-9ceaa1525ead"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7c78a0ca-3d9a-481b-85e3-43b9cba89a16"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8a903d0c-bdc1-4c76-944a-cbadc771c53c"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5dbad221-2825-4667-bfb0-abe5d09fcfe9"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b096857a-2ceb-476e-8f77-1b3dc6590f3d"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5c986dfb-f501-4e2a-9dcc-ecf676d96374"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+            name="créer une nouvelle commande"
+            isActor="false"
+            lifelineDisplayName="créer une nouvelle commande">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="ef75f48e-7941-4e8c-a3ce-96b02bb959ee"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e8d1c285-67df-43c8-b2bb-c14748510e1d"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7ce0b9d5-ecc5-4964-91ad-cabb137c8f4f"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d7c0eb7b-efd1-4ccd-a3a7-e23a37f99859"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a651fa5d-1e0e-4b6a-95f9-a348b4793f73"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="97690ac1-778c-4d80-9b95-305187381051"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="dbb46254-a728-4e94-bf28-be52a27fa5bf"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d8caacdc-0c82-4892-8575-9c5092d8963d"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c875eab0-5a28-4680-b6c1-702cbd55e945"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e06bc95a-2c4c-4bee-86e4-b8fab176a232"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6f0c1d45-17ff-4ec4-a8ea-f473ae6621b1"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2ad62d31-3f83-481c-bc44-cf787aa99151"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2f828899-0540-4f2c-a4cd-95bab9f92885"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="ac11025b-c081-44c4-972c-ec2cc7f34d19"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="834524e9-3f54-4d9f-a47f-3f6e1178efc2"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d9df74b9-e6d5-4ccf-b39b-2a9da3e9e62d"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8d29ec38-1ddd-49df-8c5f-ad655de82e6e"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="34fe576d-ba7f-4f21-a393-ef860411ad85"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="29f0be4a-7080-4515-96e2-18fd0fd855ed"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="037a195e-e9fa-4079-9f7f-194580ff0f28"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e21cb0cd-5ec5-45a3-b324-5736ad48f5f3"
+                LastKnownName="MessageOccurrenceSpecification43"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0f3155f2-a6ab-422f-878d-6f8ef183b468"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="05fbedc2-71bc-4ddb-b3ea-c4589c98d41c"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="13510b2c-fefb-4d3f-9872-7288ce195359"
+            name="commercial1 : Commercial"
+            isActor="true"
+            lifelineDisplayName="commercial1 : Commercial">
+            <represents>
+              <propertyMoniker
+                Id="d1a44788-5ac5-4b86-bc21-d9dfa75d5a7d"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="455ec269-af24-495c-93f5-055f0b87d161"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="95db414f-5984-4ada-83ac-6e39e526f169"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="76931ce0-720b-4a57-8268-2905d69de502"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f5ee1a95-9a6b-44f6-982a-38b46520bc70"
+                LastKnownName="MessageOccurrenceSpecification56"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3113957b-03e1-472d-8f0f-0efeec22f200"
+            name="créer une nouvelle commande"
+            isActor="false"
+            lifelineDisplayName="créer une nouvelle commande">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="0ecd33dd-44b1-41a5-a137-8a4fc33c45d4"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2633f1d9-82d3-4736-9f49-890b5044b528"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="4e5d1894-a078-4fb1-a09e-66b32deff045"
+                LastKnownName="ExecutionOccurrenceSpecification31"
+                LastKnownLocation="UMLvillagreen.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7edd7e61-7e71-4c6a-a4a5-2f190a4fb99c"
+                LastKnownName="ExecutionOccurrenceSpecification32"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="f23a0d86-bf22-4157-ab5d-29bee6896c08"
+            name="clique sur COMMANDE Nouvelle"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c5705047-4721-4106-8654-d4e72e5a6739"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="093da1cc-9291-4e77-882e-debddf4d4b40"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2ebe287e-a5c5-44b3-9edd-331ed2c3cf37"
+            name="affichage de l'écran de commande"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="de386d6b-2593-4079-b638-4e75bd4060d0"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8f1a21ad-21e6-4595-8815-d28c3d586659"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8a69859f-1c4a-4972-affb-08e461b6350a"
+            name="saisie du code client"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eda6fcac-9017-4844-b7bd-ebf664817a0c"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ec056e72-c6e5-43a1-b5c6-ccd4368b0b71"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b8ad7a59-22fd-418b-a6bf-89676ca69f04"
+            name="affiche client valide et remplit les champs adresses, date etc..."
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c4a53dfb-c7d7-429e-9ed3-5784df5172b2"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4ab71a00-c4f6-48bf-a03b-f5bd50c4b1aa"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f1aeec34-6880-453f-9448-5a96e35a01bb"
+            name="saisie des données de la commandeet valide"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c384cf36-d0c5-4c12-8f13-30b923853ae4"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="43a61ad5-af03-4e89-81ff-28f8f4a9eef3"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6abd73c6-b5f4-4c21-841b-1bb35b2ab973"
+            name="affiche données  enregistrées"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1ac07281-4c75-4b24-8949-413c5e8eea4e"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9fc9833e-2846-44d2-9fc6-06528c1928e9"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f474356b-57eb-4863-b518-6ed976453199"
+            name="clique sur ajouter un produit"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fb864ddb-87bc-45e2-8a24-3e25ff56d0c3"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8dff2234-8fb3-465c-90be-a076f17d41e9"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0430a308-21eb-4324-82c1-dd6eb913af49"
+            name="affiche la page &quot;saisie code produit &quot; ou choisir dans la liste des rubriques"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="73a1b7fe-35d0-40c1-87e6-b6b779f60247"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bdf66b7b-336c-4ab6-82c0-57af83d16f0b"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b9ba3585-5a48-4977-9cf5-9357a51818a1"
+            name="saisie du numero de produit"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="02996727-655e-4a52-b39f-a2dbd42da62b"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6d447c5-1eca-4d35-8d00-525fffca2fc2"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="9b963128-cf08-435f-b258-3cccbd3918e5"
+            name="clique sur Rubrique"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="455ec269-af24-495c-93f5-055f0b87d161"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b22bbc5-9e77-48ae-8a9b-76774e0faf37"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ab1c2eee-6c3c-4c54-b2c8-3d51bc4f78e0"
+            name="affiche liste des sous rubriques"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="70c77b78-0cd8-48e5-b03f-e17e32e819a2"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="95db414f-5984-4ada-83ac-6e39e526f169"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="9886d80c-c935-4515-8581-85d411e14d15"
+            name="clique sur la sous rubrique"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="76931ce0-720b-4a57-8268-2905d69de502"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4e44e208-cbad-4c80-b463-90de22df7d47"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="07f34482-d902-4dcd-bf24-ebc88980f099"
+            name="affiche la liste des produits"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8b229f50-ac4d-42d6-9021-1286ed66c1f2"
+                LastKnownName="MessageOccurrenceSpecification55"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f5ee1a95-9a6b-44f6-982a-38b46520bc70"
+                LastKnownName="MessageOccurrenceSpecification56"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="632f5af8-a32d-4ecd-999d-ce4b3f2a9c7e"
+            name="affiche détails du produit"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ae2808f5-9d61-4c4e-8dcd-f3c78483c51e"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dc05a09b-c564-40be-b932-045cb27713fb"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="019f9bfc-c6ea-490f-9b9a-e85e87042c65"
+            name="saisie quantité et validation"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="641d0bdb-9b4a-4af1-bf29-11a722c8b520"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="90863a30-09c1-4851-b1e6-1219869412bf"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a8ee0c5c-ac01-4394-a562-a67918b9279c"
+            name="affiche produit ajouté"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2c281974-50db-4102-947a-6225d07912ba"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="49d4b278-7f2d-4f7d-970b-56e385748e07"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="77cc8649-5799-4da9-817f-b25ff8b49888"
+            name="clique sur valider COMMANDE"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9addfc98-efb2-41b0-9ea1-a68904038080"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4d86d64a-581f-448d-9873-320d8b2f0857"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="70e6ac4f-660e-48b6-a34b-683d52a23dc0"
+            name="affiche &quot;garder la même adresse pour la livraison ?"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1f1cceea-365d-4046-98d1-47b59b21a52f"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8b638e5c-8bca-446b-93a1-c37ec36be6e4"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e3e022ae-d92f-44bd-bd0d-1f374cb66324"
+            name="clique sur OUI"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0b17e3c9-11eb-4126-882f-9ceaa1525ead"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e697fa39-2ee8-4c06-ab8b-ce728ad9ef11"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a1bbc3c0-e2b5-4aeb-9f1d-6b34607ca51f"
+            name="inscrit l'adresse dans livraison et affiche &quot;choisissez un mode de paiement&quot;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ee00c63f-47ec-4d2c-9f99-021ba3750b70"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c78a0ca-3d9a-481b-85e3-43b9cba89a16"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6484777b-0734-4c09-ac7c-335f0f0a3d28"
+            name="choisit un mode de paiement et valide"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8a903d0c-bdc1-4c76-944a-cbadc771c53c"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d0afbfc5-ecb1-43a4-b06b-ebe49c8b5fb4"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e824c44e-0475-4c5f-a531-dfbfb8ae6da2"
+            name="remplit les champs de la facture"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a6b35cd4-a997-4339-aa67-b862ef1f935e"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5dbad221-2825-4667-bfb0-abe5d09fcfe9"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="9ceca297-b97b-4885-ab88-b4d41fdb5cdb"
+            name="le logiciel enregistre les informations"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e21cb0cd-5ec5-45a3-b324-5736ad48f5f3"
+                LastKnownName="MessageOccurrenceSpecification43"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="66420cc9-83de-4383-97ac-0202aa326e53"
+                LastKnownName="MessageOccurrenceSpecification44"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ecbbe5a1-88d5-499a-b293-8dd5044f2a86"
+            name="envoie un mail au client puis retour au menu principal "
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6a094b73-4f92-402b-a916-4ac4f4d9258e"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="35ef8b48-a184-48c0-9d3a-2738d6f29e58"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="23ae345f-8b8f-4089-b218-bd5456c72887"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="a2fbf197-a74c-4b54-af18-dd62a067c693"
+                LastKnownName="Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d1a44788-5ac5-4b86-bc21-d9dfa75d5a7d"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="a2fbf197-a74c-4b54-af18-dd62a067c693"
+                LastKnownName="Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="84f46edb-6dc7-463a-b539-b52e1055f6d9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="dd8f6a13-7607-4dd4-aae6-3b49ea73e12c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f0c48637-d097-40ec-b706-d31d81b900af"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b14125d3-ecf0-4384-a7bd-1587907e91c4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8f2cac13-bddc-4036-8cee-ecf1bd685672"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="51d36fe3-bed5-42ea-919a-06119e28b650"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="879556ef-75e7-496b-8d92-cd16e284f8fe"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3ac8180c-20ca-4fbc-abc5-93627f0e5766"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fa7c4935-9b87-4cdb-b53c-c557995155db"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="468694c6-815d-4581-8acc-ce7c13f45748"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="13c53b95-2ab1-4d8d-ac2e-4e54d3e602d9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="920d3d35-f8c2-4a41-8a29-03d02b5bf793"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="38f63d5f-3839-491d-8941-3973df1c50e8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5c9622e3-145b-47d4-9f1b-e863c2e7e848"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="955f98cb-73ae-4aba-86e3-77babfbf340c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3bdc4aae-f0fa-47a4-82d4-6252f170f60f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="27b88ea5-b160-4665-b5f5-4336fe38ee6a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="11900591-c071-4e9e-8376-cb5e5d74b646"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ccf11d78-f874-4f6e-89d6-d6aaa15b8bb0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="74911cc4-d7d6-4de6-be82-99fbd0796f4b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cb73edc1-b62f-4dd3-92a0-493adad407d6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4cf2df41-9136-4812-85f4-b477b1e77595"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="48e52132-222d-4917-8613-b4191622e00d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="43a0ee9b-d4ea-4c34-96a9-d6a18091266a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c6aa4eab-9ff1-4882-8893-0b981cfcd280"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="53a51ed3-1763-4f7b-8004-9542066ab581"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="c6d4e534-bf5c-4cac-8ff8-dd697be3e003"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="c20b6220-e3f6-43c3-aaa1-d71f81227423"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d88f5cc6-706f-4d69-aa3c-eb8a22b41bb9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3f3dadd6-ed47-4376-9855-a2c5b3009f55"
+                  LastKnownName="cliquer sur commande"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="9ae22f6e-d10d-41b6-a7d9-fe4ed42ca4f4"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="3f3dadd6-ed47-4376-9855-a2c5b3009f55"
+            name="cliquer sur commande"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8bcab419-4930-46e1-8d96-761f0f4e2c4c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c0d5f0c0-5cde-4c83-8add-f93a6775d7cd"
+                  LastKnownName="saisir code client"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c0d5f0c0-5cde-4c83-8add-f93a6775d7cd"
+            name="saisir code client"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="55463a6a-f99f-47f2-b6e8-84d53837c0c4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c259599d-8e1d-488e-8dfd-c4a6ab5a950f"
+                  LastKnownName="saisir données commande"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c259599d-8e1d-488e-8dfd-c4a6ab5a950f"
+            name="saisir données commande"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="419dea94-d5f6-4b27-84c2-9a676986cf09"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="8b49487c-4949-444b-8ed1-c5c7b29df044"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="46ad9d6f-cf37-43e7-a372-e54556f442ba"
+            name="saisir un code   produit"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="068a55c0-61f1-4a3d-b7fb-102aa3378803"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b76c88c5-fd4f-44a6-83bc-2bafb0e6b286"
+                  LastKnownName="saisir quantité"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b6b30ef6-d8af-422f-8e32-3b20387d0e5a"
+            name="valider commande"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9c7e4843-a851-40b6-86ec-74fd575277ad"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="70e03f96-04e0-4fa1-afe7-f51dfd13cc0d"
+                  LastKnownName="valider adresse livraison"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="70e03f96-04e0-4fa1-afe7-f51dfd13cc0d"
+            name="valider adresse livraison"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="aa29c5e0-d575-42fc-9478-3605ba1e5d1e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1a1c31f9-eb97-4c9e-b344-8a2520960198"
+                  LastKnownName="choisir mode de paiement"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="1a1c31f9-eb97-4c9e-b344-8a2520960198"
+            name="choisir mode de paiement"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4d237008-e277-4860-b67a-57204260a524"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="9ae22f6e-d10d-41b6-a7d9-fe4ed42ca4f4"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="acf66147-3a8b-48a0-946f-da9e88f0a78a"
+            name="choisir une rubrique"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="52627270-fd99-4d03-959e-1e68c796fc4e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3fac50ef-8053-44aa-9c3f-7ad09b8bac24"
+                  LastKnownName="choisir une sous rubrique"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3fac50ef-8053-44aa-9c3f-7ad09b8bac24"
+            name="choisir une sous rubrique"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a5516de8-8a0c-4de7-933b-9a6a3d33d03d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="28adde58-1b77-4266-80f0-2e88cd6e1f2c"
+                  LastKnownName="choisir un produit"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="28adde58-1b77-4266-80f0-2e88cd6e1f2c"
+            name="choisir un produit"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fe91382a-8b93-4a44-b03a-f3eaf335206d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b76c88c5-fd4f-44a6-83bc-2bafb0e6b286"
+                  LastKnownName="saisir quantité"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="8b49487c-4949-444b-8ed1-c5c7b29df044"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="164588f0-8120-44bf-a595-e9456aff51ab"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="46ad9d6f-cf37-43e7-a372-e54556f442ba"
+                  LastKnownName="saisir un code   produit"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0fccecf2-5ca1-4ea0-8ce6-69ad24e66038"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="acf66147-3a8b-48a0-946f-da9e88f0a78a"
+                  LastKnownName="choisir une rubrique"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="b76c88c5-fd4f-44a6-83bc-2bafb0e6b286"
+            name="saisir quantité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="03a56779-91fa-45d9-98bb-8f1c810eb17a"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="4e3d40f7-f116-440c-91e2-d394befcc291"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="4e3d40f7-f116-440c-91e2-d394befcc291"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="849b91a2-70b3-4686-a535-80320748c9c0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b6b30ef6-d8af-422f-8e32-3b20387d0e5a"
+                  LastKnownName="valider commande"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="e91ee67f-f662-46dc-99b1-78ca40c3f2a5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="46ad9d6f-cf37-43e7-a372-e54556f442ba"
+                  LastKnownName="saisir un code   produit"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f4d70f08-19c3-427f-9b8d-ade973f0e6ec"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="acf66147-3a8b-48a0-946f-da9e88f0a78a"
+                  LastKnownName="choisir une rubrique"
+                  LastKnownLocation="UMLvillagreen.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6fb0feb0-891f-46c7-b739-a50257b1531c"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1fa28ffc-871a-4c41-bec4-8f77c5032f9c"
+        name="Commercial"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d73e4363-4185-4fa3-a8d4-0568cec74d40"
+        name="Produit"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fc992e24-07ea-4b7e-bb3e-3a962930c9ac"
+        name="Commande"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5195b0b9-6ae3-4082-8afa-d6888bbf105f"
+        name="Fournisseur"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

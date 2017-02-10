@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="923eb97e78674bb2be4b9ba598670cd8" Name="Diagram1">
+        <EntityTypeShape EntityType="villagegreenModel.bon_livraison" Width="1.5" PointX="0.625" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.client" Width="1.5" PointX="5.625" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.commande" Width="1.5" PointX="5.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.commercial" Width="1.5" PointX="0.625" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.fournisseur" Width="1.5" PointX="10.625" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.ligne_de_commande" Width="1.5" PointX="8.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.ligne_de_livraison" Width="1.5" PointX="1" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.produit" Width="1.5" PointX="8.875" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.rubrique" Width="1.5" PointX="0.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.sous_rubrique" Width="1.5" PointX="3.125" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="villagegreenModel.tva" Width="1.5" PointX="5.625" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="villagegreenModel.FK__bon_livra__comma__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__ligne_de___livra__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__client__commerci__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__commande__client__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__ligne_de___comma__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__produit__fournis__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__ligne_de___produ__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__ligne_de___produ__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__produit__ss_rubr__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__produit__tva_id__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="villagegreenModel.FK__sous_rubr__rubri__164452B1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

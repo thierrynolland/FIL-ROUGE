@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="a17dfbb7-7a63-4b86-9d6c-619718ca0ad3" name="UMLClassDiagram1" linkedPackageId="9e0e249b-4825-4d20-8022-8355259d28dc" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0f90737f-2f08-4a49-a90d-04548460b5e3">
+      <profileInstance Id="b38c97eb-ea96-49a4-a8b0-6bb7b0edf452" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ccc20ae8-5da9-47d7-8d8e-04cbba3a120b">
+      <profileInstance Id="07035179-1b43-457c-8c40-bf13e59070ad" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="15b71eea-5bdc-46c3-befa-faddcbccc1fc" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6fb0feb0-891f-46c7-b739-a50257b1531c" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="144bbfb2-b9f7-4f43-876b-c1e3d8388d20" name="Commercial" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1fa28ffc-871a-4c41-bec4-8f77c5032f9c" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b035892a-4e22-487e-8fa2-5a7674c63115" name="Produit" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d73e4363-4185-4fa3-a8d4-0568cec74d40" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="76fe54ec-9a46-4565-b110-4cc0a6a93541" name="Commande" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fc992e24-07ea-4b7e-bb3e-3a962930c9ac" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6765a06e-ed65-4abd-8c35-cddb5f39a72a" name="Fournisseur" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5195b0b9-6ae3-4082-8afa-d6888bbf105f" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="9e0e249b-4825-4d20-8022-8355259d28dc" name="UMLvillagreen">
+    <elementDefinition Id="f9363fcb-a0a5-452c-b06c-0be8baae4150" />
+  </package>
+</logicalClassDesignerModel>

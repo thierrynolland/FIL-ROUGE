@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="villagegreenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bon_livraison">
+          <Key>
+            <PropertyRef Name="livraison_id" />
+          </Key>
+          <Property Name="livraison_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="livraison_date" Type="datetime" />
+          <Property Name="commande_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="client_id" />
+          </Key>
+          <Property Name="client_id" Type="int" Nullable="false" />
+          <Property Name="client_categorie" Type="int" Nullable="false" />
+          <Property Name="client_nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="client_prenom" Type="varchar" MaxLength="50" />
+          <Property Name="client_reduc" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="client_adresse" Type="varchar" MaxLength="100" />
+          <Property Name="client_ville" Type="varchar" MaxLength="100" />
+          <Property Name="client_cp" Type="varchar" MaxLength="5" />
+          <Property Name="commercial_id" Type="int" />
+        </EntityType>
+        <EntityType Name="commande">
+          <Key>
+            <PropertyRef Name="commande_id" />
+          </Key>
+          <Property Name="commande_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="commande_reduc" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="commande_etat" Type="varchar" MaxLength="20" />
+          <Property Name="commande_reglt" Type="datetime" />
+          <Property Name="commande_date" Type="datetime" />
+          <Property Name="commande_paye" Type="bit" />
+          <Property Name="livraison_adr" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="livraison_ville" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="livraison_cp" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="client_id" Type="int" Nullable="false" />
+          <Property Name="facture_id" Type="int" Nullable="false" />
+          <Property Name="facture_date" Type="datetime" Nullable="false" />
+          <Property Name="facture_montant" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="facture_adre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="facture_ville" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="facture_cp" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="commercial">
+          <Key>
+            <PropertyRef Name="commercial_id" />
+          </Key>
+          <Property Name="commercial_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="commercial_nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="commercial_prenom" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="fournisseur">
+          <Key>
+            <PropertyRef Name="fournisseur_id" />
+          </Key>
+          <Property Name="fournisseur_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fournisseur_nom" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ligne_de_commande">
+          <Key>
+            <PropertyRef Name="lignecom_id" />
+          </Key>
+          <Property Name="lignecom_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lignecom_qte" Type="int" Nullable="false" />
+          <Property Name="prix_fixe" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="commande_id" Type="int" Nullable="false" />
+          <Property Name="produit_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ligne_de_livraison">
+          <Key>
+            <PropertyRef Name="ligneliv_id" />
+          </Key>
+          <Property Name="ligneliv_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ligneliv_qte" Type="int" Nullable="false" />
+          <Property Name="livraison_id" Type="int" Nullable="false" />
+          <Property Name="produit_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="produit">
+          <Key>
+            <PropertyRef Name="produit_id" />
+          </Key>
+          <Property Name="produit_id" Type="int" Nullable="false" />
+          <Property Name="produit_nomcourt" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="produit_nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="produit_photo" Type="varchar" MaxLength="25" />
+          <Property Name="produit_prixachat" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="produit_etat" Type="bit" Nullable="false" />
+          <Property Name="produit_prixht" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="produit_validite" Type="bit" Nullable="false" />
+          <Property Name="ss_rubrique_id" Type="int" Nullable="false" />
+          <Property Name="fournisseur_id" Type="int" Nullable="false" />
+          <Property Name="tva_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rubrique">
+          <Key>
+            <PropertyRef Name="rubrique_id" />
+          </Key>
+          <Property Name="rubrique_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rubrique_nom" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sous_rubrique">
+          <Key>
+            <PropertyRef Name="ss_rubrique_id" />
+          </Key>
+          <Property Name="ss_rubrique_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ss_rubrique_nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="rubrique_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tva">
+          <Key>
+            <PropertyRef Name="tva_id" />
+          </Key>
+          <Property Name="tva_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tva_nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tva_taux" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__bon_livra__comma__25869641">
+          <End Role="commande" Type="Self.commande" Multiplicity="1" />
+          <End Role="bon_livraison" Type="Self.bon_livraison" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commande">
+              <PropertyRef Name="commande_id" />
+            </Principal>
+            <Dependent Role="bon_livraison">
+              <PropertyRef Name="commande_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__client__commerci__1FCDBCEB">
+          <End Role="commercial" Type="Self.commercial" Multiplicity="0..1" />
+          <End Role="client" Type="Self.client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commercial">
+              <PropertyRef Name="commercial_id" />
+            </Principal>
+            <Dependent Role="client">
+              <PropertyRef Name="commercial_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__commande__client__22AA2996">
+          <End Role="client" Type="Self.client" Multiplicity="1" />
+          <End Role="commande" Type="Self.commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="client_id" />
+            </Principal>
+            <Dependent Role="commande">
+              <PropertyRef Name="client_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___comma__2C3393D0">
+          <End Role="commande" Type="Self.commande" Multiplicity="1" />
+          <End Role="ligne_de_commande" Type="Self.ligne_de_commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commande">
+              <PropertyRef Name="commande_id" />
+            </Principal>
+            <Dependent Role="ligne_de_commande">
+              <PropertyRef Name="commande_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___livra__286302EC">
+          <End Role="bon_livraison" Type="Self.bon_livraison" Multiplicity="1" />
+          <End Role="ligne_de_livraison" Type="Self.ligne_de_livraison" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bon_livraison">
+              <PropertyRef Name="livraison_id" />
+            </Principal>
+            <Dependent Role="ligne_de_livraison">
+              <PropertyRef Name="livraison_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___produ__29572725">
+          <End Role="produit" Type="Self.produit" Multiplicity="1" />
+          <End Role="ligne_de_livraison" Type="Self.ligne_de_livraison" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produit">
+              <PropertyRef Name="produit_id" />
+            </Principal>
+            <Dependent Role="ligne_de_livraison">
+              <PropertyRef Name="produit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___produ__2D27B809">
+          <End Role="produit" Type="Self.produit" Multiplicity="1" />
+          <End Role="ligne_de_commande" Type="Self.ligne_de_commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produit">
+              <PropertyRef Name="produit_id" />
+            </Principal>
+            <Dependent Role="ligne_de_commande">
+              <PropertyRef Name="produit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__produit__fournis__1BFD2C07">
+          <End Role="fournisseur" Type="Self.fournisseur" Multiplicity="1" />
+          <End Role="produit" Type="Self.produit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fournisseur">
+              <PropertyRef Name="fournisseur_id" />
+            </Principal>
+            <Dependent Role="produit">
+              <PropertyRef Name="fournisseur_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__produit__ss_rubr__1B0907CE">
+          <End Role="sous_rubrique" Type="Self.sous_rubrique" Multiplicity="1" />
+          <End Role="produit" Type="Self.produit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sous_rubrique">
+              <PropertyRef Name="ss_rubrique_id" />
+            </Principal>
+            <Dependent Role="produit">
+              <PropertyRef Name="ss_rubrique_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__produit__tva_id__1CF15040">
+          <End Role="tva" Type="Self.tva" Multiplicity="1" />
+          <End Role="produit" Type="Self.produit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tva">
+              <PropertyRef Name="tva_id" />
+            </Principal>
+            <Dependent Role="produit">
+              <PropertyRef Name="tva_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sous_rubr__rubri__164452B1">
+          <End Role="rubrique" Type="Self.rubrique" Multiplicity="1" />
+          <End Role="sous_rubrique" Type="Self.sous_rubrique" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rubrique">
+              <PropertyRef Name="rubrique_id" />
+            </Principal>
+            <Dependent Role="sous_rubrique">
+              <PropertyRef Name="rubrique_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="villagegreenModelStoreContainer">
+          <EntitySet Name="bon_livraison" EntityType="Self.bon_livraison" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="commande" EntityType="Self.commande" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="commercial" EntityType="Self.commercial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fournisseur" EntityType="Self.fournisseur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ligne_de_commande" EntityType="Self.ligne_de_commande" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ligne_de_livraison" EntityType="Self.ligne_de_livraison" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="produit" EntityType="Self.produit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="rubrique" EntityType="Self.rubrique" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sous_rubrique" EntityType="Self.sous_rubrique" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tva" EntityType="Self.tva" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__bon_livra__comma__25869641" Association="Self.FK__bon_livra__comma__25869641">
+            <End Role="commande" EntitySet="commande" />
+            <End Role="bon_livraison" EntitySet="bon_livraison" />
+          </AssociationSet>
+          <AssociationSet Name="FK__client__commerci__1FCDBCEB" Association="Self.FK__client__commerci__1FCDBCEB">
+            <End Role="commercial" EntitySet="commercial" />
+            <End Role="client" EntitySet="client" />
+          </AssociationSet>
+          <AssociationSet Name="FK__commande__client__22AA2996" Association="Self.FK__commande__client__22AA2996">
+            <End Role="client" EntitySet="client" />
+            <End Role="commande" EntitySet="commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___comma__2C3393D0" Association="Self.FK__ligne_de___comma__2C3393D0">
+            <End Role="commande" EntitySet="commande" />
+            <End Role="ligne_de_commande" EntitySet="ligne_de_commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___livra__286302EC" Association="Self.FK__ligne_de___livra__286302EC">
+            <End Role="bon_livraison" EntitySet="bon_livraison" />
+            <End Role="ligne_de_livraison" EntitySet="ligne_de_livraison" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___produ__29572725" Association="Self.FK__ligne_de___produ__29572725">
+            <End Role="produit" EntitySet="produit" />
+            <End Role="ligne_de_livraison" EntitySet="ligne_de_livraison" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___produ__2D27B809" Association="Self.FK__ligne_de___produ__2D27B809">
+            <End Role="produit" EntitySet="produit" />
+            <End Role="ligne_de_commande" EntitySet="ligne_de_commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK__produit__fournis__1BFD2C07" Association="Self.FK__produit__fournis__1BFD2C07">
+            <End Role="fournisseur" EntitySet="fournisseur" />
+            <End Role="produit" EntitySet="produit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__produit__ss_rubr__1B0907CE" Association="Self.FK__produit__ss_rubr__1B0907CE">
+            <End Role="sous_rubrique" EntitySet="sous_rubrique" />
+            <End Role="produit" EntitySet="produit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__produit__tva_id__1CF15040" Association="Self.FK__produit__tva_id__1CF15040">
+            <End Role="tva" EntitySet="tva" />
+            <End Role="produit" EntitySet="produit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sous_rubr__rubri__164452B1" Association="Self.FK__sous_rubr__rubri__164452B1">
+            <End Role="rubrique" EntitySet="rubrique" />
+            <End Role="sous_rubrique" EntitySet="sous_rubrique" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="villagegreenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="bon_livraison">
+          <Key>
+            <PropertyRef Name="livraison_id" />
+          </Key>
+          <Property Name="livraison_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="livraison_date" Type="DateTime" Precision="3" />
+          <Property Name="commande_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="commande" Relationship="Self.FK__bon_livra__comma__25869641" FromRole="bon_livraison" ToRole="commande" />
+          <NavigationProperty Name="ligne_de_livraison" Relationship="Self.FK__ligne_de___livra__286302EC" FromRole="bon_livraison" ToRole="ligne_de_livraison" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="client_id" />
+          </Key>
+          <Property Name="client_id" Type="Int32" Nullable="false" />
+          <Property Name="client_categorie" Type="Int32" Nullable="false" />
+          <Property Name="client_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="client_prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="client_reduc" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="client_adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="client_ville" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="client_cp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="commercial_id" Type="Int32" />
+          <NavigationProperty Name="commercial" Relationship="Self.FK__client__commerci__1FCDBCEB" FromRole="client" ToRole="commercial" />
+          <NavigationProperty Name="commande" Relationship="Self.FK__commande__client__22AA2996" FromRole="client" ToRole="commande" />
+        </EntityType>
+        <EntityType Name="commande">
+          <Key>
+            <PropertyRef Name="commande_id" />
+          </Key>
+          <Property Name="commande_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="commande_reduc" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="commande_etat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="commande_reglt" Type="DateTime" Precision="3" />
+          <Property Name="commande_date" Type="DateTime" Precision="3" />
+          <Property Name="commande_paye" Type="Boolean" />
+          <Property Name="livraison_adr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="livraison_ville" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="livraison_cp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="client_id" Type="Int32" Nullable="false" />
+          <Property Name="facture_id" Type="Int32" Nullable="false" />
+          <Property Name="facture_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="facture_montant" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="facture_adre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="facture_ville" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="facture_cp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="bon_livraison" Relationship="Self.FK__bon_livra__comma__25869641" FromRole="commande" ToRole="bon_livraison" />
+          <NavigationProperty Name="client" Relationship="Self.FK__commande__client__22AA2996" FromRole="commande" ToRole="client" />
+          <NavigationProperty Name="ligne_de_commande" Relationship="Self.FK__ligne_de___comma__2C3393D0" FromRole="commande" ToRole="ligne_de_commande" />
+        </EntityType>
+        <EntityType Name="commercial">
+          <Key>
+            <PropertyRef Name="commercial_id" />
+          </Key>
+          <Property Name="commercial_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="commercial_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="commercial_prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="client" Relationship="Self.FK__client__commerci__1FCDBCEB" FromRole="commercial" ToRole="client" />
+        </EntityType>
+        <EntityType Name="fournisseur">
+          <Key>
+            <PropertyRef Name="fournisseur_id" />
+          </Key>
+          <Property Name="fournisseur_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fournisseur_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="produit" Relationship="Self.FK__produit__fournis__1BFD2C07" FromRole="fournisseur" ToRole="produit" />
+        </EntityType>
+        <EntityType Name="ligne_de_commande">
+          <Key>
+            <PropertyRef Name="lignecom_id" />
+          </Key>
+          <Property Name="lignecom_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lignecom_qte" Type="Int32" Nullable="false" />
+          <Property Name="prix_fixe" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="commande_id" Type="Int32" Nullable="false" />
+          <Property Name="produit_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="commande" Relationship="Self.FK__ligne_de___comma__2C3393D0" FromRole="ligne_de_commande" ToRole="commande" />
+          <NavigationProperty Name="produit" Relationship="Self.FK__ligne_de___produ__2D27B809" FromRole="ligne_de_commande" ToRole="produit" />
+        </EntityType>
+        <EntityType Name="ligne_de_livraison">
+          <Key>
+            <PropertyRef Name="ligneliv_id" />
+          </Key>
+          <Property Name="ligneliv_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ligneliv_qte" Type="Int32" Nullable="false" />
+          <Property Name="livraison_id" Type="Int32" Nullable="false" />
+          <Property Name="produit_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="bon_livraison" Relationship="Self.FK__ligne_de___livra__286302EC" FromRole="ligne_de_livraison" ToRole="bon_livraison" />
+          <NavigationProperty Name="produit" Relationship="Self.FK__ligne_de___produ__29572725" FromRole="ligne_de_livraison" ToRole="produit" />
+        </EntityType>
+        <EntityType Name="produit">
+          <Key>
+            <PropertyRef Name="produit_id" />
+          </Key>
+          <Property Name="produit_id" Type="Int32" Nullable="false" />
+          <Property Name="produit_nomcourt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="produit_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="produit_photo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="produit_prixachat" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="produit_etat" Type="Boolean" Nullable="false" />
+          <Property Name="produit_prixht" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="produit_validite" Type="Boolean" Nullable="false" />
+          <Property Name="ss_rubrique_id" Type="Int32" Nullable="false" />
+          <Property Name="fournisseur_id" Type="Int32" Nullable="false" />
+          <Property Name="tva_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="fournisseur" Relationship="Self.FK__produit__fournis__1BFD2C07" FromRole="produit" ToRole="fournisseur" />
+          <NavigationProperty Name="ligne_de_commande" Relationship="Self.FK__ligne_de___produ__2D27B809" FromRole="produit" ToRole="ligne_de_commande" />
+          <NavigationProperty Name="ligne_de_livraison" Relationship="Self.FK__ligne_de___produ__29572725" FromRole="produit" ToRole="ligne_de_livraison" />
+          <NavigationProperty Name="sous_rubrique" Relationship="Self.FK__produit__ss_rubr__1B0907CE" FromRole="produit" ToRole="sous_rubrique" />
+          <NavigationProperty Name="tva" Relationship="Self.FK__produit__tva_id__1CF15040" FromRole="produit" ToRole="tva" />
+        </EntityType>
+        <EntityType Name="rubrique">
+          <Key>
+            <PropertyRef Name="rubrique_id" />
+          </Key>
+          <Property Name="rubrique_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rubrique_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sous_rubrique" Relationship="Self.FK__sous_rubr__rubri__164452B1" FromRole="rubrique" ToRole="sous_rubrique" />
+        </EntityType>
+        <EntityType Name="sous_rubrique">
+          <Key>
+            <PropertyRef Name="ss_rubrique_id" />
+          </Key>
+          <Property Name="ss_rubrique_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ss_rubrique_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rubrique_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="produit" Relationship="Self.FK__produit__ss_rubr__1B0907CE" FromRole="sous_rubrique" ToRole="produit" />
+          <NavigationProperty Name="rubrique" Relationship="Self.FK__sous_rubr__rubri__164452B1" FromRole="sous_rubrique" ToRole="rubrique" />
+        </EntityType>
+        <EntityType Name="tva">
+          <Key>
+            <PropertyRef Name="tva_id" />
+          </Key>
+          <Property Name="tva_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tva_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tva_taux" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <NavigationProperty Name="produit" Relationship="Self.FK__produit__tva_id__1CF15040" FromRole="tva" ToRole="produit" />
+        </EntityType>
+        <Association Name="FK__bon_livra__comma__25869641">
+          <End Role="commande" Type="Self.commande" Multiplicity="1" />
+          <End Role="bon_livraison" Type="Self.bon_livraison" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commande">
+              <PropertyRef Name="commande_id" />
+            </Principal>
+            <Dependent Role="bon_livraison">
+              <PropertyRef Name="commande_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___livra__286302EC">
+          <End Role="bon_livraison" Type="Self.bon_livraison" Multiplicity="1" />
+          <End Role="ligne_de_livraison" Type="Self.ligne_de_livraison" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bon_livraison">
+              <PropertyRef Name="livraison_id" />
+            </Principal>
+            <Dependent Role="ligne_de_livraison">
+              <PropertyRef Name="livraison_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__client__commerci__1FCDBCEB">
+          <End Role="commercial" Type="Self.commercial" Multiplicity="0..1" />
+          <End Role="client" Type="Self.client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commercial">
+              <PropertyRef Name="commercial_id" />
+            </Principal>
+            <Dependent Role="client">
+              <PropertyRef Name="commercial_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__commande__client__22AA2996">
+          <End Role="client" Type="Self.client" Multiplicity="1" />
+          <End Role="commande" Type="Self.commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="client_id" />
+            </Principal>
+            <Dependent Role="commande">
+              <PropertyRef Name="client_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___comma__2C3393D0">
+          <End Role="commande" Type="Self.commande" Multiplicity="1" />
+          <End Role="ligne_de_commande" Type="Self.ligne_de_commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="commande">
+              <PropertyRef Name="commande_id" />
+            </Principal>
+            <Dependent Role="ligne_de_commande">
+              <PropertyRef Name="commande_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__produit__fournis__1BFD2C07">
+          <End Role="fournisseur" Type="Self.fournisseur" Multiplicity="1" />
+          <End Role="produit" Type="Self.produit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fournisseur">
+              <PropertyRef Name="fournisseur_id" />
+            </Principal>
+            <Dependent Role="produit">
+              <PropertyRef Name="fournisseur_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___produ__2D27B809">
+          <End Role="produit" Type="Self.produit" Multiplicity="1" />
+          <End Role="ligne_de_commande" Type="Self.ligne_de_commande" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produit">
+              <PropertyRef Name="produit_id" />
+            </Principal>
+            <Dependent Role="ligne_de_commande">
+              <PropertyRef Name="produit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ligne_de___produ__29572725">
+          <End Role="produit" Type="Self.produit" Multiplicity="1" />
+          <End Role="ligne_de_livraison" Type="Self.ligne_de_livraison" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produit">
+              <PropertyRef Name="produit_id" />
+            </Principal>
+            <Dependent Role="ligne_de_livraison">
+              <PropertyRef Name="produit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__produit__ss_rubr__1B0907CE">
+          <End Role="sous_rubrique" Type="Self.sous_rubrique" Multiplicity="1" />
+          <End Role="produit" Type="Self.produit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sous_rubrique">
+              <PropertyRef Name="ss_rubrique_id" />
+            </Principal>
+            <Dependent Role="produit">
+              <PropertyRef Name="ss_rubrique_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__produit__tva_id__1CF15040">
+          <End Role="tva" Type="Self.tva" Multiplicity="1" />
+          <End Role="produit" Type="Self.produit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tva">
+              <PropertyRef Name="tva_id" />
+            </Principal>
+            <Dependent Role="produit">
+              <PropertyRef Name="tva_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sous_rubr__rubri__164452B1">
+          <End Role="rubrique" Type="Self.rubrique" Multiplicity="1" />
+          <End Role="sous_rubrique" Type="Self.sous_rubrique" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rubrique">
+              <PropertyRef Name="rubrique_id" />
+            </Principal>
+            <Dependent Role="sous_rubrique">
+              <PropertyRef Name="rubrique_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="villagegreenEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bon_livraison" EntityType="Self.bon_livraison" />
+          <EntitySet Name="client" EntityType="Self.client" />
+          <EntitySet Name="commande" EntityType="Self.commande" />
+          <EntitySet Name="commercial" EntityType="Self.commercial" />
+          <EntitySet Name="fournisseur" EntityType="Self.fournisseur" />
+          <EntitySet Name="ligne_de_commande" EntityType="Self.ligne_de_commande" />
+          <EntitySet Name="ligne_de_livraison" EntityType="Self.ligne_de_livraison" />
+          <EntitySet Name="produit" EntityType="Self.produit" />
+          <EntitySet Name="rubrique" EntityType="Self.rubrique" />
+          <EntitySet Name="sous_rubrique" EntityType="Self.sous_rubrique" />
+          <EntitySet Name="tva" EntityType="Self.tva" />
+          <AssociationSet Name="FK__bon_livra__comma__25869641" Association="Self.FK__bon_livra__comma__25869641">
+            <End Role="commande" EntitySet="commande" />
+            <End Role="bon_livraison" EntitySet="bon_livraison" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___livra__286302EC" Association="Self.FK__ligne_de___livra__286302EC">
+            <End Role="bon_livraison" EntitySet="bon_livraison" />
+            <End Role="ligne_de_livraison" EntitySet="ligne_de_livraison" />
+          </AssociationSet>
+          <AssociationSet Name="FK__client__commerci__1FCDBCEB" Association="Self.FK__client__commerci__1FCDBCEB">
+            <End Role="commercial" EntitySet="commercial" />
+            <End Role="client" EntitySet="client" />
+          </AssociationSet>
+          <AssociationSet Name="FK__commande__client__22AA2996" Association="Self.FK__commande__client__22AA2996">
+            <End Role="client" EntitySet="client" />
+            <End Role="commande" EntitySet="commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___comma__2C3393D0" Association="Self.FK__ligne_de___comma__2C3393D0">
+            <End Role="commande" EntitySet="commande" />
+            <End Role="ligne_de_commande" EntitySet="ligne_de_commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK__produit__fournis__1BFD2C07" Association="Self.FK__produit__fournis__1BFD2C07">
+            <End Role="fournisseur" EntitySet="fournisseur" />
+            <End Role="produit" EntitySet="produit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___produ__2D27B809" Association="Self.FK__ligne_de___produ__2D27B809">
+            <End Role="produit" EntitySet="produit" />
+            <End Role="ligne_de_commande" EntitySet="ligne_de_commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ligne_de___produ__29572725" Association="Self.FK__ligne_de___produ__29572725">
+            <End Role="produit" EntitySet="produit" />
+            <End Role="ligne_de_livraison" EntitySet="ligne_de_livraison" />
+          </AssociationSet>
+          <AssociationSet Name="FK__produit__ss_rubr__1B0907CE" Association="Self.FK__produit__ss_rubr__1B0907CE">
+            <End Role="sous_rubrique" EntitySet="sous_rubrique" />
+            <End Role="produit" EntitySet="produit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__produit__tva_id__1CF15040" Association="Self.FK__produit__tva_id__1CF15040">
+            <End Role="tva" EntitySet="tva" />
+            <End Role="produit" EntitySet="produit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sous_rubr__rubri__164452B1" Association="Self.FK__sous_rubr__rubri__164452B1">
+            <End Role="rubrique" EntitySet="rubrique" />
+            <End Role="sous_rubrique" EntitySet="sous_rubrique" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="villagegreenModelStoreContainer" CdmEntityContainer="villagegreenEntities">
+          <EntitySetMapping Name="bon_livraison">
+            <EntityTypeMapping TypeName="villagegreenModel.bon_livraison">
+              <MappingFragment StoreEntitySet="bon_livraison">
+                <ScalarProperty Name="livraison_id" ColumnName="livraison_id" />
+                <ScalarProperty Name="livraison_date" ColumnName="livraison_date" />
+                <ScalarProperty Name="commande_id" ColumnName="commande_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="client">
+            <EntityTypeMapping TypeName="villagegreenModel.client">
+              <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="client_categorie" ColumnName="client_categorie" />
+                <ScalarProperty Name="client_nom" ColumnName="client_nom" />
+                <ScalarProperty Name="client_prenom" ColumnName="client_prenom" />
+                <ScalarProperty Name="client_reduc" ColumnName="client_reduc" />
+                <ScalarProperty Name="client_adresse" ColumnName="client_adresse" />
+                <ScalarProperty Name="client_ville" ColumnName="client_ville" />
+                <ScalarProperty Name="client_cp" ColumnName="client_cp" />
+                <ScalarProperty Name="commercial_id" ColumnName="commercial_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="commande">
+            <EntityTypeMapping TypeName="villagegreenModel.commande">
+              <MappingFragment StoreEntitySet="commande">
+                <ScalarProperty Name="commande_id" ColumnName="commande_id" />
+                <ScalarProperty Name="commande_reduc" ColumnName="commande_reduc" />
+                <ScalarProperty Name="commande_etat" ColumnName="commande_etat" />
+                <ScalarProperty Name="commande_reglt" ColumnName="commande_reglt" />
+                <ScalarProperty Name="commande_date" ColumnName="commande_date" />
+                <ScalarProperty Name="commande_paye" ColumnName="commande_paye" />
+                <ScalarProperty Name="livraison_adr" ColumnName="livraison_adr" />
+                <ScalarProperty Name="livraison_ville" ColumnName="livraison_ville" />
+                <ScalarProperty Name="livraison_cp" ColumnName="livraison_cp" />
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="facture_id" ColumnName="facture_id" />
+                <ScalarProperty Name="facture_date" ColumnName="facture_date" />
+                <ScalarProperty Name="facture_montant" ColumnName="facture_montant" />
+                <ScalarProperty Name="facture_adre" ColumnName="facture_adre" />
+                <ScalarProperty Name="facture_ville" ColumnName="facture_ville" />
+                <ScalarProperty Name="facture_cp" ColumnName="facture_cp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="commercial">
+            <EntityTypeMapping TypeName="villagegreenModel.commercial">
+              <MappingFragment StoreEntitySet="commercial">
+                <ScalarProperty Name="commercial_id" ColumnName="commercial_id" />
+                <ScalarProperty Name="commercial_nom" ColumnName="commercial_nom" />
+                <ScalarProperty Name="commercial_prenom" ColumnName="commercial_prenom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fournisseur">
+            <EntityTypeMapping TypeName="villagegreenModel.fournisseur">
+              <MappingFragment StoreEntitySet="fournisseur">
+                <ScalarProperty Name="fournisseur_id" ColumnName="fournisseur_id" />
+                <ScalarProperty Name="fournisseur_nom" ColumnName="fournisseur_nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ligne_de_commande">
+            <EntityTypeMapping TypeName="villagegreenModel.ligne_de_commande">
+              <MappingFragment StoreEntitySet="ligne_de_commande">
+                <ScalarProperty Name="lignecom_id" ColumnName="lignecom_id" />
+                <ScalarProperty Name="lignecom_qte" ColumnName="lignecom_qte" />
+                <ScalarProperty Name="prix_fixe" ColumnName="prix_fixe" />
+                <ScalarProperty Name="commande_id" ColumnName="commande_id" />
+                <ScalarProperty Name="produit_id" ColumnName="produit_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ligne_de_livraison">
+            <EntityTypeMapping TypeName="villagegreenModel.ligne_de_livraison">
+              <MappingFragment StoreEntitySet="ligne_de_livraison">
+                <ScalarProperty Name="ligneliv_id" ColumnName="ligneliv_id" />
+                <ScalarProperty Name="ligneliv_qte" ColumnName="ligneliv_qte" />
+                <ScalarProperty Name="livraison_id" ColumnName="livraison_id" />
+                <ScalarProperty Name="produit_id" ColumnName="produit_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="produit">
+            <EntityTypeMapping TypeName="villagegreenModel.produit">
+              <MappingFragment StoreEntitySet="produit">
+                <ScalarProperty Name="produit_id" ColumnName="produit_id" />
+                <ScalarProperty Name="produit_nomcourt" ColumnName="produit_nomcourt" />
+                <ScalarProperty Name="produit_nom" ColumnName="produit_nom" />
+                <ScalarProperty Name="produit_photo" ColumnName="produit_photo" />
+                <ScalarProperty Name="produit_prixachat" ColumnName="produit_prixachat" />
+                <ScalarProperty Name="produit_etat" ColumnName="produit_etat" />
+                <ScalarProperty Name="produit_prixht" ColumnName="produit_prixht" />
+                <ScalarProperty Name="produit_validite" ColumnName="produit_validite" />
+                <ScalarProperty Name="ss_rubrique_id" ColumnName="ss_rubrique_id" />
+                <ScalarProperty Name="fournisseur_id" ColumnName="fournisseur_id" />
+                <ScalarProperty Name="tva_id" ColumnName="tva_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rubrique">
+            <EntityTypeMapping TypeName="villagegreenModel.rubrique">
+              <MappingFragment StoreEntitySet="rubrique">
+                <ScalarProperty Name="rubrique_id" ColumnName="rubrique_id" />
+                <ScalarProperty Name="rubrique_nom" ColumnName="rubrique_nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sous_rubrique">
+            <EntityTypeMapping TypeName="villagegreenModel.sous_rubrique">
+              <MappingFragment StoreEntitySet="sous_rubrique">
+                <ScalarProperty Name="ss_rubrique_id" ColumnName="ss_rubrique_id" />
+                <ScalarProperty Name="ss_rubrique_nom" ColumnName="ss_rubrique_nom" />
+                <ScalarProperty Name="rubrique_id" ColumnName="rubrique_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tva">
+            <EntityTypeMapping TypeName="villagegreenModel.tva">
+              <MappingFragment StoreEntitySet="tva">
+                <ScalarProperty Name="tva_id" ColumnName="tva_id" />
+                <ScalarProperty Name="tva_nom" ColumnName="tva_nom" />
+                <ScalarProperty Name="tva_taux" ColumnName="tva_taux" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
