@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50B1A0C1-1552-4F7E-BBDD-6B201A6651A6}</ProjectGuid>
+    <ProjectGuid>{AEE4B0D1-C279-4818-8138-F9CC29D76511}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>prgvillage</RootNamespace>
-    <AssemblyName>prgvillage</AssemblyName>
+    <RootNamespace>ValidEmail</RootNamespace>
+    <AssemblyName>ValidEmail</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,43 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="villagegreenDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>villagegreenDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="villagegreenDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>villagegreenDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="villagegreenDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>villagegreenDataSet2.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,48 +75,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="villagegreenDataSet.xsc">
-      <DependentUpon>villagegreenDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="villagegreenDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>villagegreenDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="villagegreenDataSet.xss">
-      <DependentUpon>villagegreenDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="villagegreenDataSet1.xsc">
-      <DependentUpon>villagegreenDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="villagegreenDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>villagegreenDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="villagegreenDataSet1.xss">
-      <DependentUpon>villagegreenDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="villagegreenDataSet2.xsc">
-      <DependentUpon>villagegreenDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="villagegreenDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>villagegreenDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="villagegreenDataSet2.xss">
-      <DependentUpon>villagegreenDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MesClasses\MesClasses.csproj">
-      <Project>{2f21a6cc-6ed7-462c-ad9b-ec51c7c7440c}</Project>
-      <Name>MesClasses</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

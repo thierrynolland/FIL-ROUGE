@@ -5,6 +5,9 @@ use villagegreen
 create table fournisseur (
 	fournisseur_id 		int identity primary key not null,
 	fournisseur_nom 	varchar(50) not null
+	fournisseur_adresse varchar(100),
+	fournisseur_cp varchar(5),
+	fournisseur_ville varchar(100)
 )
 go
 
@@ -128,171 +131,61 @@ create index indexproduit on produit(produit_id)
 go	
 
 
-/* ____________________  */
+/* __LES LOGINS CREES DANS MASTER____  */
 
-
-
-
-
-create login ut1 with password ='pwdut1', default_database = [villagegreen], check_expiration= off, check_policy=off
+use master
+go
+create login admi with password ='adm', default_database = [villagegreen], check_expiration= off, check_policy=off
 go	
-create login ut2 with password ='pwdut2', default_database = [villagegreen], check_expiration= off, check_policy=off
+create login comm with password ='com', default_database = [villagegreen], check_expiration= off, check_policy=off
 go	
-create login ut3 with password ='pwdut3', default_database = [villagegreen], check_expiration= off, check_policy=off
+create login gest with password ='ges', default_database = [villagegreen], check_expiration= off, check_policy=off
+go	
+create login client with password ='cli', default_database = [villagegreen], check_expiration= off, check_policy=off
 go
-create login ut4 with password ='pwdut4', default_database = [villagegreen], check_expiration= off, check_policy=off
-go
-create login ut5 with password ='pwdut5', default_database = [villagegreen], check_expiration= off, check_policy=off
-go
-create login ut6 with password ='pwdut6', default_database = [villagegreen], check_expiration= off, check_policy=off
-go
-create login ut7 with password ='pwdut7', default_database = [villagegreen], check_expiration= off, check_policy=off
-go
-create login ut8 with password ='pwdut8', default_database = [villagegreen], check_expiration= off, check_policy=off
-go
-create login ut9 with password ='pwdut9', default_database = [villagegreen], check_expiration= off, check_policy=off
-go
-create login ut10 with password ='pwdut10', default_database = [villagegreen], check_expiration= off, check_policy=off
+create login consu with password ='con', default_database = [villagegreen], check_expiration= off, check_policy=off
 go
 
-/* ____________________  */
+
+
+/* ___LES USERS CREES DANS VILLAGEGREEN_________________  */
 
 use villagegreen
-create user ut1 for login ut1
 go
-create user ut2 for login ut2
+
+create user admi for login admi
 go
-create user ut3 for login ut3
+create user comm for login comm
 go
-create user ut4 for login ut4
+create user gest for login gest
 go
-create user ut5 for login ut5
+create user client for login client
 go
-create user ut6 for login ut6
-go
-create user ut7 for login ut7
-go
-create user ut8 for login ut8
-go
-create user ut9 for login ut9
-go
-create user ut10 for login ut10
+create user consu for login consu
 go
 
 
-/* j'ai remplacé tout ça par le role db_owner  qui existe déjà par défaut, donc pas besoin de le créer
-create role roleadmin
-	grant select on client to roleadmin
- 	grant select on commande to roleadmin
- 	grant select on produit to roleadmin
- 	grant select on commercial to roleadmin
- 	grant select on fournisseur to roleadmin
- 	grant select on ligne_de_commande to roleadmin
- 	grant select on ligne_de_livraison to roleadmin
- 	grant select on sous_rubrique to roleadmin
- 	grant select on rubrique to roleadmin
- 	grant select on bon_livraison to roleadmin
-
- 	grant update on client to roleadmin
- 	grant update on commande to roleadmin
- 	grant update on produit to roleadmin
- 	grant update on commercial to roleadmin
- 	grant update on fournisseur to roleadmin
- 	grant update on ligne_de_commande to roleadmin
- 	grant update on ligne_de_livraison to roleadmin
- 	grant update on sous_rubrique to roleadmin
- 	grant update on rubrique to roleadmin
- 	grant update on bon_livraison to roleadmin
-
- 	grant delete on client to roleadmin
- 	grant delete on commande to roleadmin
- 	grant delete on produit to roleadmin
- 	grant delete on commercial to roleadmin
- 	grant delete on fournisseur to roleadmin
-	grant delete on ligne_de_commande to roleadmin
- 	grant delete on ligne_de_livraison to roleadmin
- 	grant delete on sous_rubrique to roleadmin
- 	grant delete on rubrique to roleadmin
- 	grant delete on bon_livraison to roleadmin
-
- 	grant insert on client to roleadmin
- 	grant insert on commande to roleadmin
- 	grant insert on produit to roleadmin
- 	grant insert on commercial to roleadmin
- 	grant insert on fournisseur to roleadmin
- 	grant insert on ligne_de_commande to roleadmin
- 	grant insert on ligne_de_livraison to roleadmin
- 	grant insert on sous_rubrique to roleadmin
- 	grant insert on rubrique to roleadmin
- 	grant insert on bon_livraison to roleadmin
-execute sp_addrolemember 'roleadmin','ut1'
-execute sp_droprolemember 'roleadmin','ut1'
-
-*/
-
-create role roleconsult 
- 	grant select on client to roleconsult
- 	grant select on commande to roleconsult
- 	grant select on produit to roleconsult
- 	grant select on commercial to roleconsult
- 	grant select on fournisseur to roleconsult
- 	grant select on ligne_de_commande to roleconsult
- 	grant select on ligne_de_livraison to roleconsult
- 	grant select on sous_rubrique to roleconsult
- 	grant select on rubrique to roleconsult
- 	grant select on bon_livraison to roleconsult
-go
+/* les roles dans villagegreen */
 create role rolegestion
-	grant select on client to rolegestion
-	grant update on client to rolegestion
-	grant insert on client to rolegestion
-	grant delete on client to rolegestion
-
-	grant select on  rubrique to rolegestion
-	grant update on  rubrique to rolegestion
-	grant insert on  rubrique to rolegestion
-	grant delete on  rubrique to rolegestion
-
-	grant select on sous_rubrique to rolegestion
-	grant update on sous_rubrique to rolegestion
-	grant insert on sous_rubrique to rolegestion
-	grant delete on sous_rubrique to rolegestion
-
-	grant select on commande to rolegestion
-	grant update on commande to rolegestion
-	grant insert on commande to rolegestion
-	grant delete on commande to rolegestion
-
-	grant select on fournisseur to rolegestion
-	grant update on fournisseur to rolegestion
-	grant insert on fournisseur to rolegestion
-	grant delete on fournisseur to rolegestion
-
-
-	grant select on bon_livraison to rolegestion
-	grant update on bon_livraison to rolegestion
-	grant insert on bon_livraison to rolegestion
-	grant delete on bon_livraison to rolegestion
-
-	grant select on ligne_de_commande to rolegestion
-	grant update on ligne_de_commande to rolegestion
-	grant insert on ligne_de_commande to rolegestion
-	grant delete on ligne_de_commande to rolegestion
-
-	grant select on ligne_de_livraison to rolegestion
-	grant update on ligne_de_livraison to rolegestion
-	grant insert on ligne_de_livraison to rolegestion
-	grant delete on ligne_de_livraison to rolegestion
-
-	grant select on commercial to rolegestion
-	grant update on commercial to rolegestion
-	grant insert on commercial to rolegestion
-	grant delete on commercial to rolegestion
-
-	grant select on produit to rolegestion
 	grant update on produit to rolegestion
 	grant insert on produit to rolegestion
 	grant delete on produit to rolegestion
+	grant select on produit to rolegestion
+
+	grant update on rubrique to rolegestion
+	grant insert on rubrique to rolegestion
+	grant delete on rubrique to rolegestion
+	grant select on rubrique to rolegestion
+
+	grant update on sous_rubrique to rolegestion
+	grant insert on sous_rubrique to rolegestion
+	grant delete on sous_rubrique to rolegestion
+	grant select on sous_rubrique to rolegestion
+
+
+	grant update on fournisseur to rolegestion
+	grant insert on fournisseur to rolegestion
+	grant select on fournisseur to rolegestion
 
 go
 
@@ -300,41 +193,72 @@ create role roleclient
 	
 	grant update on client to roleclient
 	grant insert on client to roleclient
-	grant delete on client to roleclient
-	
+	grant select on client to roleclient
+
+
+	grant select on produit to roleclient
+	grant select on rubrique to roleclient
+	grant select on sous_rubrique to roleclient
+
+
+
 	grant update on commande to roleclient
 	grant insert on commande to roleclient
-	grant delete on commande to roleclient
+	grant select on commande to roleclient
+
 	
 	grant update on ligne_de_commande to roleclient
 	grant insert on ligne_de_commande to roleclient
 	grant delete on ligne_de_commande to roleclient
-
-	grant select on client to roleclient
- 	grant select on commande to roleclient
- 	grant select on produit to roleclient
- 	grant select on commercial to roleclient
- 	grant select on fournisseur to roleclient
- 	grant select on ligne_de_commande to roleclient
- 	grant select on ligne_de_livraison to roleclient
- 	grant select on sous_rubrique to roleclient
- 	grant select on rubrique to roleclient
- 	grant select on bon_livraison to roleclient
-
-
-
+	grant select on ligne_de_commande to roleclient
 go
 
-execute sp_addrolemember 'db_owner','ut1'
-execute sp_addrolemember 'rolegestion','ut2'
-execute sp_addrolemember 'roleconsult','ut3'
-execute sp_addrolemember 'roleconsult','ut4'
-execute sp_addrolemember 'roleconsult','ut5'
-execute sp_addrolemember 'roleonsult','ut6'
-execute sp_addrolemember 'roleconsult','ut7'
-execute sp_addrolemember 'roleclient','ut8'
-execute sp_addrolemember 'roleclient','ut9'
-execute sp_addrolemember 'roleclient','ut10'
+create role roleconsult
+	grant select on produit to roleconsult
+	grant select on rubrique to roleconsult
+	grant select on sous_rubrique to roleconsult
+go
+
+create role rolecommercial
+	grant select on produit to rolecommercial
+	grant select on rubrique to rolecommercial
+	grant select on sous_rubrique to rolecommercial
+
+
+	grant update on client to rolecommercial
+	grant insert on client to rolecommercial
+	grant select on client to rolecommercial
+
+	grant update on commande to rolecommercial
+	grant insert on commande to rolecommercial
+	grant select on commande to rolecommercial
+
+	
+	grant update on ligne_de_commande to rolecommercial
+	grant insert on ligne_de_commande to rolecommercial
+	grant delete on ligne_de_commande to rolecommercial
+	grant select on ligne_de_commande to rolecommercial
+	
+go
+
+grant select on utilisateur to rolecommercial
+grant select on utilisateur to rolegestion
+grant select on utilisateur to roleclient
+
+grant update on utilisateur to rolecommercial
+grant update on utilisateur to roleclient
+
+grant insert on utilisateur to rolecommercial
+grant insert on utilisateur to roleclient
+go
+
+execute sp_addrolemember 'db_owner','admi'
+execute sp_addrolemember 'roleclient','client'
+execute sp_addrolemember 'rolegestion','gest'
+execute sp_addrolemember 'rolecommercial','comm'
+execute sp_addrolemember 'roleconsult','consu'
+
+
 
 /* -------------------------------------------------------*/
 
