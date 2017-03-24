@@ -39,12 +39,12 @@ namespace MesClasses
             MaConnexion.Open();
             SqlCommand requete5 = new SqlCommand("Select * from rubrique where rubrique_id=@id", MaConnexion);
             requete5.Parameters.AddWithValue("@id", id);
-            SqlDataReader resultat = requete5.ExecuteReader();
-            resultat.Read();
+            SqlDataReader lecture = requete5.ExecuteReader();
+            lecture.Read();
             Rubrique NouveauRubrique = new Rubrique();
-            NouveauRubrique.Id = Convert.ToInt32(resultat["rubrique_id"].ToString());
-            NouveauRubrique.Nom = resultat["rubrique_nom"].ToString();
-            resultat.Close();
+            NouveauRubrique.Id = Convert.ToInt32(lecture["rubrique_id"].ToString());
+            NouveauRubrique.Nom = lecture["rubrique_nom"].ToString();
+            lecture.Close();
             MaConnexion.Close();
             return NouveauRubrique;
         }
@@ -66,51 +66,7 @@ namespace MesClasses
             MaConnexion.Close();
             return resultat;
         }
-        //public double TrouverCATotalRubrique()
-        //{
-        //    double CATotalrub = 0;
-        //    MaConnexion.Open();
-        //    SqlCommand requete6 = new SqlCommand("select sum(lignecom_qte*prix_fixe) As 'CAHTTotal' from ligne_de_commande", MaConnexion);
-        //    SqlDataReader resultat = requete6.ExecuteReader();
-        //    resultat.Read();
-        //    CATotalrub = Convert.ToDouble(resultat["CAHTTotal"].ToString());
-        //    resultat.Close();
-        //    MaConnexion.Close();
-        //    return CATotalrub;
-        //}
-        //public double TrouverCARubrique(int id)
-        //{
-        //    double CArub = 0;
-        //    MaConnexion.Open();
-        //    SqlCommand requete7 = new SqlCommand("select Rubrique.Rubrique_id, sum(lignecom_qte*prix_fixe) as 'total' from ligne_de_commande JOIN	PRODUIT ON	ligne_de_commande.produit_id = produit.produit_id JOIN	Rubrique	ON	produit.Rubrique_id=Rubrique.Rubrique_id where Rubrique.Rubrique_id=@id group by Rubrique.Rubrique_id", MaConnexion);
-        //    requete7.Parameters.AddWithValue("@id", id);
-        //    SqlDataReader resultat = requete7.ExecuteReader();
-        //    if (resultat.Read())
-        //    {
-        //        CArub = Convert.ToDouble(resultat["total"].ToString());
-        //    }
-        //    resultat.Close();
-        //    MaConnexion.Close();
-        //    return CArub;
-        //}
-        //public double ListCARubrique(int id)
-        //{
-        //    double CArub = 0;
-        //    MaConnexion.Open();
-        //    SqlCommand requete7 = new SqlCommand("select Rubrique.Rubrique_id, sum(lignecom_qte*prix_fixe) as 'total' from ligne_de_commande JOIN	PRODUIT ON	ligne_de_commande.produit_id = produit.produit_id JOIN	Rubrique	ON	produit.Rubrique_id=Rubrique.Rubrique_id where Rubrique.Rubrique_id=@id group by Rubrique.Rubrique_id", MaConnexion);
-        //    requete7.Parameters.AddWithValue("@id", id);
-        //    SqlDataReader resultat = requete7.ExecuteReader();
-        //    if (resultat.Read())
-        //    {
-        //        CArub = Convert.ToDouble(resultat["total"].ToString());
-        //    }
-        //    resultat.Close();
-        //    MaConnexion.Close();
-        //    return CArub;
-
-
-        //}
-
+       
 
     }
 }

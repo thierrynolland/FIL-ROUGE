@@ -17,7 +17,7 @@ namespace MesClasses
         public void Insert(SousRubrique ssrub)
         {
             MaConnexion.Open();
-            SqlCommand requete1 = new SqlCommand("insert into sous_rubrique (ss_rubrique_nom,rubrique_id) values (@nom,@rubriqueID)", MaConnexion);
+            SqlCommand requete1 = new SqlCommand("insert into sous_rubrique (ss_rubrique_nom,rubrique_id) values (@nom,@rubriqueid)", MaConnexion);
             requete1.Parameters.AddWithValue("@nom", ssrub.Nom);
             requete1.Parameters.AddWithValue("@rubriqueid", ssrub.SousRubriqueId);
             requete1.ExecuteNonQuery();
@@ -30,7 +30,7 @@ namespace MesClasses
             SqlCommand requete3 = new SqlCommand("update sous_rubrique set ss_rubrique_nom=@nom, rubrique_id=@rubriqueid from sous_rubrique where ss_rubrique_id = @id", MaConnexion);
             requete3.Parameters.AddWithValue("@id", ssrub.Id);
             requete3.Parameters.AddWithValue("@nom", ssrub.Nom);
-            requete3.Parameters.AddWithValue("@nom", ssrub.SousRubriqueId);
+            requete3.Parameters.AddWithValue("@rubriqueid", ssrub.SousRubriqueId);
             requete3.ExecuteNonQuery();
             MaConnexion.Close();
 
@@ -51,12 +51,12 @@ namespace MesClasses
             MaConnexion.Close();
             return Nouveaussrubrique;
         }
-        public List<SousRubrique> List()
+        public List<SousRubrique> List(int id)
         {
             MaConnexion.Open();
             List<SousRubrique> resultat = new List<SousRubrique>();
-            SqlCommand requete = new SqlCommand("select * from sous_rubrique", MaConnexion);
-
+            SqlCommand requete = new SqlCommand("select * from sous_rubrique where rubrique_id=@id", MaConnexion);
+            requete.Parameters.AddWithValue("@id", id);
             SqlDataReader lecture = requete.ExecuteReader();
             while (lecture.Read())
             {
@@ -70,52 +70,9 @@ namespace MesClasses
             MaConnexion.Close();
             return resultat;
         }
-        //public double TrouverCATotalsous_rubrique()
-        //{
-        //    double CATotalrub = 0;
-        //    MaConnexion.Open();
-        //    SqlCommand requete6 = new SqlCommand("select sum(lignecom_qte*prix_fixe) As 'CAHTTotal' from ligne_de_commande", MaConnexion);
-        //    SqlDataReader resultat = requete6.ExecuteReader();
-        //    resultat.Read();
-        //    CATotalrub = Convert.ToDouble(resultat["CAHTTotal"].ToString());
-        //    resultat.Close();
-        //    MaConnexion.Close();
-        //    return CATotalrub;
-        //}
-        //public double TrouverCAsous_rubrique(int id)
-        //{
-        //    double CArub = 0;
-        //    MaConnexion.Open();
-        //    SqlCommand requete7 = new SqlCommand("select sous_rubrique.sous_rubrique_id, sum(lignecom_qte*prix_fixe) as 'total' from ligne_de_commande JOIN	PRODUIT ON	ligne_de_commande.produit_id = produit.produit_id JOIN	sous_rubrique	ON	produit.sous_rubrique_id=sous_rubrique.sous_rubrique_id where sous_rubrique.sous_rubrique_id=@id group by sous_rubrique.sous_rubrique_id", MaConnexion);
-        //    requete7.Parameters.AddWithValue("@id", id);
-        //    SqlDataReader resultat = requete7.ExecuteReader();
-        //    if (resultat.Read())
-        //    {
-        //        CArub = Convert.ToDouble(resultat["total"].ToString());
-        //    }
-        //    resultat.Close();
-        //    MaConnexion.Close();
-        //    return CArub;
-        //}
-        //public double ListCAsous_rubrique(int id)
-        //{
-        //    double CArub = 0;
-        //    MaConnexion.Open();
-        //    SqlCommand requete7 = new SqlCommand("select sous_rubrique.sous_rubrique_id, sum(lignecom_qte*prix_fixe) as 'total' from ligne_de_commande JOIN	PRODUIT ON	ligne_de_commande.produit_id = produit.produit_id JOIN	sous_rubrique	ON	produit.sous_rubrique_id=sous_rubrique.sous_rubrique_id where sous_rubrique.sous_rubrique_id=@id group by sous_rubrique.sous_rubrique_id", MaConnexion);
-        //    requete7.Parameters.AddWithValue("@id", id);
-        //    SqlDataReader resultat = requete7.ExecuteReader();
-        //    if (resultat.Read())
-        //    {
-        //        CArub = Convert.ToDouble(resultat["total"].ToString());
-        //    }
-        //    resultat.Close();
-        //    MaConnexion.Close();
-        //    return CArub;
 
-
-        //}
 
 
     }
 }
-}
+

@@ -48,11 +48,14 @@
     <Compile Include="FournisseurDAO.cs" />
     <Compile Include="LigneDeCommande.cs" />
     <Compile Include="Produit.cs" />
+    <Compile Include="ProduitDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rubrique.cs" />
     <Compile Include="RubriqueDAO.cs" />
     <Compile Include="SousRubrique.cs" />
     <Compile Include="SousRubriqueDAO.cs" />
+    <Compile Include="Tva.cs" />
+    <Compile Include="TvaDAO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

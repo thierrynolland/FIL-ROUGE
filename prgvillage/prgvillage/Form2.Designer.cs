@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -148,71 +149,83 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.label35 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.panelProduit2 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxProduitRubriqueAM = new System.Windows.Forms.ComboBox();
             this.button26 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
+            this.textBoxProduitNomcourtAM = new System.Windows.Forms.TextBox();
             this.button27 = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label34 = new System.Windows.Forms.Label();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.textBoxNomFichier = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.buttonAjouterPhoto = new System.Windows.Forms.Button();
+            this.textBoxProduitPrixVenteHTAM = new System.Windows.Forms.TextBox();
+            this.pictureBoxProduit = new System.Windows.Forms.PictureBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBoxProduitSSRubriqueAM = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBoxProduitNomlongAM = new System.Windows.Forms.TextBox();
+            this.textBoxProduitNumAM = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButtonProduitNonPubAM = new System.Windows.Forms.RadioButton();
+            this.radioButtonProduitPubAM = new System.Windows.Forms.RadioButton();
+            this.textBoxProduitPrixAchatAM = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.radioButtonProduitInactifAM = new System.Windows.Forms.RadioButton();
+            this.radioButtonProduitActifAM = new System.Windows.Forms.RadioButton();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.comboBoxProduitTVAAM = new System.Windows.Forms.ComboBox();
+            this.comboBoxProduitFournisseurAM = new System.Windows.Forms.ComboBox();
+            this.panelProduit1 = new System.Windows.Forms.Panel();
+            this.buttonProduitChercher = new System.Windows.Forms.Button();
+            this.textBoxProduitPrixMini = new System.Windows.Forms.TextBox();
+            this.labelPrixMini = new System.Windows.Forms.Label();
+            this.textBoxProduitPrixMax = new System.Windows.Forms.TextBox();
+            this.labelPrix = new System.Windows.Forms.Label();
+            this.groupBoxPub = new System.Windows.Forms.GroupBox();
+            this.radioButtonPasCatalogue = new System.Windows.Forms.RadioButton();
+            this.radioButtonCatalogue = new System.Windows.Forms.RadioButton();
+            this.groupBoxEtat = new System.Windows.Forms.GroupBox();
+            this.radioButtonInactif = new System.Windows.Forms.RadioButton();
+            this.radioButtonActif1 = new System.Windows.Forms.RadioButton();
+            this.dataGridViewProduit = new System.Windows.Forms.DataGridView();
+            this.label35 = new System.Windows.Forms.Label();
+            this.buttonModifier = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
+            this.comboBoxProduitID = new System.Windows.Forms.ComboBox();
+            this.comboBoxProduitRub = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.comboBoxProduitSSRub = new System.Windows.Forms.ComboBox();
+            this.buttonAjouterProduit = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxSSRubrique = new System.Windows.Forms.GroupBox();
+            this.buttonSSRubriqueAnnuler = new System.Windows.Forms.Button();
             this.label70 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.buttonSSRubriqueValider = new System.Windows.Forms.Button();
+            this.textBoxSSRubrique = new System.Windows.Forms.TextBox();
+            this.comboBoxSousRubriqueListe = new System.Windows.Forms.ComboBox();
+            this.comboBoxRubriqueListe2 = new System.Windows.Forms.ComboBox();
+            this.buttonSSRubriqueModifier = new System.Windows.Forms.Button();
+            this.buttonSSRubriqueAjouter = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.groupBoxRubrique = new System.Windows.Forms.GroupBox();
+            this.buttonRubriqueAnnuler = new System.Windows.Forms.Button();
+            this.buttonRubriqueValider = new System.Windows.Forms.Button();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
+            this.textBoxRubrique = new System.Windows.Forms.TextBox();
+            this.buttonRubriqueModifier = new System.Windows.Forms.Button();
+            this.buttonRubriqueAjouter = new System.Windows.Forms.Button();
+            this.comboBoxRubriqueListe1 = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
@@ -266,7 +279,11 @@
             this.textBoxTotalFourCA = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.ongletUtilisateur.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -287,12 +304,16 @@
             this.tabPage4.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage14.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panelProduit2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduit)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.panelProduit1.SuspendLayout();
+            this.groupBoxPub.SuspendLayout();
+            this.groupBoxEtat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduit)).BeginInit();
             this.tabPage1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBoxSSRubrique.SuspendLayout();
             this.groupBoxRubrique.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage5.SuspendLayout();
@@ -1566,23 +1587,13 @@
             this.tabControl5.SelectedIndex = 0;
             this.tabControl5.Size = new System.Drawing.Size(1383, 750);
             this.tabControl5.TabIndex = 2;
+            this.tabControl5.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl5_Selected);
             // 
             // tabPage14
             // 
             this.tabPage14.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage14.Controls.Add(this.label35);
-            this.tabPage14.Controls.Add(this.button21);
-            this.tabPage14.Controls.Add(this.button24);
-            this.tabPage14.Controls.Add(this.button25);
-            this.tabPage14.Controls.Add(this.label36);
-            this.tabPage14.Controls.Add(this.comboBox15);
-            this.tabPage14.Controls.Add(this.label37);
-            this.tabPage14.Controls.Add(this.comboBox16);
-            this.tabPage14.Controls.Add(this.groupBox2);
-            this.tabPage14.Controls.Add(this.label18);
-            this.tabPage14.Controls.Add(this.label23);
-            this.tabPage14.Controls.Add(this.comboBox5);
-            this.tabPage14.Controls.Add(this.comboBox13);
+            this.tabPage14.Controls.Add(this.panelProduit2);
+            this.tabPage14.Controls.Add(this.panelProduit1);
             this.tabPage14.Location = new System.Drawing.Point(4, 31);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
@@ -1590,129 +1601,57 @@
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "         Produit      ";
             // 
-            // label35
+            // panelProduit2
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("High Tower Text", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label35.Location = new System.Drawing.Point(217, 16);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(204, 44);
-            this.label35.TabIndex = 156;
-            this.label35.Text = "PRODUIT";
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Orange;
-            this.button21.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button21.FlatAppearance.BorderSize = 2;
-            this.button21.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(426, 273);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(163, 45);
-            this.button21.TabIndex = 6;
-            this.button21.Text = "SUPPRIMER";
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.Color.Orange;
-            this.button24.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button24.FlatAppearance.BorderSize = 2;
-            this.button24.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(426, 198);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(163, 45);
-            this.button24.TabIndex = 5;
-            this.button24.Text = "MODIFIER";
-            this.button24.UseVisualStyleBackColor = false;
-            // 
-            // button25
-            // 
-            this.button25.BackColor = System.Drawing.Color.Orange;
-            this.button25.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button25.FlatAppearance.BorderSize = 2;
-            this.button25.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(426, 130);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(163, 45);
-            this.button25.TabIndex = 4;
-            this.button25.Text = "AJOUTER";
-            this.button25.UseVisualStyleBackColor = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(36, 99);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(89, 28);
-            this.label36.TabIndex = 152;
-            this.label36.Text = "Choisir N°";
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(31, 130);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(101, 30);
-            this.comboBox15.TabIndex = 0;
+            this.panelProduit2.Controls.Add(this.label37);
+            this.panelProduit2.Controls.Add(this.comboBoxProduitRubriqueAM);
+            this.panelProduit2.Controls.Add(this.button26);
+            this.panelProduit2.Controls.Add(this.label30);
+            this.panelProduit2.Controls.Add(this.textBoxProduitNomcourtAM);
+            this.panelProduit2.Controls.Add(this.button27);
+            this.panelProduit2.Controls.Add(this.label32);
+            this.panelProduit2.Controls.Add(this.textBoxNomFichier);
+            this.panelProduit2.Controls.Add(this.label31);
+            this.panelProduit2.Controls.Add(this.buttonAjouterPhoto);
+            this.panelProduit2.Controls.Add(this.textBoxProduitPrixVenteHTAM);
+            this.panelProduit2.Controls.Add(this.pictureBoxProduit);
+            this.panelProduit2.Controls.Add(this.label29);
+            this.panelProduit2.Controls.Add(this.label26);
+            this.panelProduit2.Controls.Add(this.label28);
+            this.panelProduit2.Controls.Add(this.comboBoxProduitSSRubriqueAM);
+            this.panelProduit2.Controls.Add(this.label24);
+            this.panelProduit2.Controls.Add(this.textBoxProduitNomlongAM);
+            this.panelProduit2.Controls.Add(this.textBoxProduitNumAM);
+            this.panelProduit2.Controls.Add(this.groupBox4);
+            this.panelProduit2.Controls.Add(this.textBoxProduitPrixAchatAM);
+            this.panelProduit2.Controls.Add(this.groupBox7);
+            this.panelProduit2.Controls.Add(this.label33);
+            this.panelProduit2.Controls.Add(this.label34);
+            this.panelProduit2.Controls.Add(this.comboBoxProduitTVAAM);
+            this.panelProduit2.Controls.Add(this.comboBoxProduitFournisseurAM);
+            this.panelProduit2.Location = new System.Drawing.Point(2, 2);
+            this.panelProduit2.Name = "panelProduit2";
+            this.panelProduit2.Size = new System.Drawing.Size(23, 713);
+            this.panelProduit2.TabIndex = 170;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(215, 235);
+            this.label37.Location = new System.Drawing.Point(39, 111);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(127, 28);
-            this.label37.TabIndex = 150;
-            this.label37.Text = "Nom de produit";
+            this.label37.Size = new System.Drawing.Size(79, 28);
+            this.label37.TabIndex = 160;
+            this.label37.Text = "Rubrique";
             // 
-            // comboBox16
+            // comboBoxProduitRubriqueAM
             // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(147, 132);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(256, 30);
-            this.comboBox16.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox2.Controls.Add(this.button26);
-            this.groupBox2.Controls.Add(this.label30);
-            this.groupBox2.Controls.Add(this.button27);
-            this.groupBox2.Controls.Add(this.textBox24);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.pictureBox10);
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.comboBox17);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.groupBox7);
-            this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.comboBox14);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.label33);
-            this.groupBox2.Controls.Add(this.textBox21);
-            this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Controls.Add(this.textBox22);
-            this.groupBox2.Controls.Add(this.textBox23);
-            this.groupBox2.Controls.Add(this.textBox25);
-            this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Controls.Add(this.textBox27);
-            this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.label32);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(611, 16);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(508, 666);
-            this.groupBox2.TabIndex = 148;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Informations Produit";
+            this.comboBoxProduitRubriqueAM.FormattingEnabled = true;
+            this.comboBoxProduitRubriqueAM.Location = new System.Drawing.Point(173, 110);
+            this.comboBoxProduitRubriqueAM.Name = "comboBoxProduitRubriqueAM";
+            this.comboBoxProduitRubriqueAM.Size = new System.Drawing.Size(335, 30);
+            this.comboBoxProduitRubriqueAM.TabIndex = 159;
+            this.comboBoxProduitRubriqueAM.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitRubriqueAM_SelectedIndexChanged);
             // 
             // button26
             // 
@@ -1720,22 +1659,31 @@
             this.button26.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button26.FlatAppearance.BorderSize = 2;
             this.button26.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(262, 593);
+            this.button26.Location = new System.Drawing.Point(284, 591);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(163, 45);
             this.button26.TabIndex = 158;
             this.button26.Text = "ANNULER";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(17, 158);
+            this.label30.Location = new System.Drawing.Point(882, 246);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(95, 28);
             this.label30.TabIndex = 150;
             this.label30.Text = "Nom photo";
+            // 
+            // textBoxProduitNomcourtAM
+            // 
+            this.textBoxProduitNomcourtAM.Location = new System.Drawing.Point(392, 29);
+            this.textBoxProduitNomcourtAM.Name = "textBoxProduitNomcourtAM";
+            this.textBoxProduitNomcourtAM.Size = new System.Drawing.Size(116, 29);
+            this.textBoxProduitNomcourtAM.TabIndex = 1;
+            this.textBoxProduitNomcourtAM.TextChanged += new System.EventHandler(this.textBoxProduitNomcourtAM_TextChanged);
             // 
             // button27
             // 
@@ -1743,271 +1691,475 @@
             this.button27.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button27.FlatAppearance.BorderSize = 2;
             this.button27.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.Location = new System.Drawing.Point(75, 593);
+            this.button27.Location = new System.Drawing.Point(97, 591);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(163, 45);
             this.button27.TabIndex = 10;
             this.button27.Text = "VALIDER";
             this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
-            // textBox24
+            // label32
             // 
-            this.textBox24.Location = new System.Drawing.Point(151, 160);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(178, 28);
-            this.textBox24.TabIndex = 4;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(39, 306);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(97, 28);
+            this.label32.TabIndex = 34;
+            this.label32.Text = "Prix d\'achat";
             // 
-            // button10
+            // textBoxNomFichier
             // 
-            this.button10.BackColor = System.Drawing.Color.Orange;
-            this.button10.Location = new System.Drawing.Point(151, 229);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(146, 52);
-            this.button10.TabIndex = 123;
-            this.button10.Text = "Ajouter photo Parcourir";
-            this.button10.UseVisualStyleBackColor = false;
+            this.textBoxNomFichier.Enabled = false;
+            this.textBoxNomFichier.Location = new System.Drawing.Point(830, 277);
+            this.textBoxNomFichier.Name = "textBoxNomFichier";
+            this.textBoxNomFichier.Size = new System.Drawing.Size(210, 29);
+            this.textBoxNomFichier.TabIndex = 4;
+            this.textBoxNomFichier.TextChanged += new System.EventHandler(this.textBoxNomFichier_TextChanged);
             // 
-            // pictureBox10
+            // label31
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(340, 143);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(146, 138);
-            this.pictureBox10.TabIndex = 141;
-            this.pictureBox10.TabStop = false;
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(39, 67);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(101, 28);
+            this.label31.TabIndex = 37;
+            this.label31.Text = "Désignation";
+            // 
+            // buttonAjouterPhoto
+            // 
+            this.buttonAjouterPhoto.BackColor = System.Drawing.Color.Orange;
+            this.buttonAjouterPhoto.Location = new System.Drawing.Point(859, 329);
+            this.buttonAjouterPhoto.Name = "buttonAjouterPhoto";
+            this.buttonAjouterPhoto.Size = new System.Drawing.Size(146, 52);
+            this.buttonAjouterPhoto.TabIndex = 123;
+            this.buttonAjouterPhoto.Text = "Ajouter photo Parcourir";
+            this.buttonAjouterPhoto.UseVisualStyleBackColor = false;
+            this.buttonAjouterPhoto.Click += new System.EventHandler(this.buttonAjouterPhoto_Click);
+            // 
+            // textBoxProduitPrixVenteHTAM
+            // 
+            this.textBoxProduitPrixVenteHTAM.Location = new System.Drawing.Point(392, 306);
+            this.textBoxProduitPrixVenteHTAM.Name = "textBoxProduitPrixVenteHTAM";
+            this.textBoxProduitPrixVenteHTAM.Size = new System.Drawing.Size(116, 29);
+            this.textBoxProduitPrixVenteHTAM.TabIndex = 6;
+            this.textBoxProduitPrixVenteHTAM.TextChanged += new System.EventHandler(this.textBoxProduitPrixVenteHTAM_TextChanged);
+            // 
+            // pictureBoxProduit
+            // 
+            this.pictureBoxProduit.BackColor = System.Drawing.Color.White;
+            this.pictureBoxProduit.Location = new System.Drawing.Point(830, 26);
+            this.pictureBoxProduit.Name = "pictureBoxProduit";
+            this.pictureBoxProduit.Size = new System.Drawing.Size(210, 214);
+            this.pictureBoxProduit.TabIndex = 141;
+            this.pictureBoxProduit.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(293, 29);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(94, 28);
+            this.label29.TabIndex = 101;
+            this.label29.Text = "Nom Court";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(17, 106);
+            this.label26.Location = new System.Drawing.Point(39, 160);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(117, 28);
             this.label26.TabIndex = 148;
             this.label26.Text = "Sous Rubrique";
             // 
-            // comboBox17
+            // label28
             // 
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(151, 105);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(335, 29);
-            this.comboBox17.TabIndex = 3;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(279, 306);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(111, 28);
+            this.label28.TabIndex = 38;
+            this.label28.Text = "Prix vente HT";
+            // 
+            // comboBoxProduitSSRubriqueAM
+            // 
+            this.comboBoxProduitSSRubriqueAM.FormattingEnabled = true;
+            this.comboBoxProduitSSRubriqueAM.Location = new System.Drawing.Point(173, 159);
+            this.comboBoxProduitSSRubriqueAM.Name = "comboBoxProduitSSRubriqueAM";
+            this.comboBoxProduitSSRubriqueAM.Size = new System.Drawing.Size(335, 30);
+            this.comboBoxProduitSSRubriqueAM.TabIndex = 3;
+            this.comboBoxProduitSSRubriqueAM.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitSSRubriqueAM_SelectedIndexChanged);
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(17, 28);
+            this.label24.Location = new System.Drawing.Point(39, 26);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(72, 28);
             this.label24.TabIndex = 133;
             this.label24.Text = "Numéro";
             // 
-            // textBox14
+            // textBoxProduitNomlongAM
             // 
-            this.textBox14.Location = new System.Drawing.Point(151, 31);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(101, 28);
-            this.textBox14.TabIndex = 0;
+            this.textBoxProduitNomlongAM.Location = new System.Drawing.Point(173, 66);
+            this.textBoxProduitNomlongAM.Name = "textBoxProduitNomlongAM";
+            this.textBoxProduitNomlongAM.Size = new System.Drawing.Size(638, 29);
+            this.textBoxProduitNomlongAM.TabIndex = 2;
+            this.textBoxProduitNomlongAM.TextChanged += new System.EventHandler(this.textBoxProduitNomlongAM_TextChanged);
+            // 
+            // textBoxProduitNumAM
+            // 
+            this.textBoxProduitNumAM.Enabled = false;
+            this.textBoxProduitNumAM.Location = new System.Drawing.Point(173, 29);
+            this.textBoxProduitNumAM.Name = "textBoxProduitNumAM";
+            this.textBoxProduitNumAM.Size = new System.Drawing.Size(101, 29);
+            this.textBoxProduitNumAM.TabIndex = 0;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton2);
-            this.groupBox4.Controls.Add(this.radioButton1);
+            this.groupBox4.Controls.Add(this.radioButtonProduitNonPubAM);
+            this.groupBox4.Controls.Add(this.radioButtonProduitPubAM);
             this.groupBox4.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(262, 358);
+            this.groupBox4.Location = new System.Drawing.Point(284, 356);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(224, 92);
             this.groupBox4.TabIndex = 131;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Publication catalogue";
             // 
-            // radioButton2
+            // radioButtonProduitNonPubAM
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(142, 39);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(61, 32);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Non";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonProduitNonPubAM.AutoSize = true;
+            this.radioButtonProduitNonPubAM.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonProduitNonPubAM.Location = new System.Drawing.Point(142, 39);
+            this.radioButtonProduitNonPubAM.Name = "radioButtonProduitNonPubAM";
+            this.radioButtonProduitNonPubAM.Size = new System.Drawing.Size(61, 32);
+            this.radioButtonProduitNonPubAM.TabIndex = 1;
+            this.radioButtonProduitNonPubAM.TabStop = true;
+            this.radioButtonProduitNonPubAM.Text = "Non";
+            this.radioButtonProduitNonPubAM.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonProduitPubAM
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(55, 39);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 32);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Oui";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonProduitPubAM.AutoSize = true;
+            this.radioButtonProduitPubAM.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonProduitPubAM.Location = new System.Drawing.Point(55, 39);
+            this.radioButtonProduitPubAM.Name = "radioButtonProduitPubAM";
+            this.radioButtonProduitPubAM.Size = new System.Drawing.Size(56, 32);
+            this.radioButtonProduitPubAM.TabIndex = 0;
+            this.radioButtonProduitPubAM.TabStop = true;
+            this.radioButtonProduitPubAM.Text = "Oui";
+            this.radioButtonProduitPubAM.UseVisualStyleBackColor = true;
+            // 
+            // textBoxProduitPrixAchatAM
+            // 
+            this.textBoxProduitPrixAchatAM.Location = new System.Drawing.Point(173, 307);
+            this.textBoxProduitPrixAchatAM.Name = "textBoxProduitPrixAchatAM";
+            this.textBoxProduitPrixAchatAM.Size = new System.Drawing.Size(101, 29);
+            this.textBoxProduitPrixAchatAM.TabIndex = 5;
+            this.textBoxProduitPrixAchatAM.TextChanged += new System.EventHandler(this.textBoxProduitPrixAchatAM_TextChanged);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.radioButton3);
-            this.groupBox7.Controls.Add(this.radioButton4);
+            this.groupBox7.Controls.Add(this.radioButtonProduitInactifAM);
+            this.groupBox7.Controls.Add(this.radioButtonProduitActifAM);
             this.groupBox7.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(16, 358);
+            this.groupBox7.Location = new System.Drawing.Point(38, 356);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(236, 92);
             this.groupBox7.TabIndex = 130;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Etat";
             // 
-            // radioButton3
+            // radioButtonProduitInactifAM
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(103, 37);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(76, 32);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Inactif";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonProduitInactifAM.AutoSize = true;
+            this.radioButtonProduitInactifAM.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonProduitInactifAM.Location = new System.Drawing.Point(103, 37);
+            this.radioButtonProduitInactifAM.Name = "radioButtonProduitInactifAM";
+            this.radioButtonProduitInactifAM.Size = new System.Drawing.Size(76, 32);
+            this.radioButtonProduitInactifAM.TabIndex = 1;
+            this.radioButtonProduitInactifAM.TabStop = true;
+            this.radioButtonProduitInactifAM.Text = "Inactif";
+            this.radioButtonProduitInactifAM.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioButtonProduitActifAM
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(14, 37);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(63, 32);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Actif";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(17, 548);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(98, 28);
-            this.label34.TabIndex = 129;
-            this.label34.Text = "Fournisseur";
-            // 
-            // comboBox14
-            // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(151, 547);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(335, 29);
-            this.comboBox14.TabIndex = 9;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(151, 491);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(78, 29);
-            this.comboBox3.TabIndex = 7;
+            this.radioButtonProduitActifAM.AutoSize = true;
+            this.radioButtonProduitActifAM.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonProduitActifAM.Location = new System.Drawing.Point(14, 37);
+            this.radioButtonProduitActifAM.Name = "radioButtonProduitActifAM";
+            this.radioButtonProduitActifAM.Size = new System.Drawing.Size(63, 32);
+            this.radioButtonProduitActifAM.TabIndex = 0;
+            this.radioButtonProduitActifAM.TabStop = true;
+            this.radioButtonProduitActifAM.Text = "Actif";
+            this.radioButtonProduitActifAM.UseVisualStyleBackColor = true;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(17, 491);
+            this.label33.Location = new System.Drawing.Point(39, 489);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(42, 28);
             this.label33.TabIndex = 121;
             this.label33.Text = "TVA";
             // 
-            // textBox21
+            // label34
             // 
-            this.textBox21.Location = new System.Drawing.Point(151, 309);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(101, 28);
-            this.textBox21.TabIndex = 5;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(39, 546);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(98, 28);
+            this.label34.TabIndex = 129;
+            this.label34.Text = "Fournisseur";
             // 
-            // label27
+            // comboBoxProduitTVAAM
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(243, 494);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(86, 28);
-            this.label27.TabIndex = 35;
-            this.label27.Text = "Réduction";
+            this.comboBoxProduitTVAAM.FormattingEnabled = true;
+            this.comboBoxProduitTVAAM.Location = new System.Drawing.Point(173, 489);
+            this.comboBoxProduitTVAAM.Name = "comboBoxProduitTVAAM";
+            this.comboBoxProduitTVAAM.Size = new System.Drawing.Size(101, 30);
+            this.comboBoxProduitTVAAM.TabIndex = 7;
+            this.comboBoxProduitTVAAM.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitTVAAM_SelectedIndexChanged);
             // 
-            // textBox22
+            // comboBoxProduitFournisseurAM
             // 
-            this.textBox22.Location = new System.Drawing.Point(151, 68);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(335, 28);
-            this.textBox22.TabIndex = 2;
+            this.comboBoxProduitFournisseurAM.FormattingEnabled = true;
+            this.comboBoxProduitFournisseurAM.Location = new System.Drawing.Point(173, 545);
+            this.comboBoxProduitFournisseurAM.Name = "comboBoxProduitFournisseurAM";
+            this.comboBoxProduitFournisseurAM.Size = new System.Drawing.Size(335, 30);
+            this.comboBoxProduitFournisseurAM.TabIndex = 9;
+            this.comboBoxProduitFournisseurAM.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitFournisseurAM_SelectedIndexChanged);
             // 
-            // textBox23
+            // panelProduit1
             // 
-            this.textBox23.Location = new System.Drawing.Point(370, 494);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(116, 28);
-            this.textBox23.TabIndex = 8;
+            this.panelProduit1.Controls.Add(this.buttonProduitChercher);
+            this.panelProduit1.Controls.Add(this.textBoxProduitPrixMini);
+            this.panelProduit1.Controls.Add(this.labelPrixMini);
+            this.panelProduit1.Controls.Add(this.textBoxProduitPrixMax);
+            this.panelProduit1.Controls.Add(this.labelPrix);
+            this.panelProduit1.Controls.Add(this.groupBoxPub);
+            this.panelProduit1.Controls.Add(this.groupBoxEtat);
+            this.panelProduit1.Controls.Add(this.dataGridViewProduit);
+            this.panelProduit1.Controls.Add(this.label35);
+            this.panelProduit1.Controls.Add(this.buttonModifier);
+            this.panelProduit1.Controls.Add(this.label36);
+            this.panelProduit1.Controls.Add(this.comboBoxProduitID);
+            this.panelProduit1.Controls.Add(this.comboBoxProduitRub);
+            this.panelProduit1.Controls.Add(this.label18);
+            this.panelProduit1.Controls.Add(this.label23);
+            this.panelProduit1.Controls.Add(this.comboBoxProduitSSRub);
+            this.panelProduit1.Controls.Add(this.buttonAjouterProduit);
+            this.panelProduit1.Location = new System.Drawing.Point(3, 0);
+            this.panelProduit1.Name = "panelProduit1";
+            this.panelProduit1.Size = new System.Drawing.Size(1185, 741);
+            this.panelProduit1.TabIndex = 170;
             // 
-            // textBox25
+            // buttonProduitChercher
             // 
-            this.textBox25.Location = new System.Drawing.Point(370, 31);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(116, 28);
-            this.textBox25.TabIndex = 1;
+            this.buttonProduitChercher.BackColor = System.Drawing.Color.Orange;
+            this.buttonProduitChercher.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonProduitChercher.FlatAppearance.BorderSize = 2;
+            this.buttonProduitChercher.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProduitChercher.Location = new System.Drawing.Point(446, 197);
+            this.buttonProduitChercher.Name = "buttonProduitChercher";
+            this.buttonProduitChercher.Size = new System.Drawing.Size(163, 45);
+            this.buttonProduitChercher.TabIndex = 166;
+            this.buttonProduitChercher.Text = "CHERCHER";
+            this.buttonProduitChercher.UseVisualStyleBackColor = false;
+            this.buttonProduitChercher.Click += new System.EventHandler(this.buttonProduitChercher_Click);
             // 
-            // label28
+            // textBoxProduitPrixMini
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(257, 308);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(111, 28);
-            this.label28.TabIndex = 38;
-            this.label28.Text = "Prix vente HT";
+            this.textBoxProduitPrixMini.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProduitPrixMini.Location = new System.Drawing.Point(693, 94);
+            this.textBoxProduitPrixMini.Name = "textBoxProduitPrixMini";
+            this.textBoxProduitPrixMini.Size = new System.Drawing.Size(171, 31);
+            this.textBoxProduitPrixMini.TabIndex = 165;
+            this.textBoxProduitPrixMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxProduitPrixMini.TextChanged += new System.EventHandler(this.textBoxProduitPrixMini_TextChanged);
             // 
-            // label29
+            // labelPrixMini
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(271, 31);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(94, 28);
-            this.label29.TabIndex = 101;
-            this.label29.Text = "Nom Court";
+            this.labelPrixMini.AutoSize = true;
+            this.labelPrixMini.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrixMini.Location = new System.Drawing.Point(689, 63);
+            this.labelPrixMini.Name = "labelPrixMini";
+            this.labelPrixMini.Size = new System.Drawing.Size(80, 28);
+            this.labelPrixMini.TabIndex = 164;
+            this.labelPrixMini.Text = "Prix mini";
             // 
-            // textBox27
+            // textBoxProduitPrixMax
             // 
-            this.textBox27.Location = new System.Drawing.Point(370, 308);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(116, 28);
-            this.textBox27.TabIndex = 6;
+            this.textBoxProduitPrixMax.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProduitPrixMax.Location = new System.Drawing.Point(696, 164);
+            this.textBoxProduitPrixMax.Name = "textBoxProduitPrixMax";
+            this.textBoxProduitPrixMax.Size = new System.Drawing.Size(171, 31);
+            this.textBoxProduitPrixMax.TabIndex = 163;
+            this.textBoxProduitPrixMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxProduitPrixMax.TextChanged += new System.EventHandler(this.textBoxProduitPrixMax_TextChanged);
             // 
-            // label31
+            // labelPrix
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(17, 69);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(101, 28);
-            this.label31.TabIndex = 37;
-            this.label31.Text = "Désignation";
+            this.labelPrix.AutoSize = true;
+            this.labelPrix.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrix.Location = new System.Drawing.Point(692, 131);
+            this.labelPrix.Name = "labelPrix";
+            this.labelPrix.Size = new System.Drawing.Size(76, 28);
+            this.labelPrix.TabIndex = 162;
+            this.labelPrix.Text = "Prix max";
             // 
-            // label32
+            // groupBoxPub
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(17, 308);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(97, 28);
-            this.label32.TabIndex = 34;
-            this.label32.Text = "Prix d\'achat";
+            this.groupBoxPub.Controls.Add(this.radioButtonPasCatalogue);
+            this.groupBoxPub.Controls.Add(this.radioButtonCatalogue);
+            this.groupBoxPub.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxPub.Location = new System.Drawing.Point(552, 63);
+            this.groupBoxPub.Name = "groupBoxPub";
+            this.groupBoxPub.Size = new System.Drawing.Size(122, 105);
+            this.groupBoxPub.TabIndex = 160;
+            this.groupBoxPub.TabStop = false;
+            this.groupBoxPub.Text = "Au catalogue";
+            // 
+            // radioButtonPasCatalogue
+            // 
+            this.radioButtonPasCatalogue.AutoSize = true;
+            this.radioButtonPasCatalogue.Location = new System.Drawing.Point(17, 63);
+            this.radioButtonPasCatalogue.Name = "radioButtonPasCatalogue";
+            this.radioButtonPasCatalogue.Size = new System.Drawing.Size(61, 32);
+            this.radioButtonPasCatalogue.TabIndex = 159;
+            this.radioButtonPasCatalogue.Text = "Non";
+            this.radioButtonPasCatalogue.UseVisualStyleBackColor = true;
+            this.radioButtonPasCatalogue.CheckedChanged += new System.EventHandler(this.radioButtonPasCatalogue_CheckedChanged);
+            // 
+            // radioButtonCatalogue
+            // 
+            this.radioButtonCatalogue.AutoSize = true;
+            this.radioButtonCatalogue.Checked = true;
+            this.radioButtonCatalogue.Location = new System.Drawing.Point(17, 31);
+            this.radioButtonCatalogue.Name = "radioButtonCatalogue";
+            this.radioButtonCatalogue.Size = new System.Drawing.Size(56, 32);
+            this.radioButtonCatalogue.TabIndex = 0;
+            this.radioButtonCatalogue.TabStop = true;
+            this.radioButtonCatalogue.Text = "Oui";
+            this.radioButtonCatalogue.UseVisualStyleBackColor = true;
+            this.radioButtonCatalogue.CheckedChanged += new System.EventHandler(this.radioButtonCatalogue_CheckedChanged);
+            // 
+            // groupBoxEtat
+            // 
+            this.groupBoxEtat.Controls.Add(this.radioButtonInactif);
+            this.groupBoxEtat.Controls.Add(this.radioButtonActif1);
+            this.groupBoxEtat.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxEtat.Location = new System.Drawing.Point(411, 63);
+            this.groupBoxEtat.Name = "groupBoxEtat";
+            this.groupBoxEtat.Size = new System.Drawing.Size(122, 105);
+            this.groupBoxEtat.TabIndex = 158;
+            this.groupBoxEtat.TabStop = false;
+            this.groupBoxEtat.Text = "Etat";
+            // 
+            // radioButtonInactif
+            // 
+            this.radioButtonInactif.AutoSize = true;
+            this.radioButtonInactif.Location = new System.Drawing.Point(17, 63);
+            this.radioButtonInactif.Name = "radioButtonInactif";
+            this.radioButtonInactif.Size = new System.Drawing.Size(76, 32);
+            this.radioButtonInactif.TabIndex = 159;
+            this.radioButtonInactif.Text = "Inactif";
+            this.radioButtonInactif.UseVisualStyleBackColor = true;
+            this.radioButtonInactif.CheckedChanged += new System.EventHandler(this.radioButtonInactif_CheckedChanged);
+            // 
+            // radioButtonActif1
+            // 
+            this.radioButtonActif1.AutoSize = true;
+            this.radioButtonActif1.Checked = true;
+            this.radioButtonActif1.Location = new System.Drawing.Point(17, 31);
+            this.radioButtonActif1.Name = "radioButtonActif1";
+            this.radioButtonActif1.Size = new System.Drawing.Size(63, 32);
+            this.radioButtonActif1.TabIndex = 0;
+            this.radioButtonActif1.TabStop = true;
+            this.radioButtonActif1.Text = "Actif";
+            this.radioButtonActif1.UseVisualStyleBackColor = true;
+            this.radioButtonActif1.CheckedChanged += new System.EventHandler(this.radioButtonActif1_CheckedChanged);
+            // 
+            // dataGridViewProduit
+            // 
+            this.dataGridViewProduit.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProduit.GridColor = System.Drawing.Color.DarkOrange;
+            this.dataGridViewProduit.Location = new System.Drawing.Point(28, 248);
+            this.dataGridViewProduit.Name = "dataGridViewProduit";
+            this.dataGridViewProduit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridViewProduit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewProduit.Size = new System.Drawing.Size(1100, 372);
+            this.dataGridViewProduit.TabIndex = 157;
+            this.dataGridViewProduit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduit_CellContentClick);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("High Tower Text", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label35.Location = new System.Drawing.Point(420, 2);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(204, 44);
+            this.label35.TabIndex = 156;
+            this.label35.Text = "PRODUIT";
+            // 
+            // buttonModifier
+            // 
+            this.buttonModifier.BackColor = System.Drawing.Color.Orange;
+            this.buttonModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonModifier.FlatAppearance.BorderSize = 2;
+            this.buttonModifier.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModifier.Location = new System.Drawing.Point(574, 626);
+            this.buttonModifier.Name = "buttonModifier";
+            this.buttonModifier.Size = new System.Drawing.Size(163, 45);
+            this.buttonModifier.TabIndex = 5;
+            this.buttonModifier.Text = "MODIFIER";
+            this.buttonModifier.UseVisualStyleBackColor = false;
+            this.buttonModifier.Click += new System.EventHandler(this.buttonModifier_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(23, 63);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(72, 28);
+            this.label36.TabIndex = 152;
+            this.label36.Text = "Numéro";
+            // 
+            // comboBoxProduitID
+            // 
+            this.comboBoxProduitID.FormattingEnabled = true;
+            this.comboBoxProduitID.Location = new System.Drawing.Point(18, 94);
+            this.comboBoxProduitID.Name = "comboBoxProduitID";
+            this.comboBoxProduitID.Size = new System.Drawing.Size(101, 30);
+            this.comboBoxProduitID.TabIndex = 0;
+            this.comboBoxProduitID.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitID_SelectedIndexChanged);
+            // 
+            // comboBoxProduitRub
+            // 
+            this.comboBoxProduitRub.FormattingEnabled = true;
+            this.comboBoxProduitRub.Location = new System.Drawing.Point(134, 94);
+            this.comboBoxProduitRub.Name = "comboBoxProduitRub";
+            this.comboBoxProduitRub.Size = new System.Drawing.Size(256, 30);
+            this.comboBoxProduitRub.TabIndex = 1;
+            this.comboBoxProduitRub.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitRub_SelectedIndexChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(220, 167);
+            this.label18.Location = new System.Drawing.Point(207, 131);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(117, 28);
             this.label18.TabIndex = 147;
@@ -2017,27 +2169,34 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(234, 99);
+            this.label23.Location = new System.Drawing.Point(221, 63);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(79, 28);
             this.label23.TabIndex = 146;
             this.label23.Text = "Rubrique";
             // 
-            // comboBox5
+            // comboBoxProduitSSRub
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(147, 268);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(256, 30);
-            this.comboBox5.TabIndex = 3;
+            this.comboBoxProduitSSRub.FormattingEnabled = true;
+            this.comboBoxProduitSSRub.Location = new System.Drawing.Point(134, 164);
+            this.comboBoxProduitSSRub.Name = "comboBoxProduitSSRub";
+            this.comboBoxProduitSSRub.Size = new System.Drawing.Size(256, 30);
+            this.comboBoxProduitSSRub.TabIndex = 2;
+            this.comboBoxProduitSSRub.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduitSSRub_SelectedIndexChanged);
             // 
-            // comboBox13
+            // buttonAjouterProduit
             // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(147, 200);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(256, 30);
-            this.comboBox13.TabIndex = 2;
+            this.buttonAjouterProduit.BackColor = System.Drawing.Color.Orange;
+            this.buttonAjouterProduit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonAjouterProduit.FlatAppearance.BorderSize = 2;
+            this.buttonAjouterProduit.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAjouterProduit.Location = new System.Drawing.Point(386, 626);
+            this.buttonAjouterProduit.Name = "buttonAjouterProduit";
+            this.buttonAjouterProduit.Size = new System.Drawing.Size(163, 45);
+            this.buttonAjouterProduit.TabIndex = 4;
+            this.buttonAjouterProduit.Text = "AJOUTER";
+            this.buttonAjouterProduit.UseVisualStyleBackColor = false;
+            this.buttonAjouterProduit.Click += new System.EventHandler(this.buttonAjouterProduit_Click);
             // 
             // tabPage1
             // 
@@ -2045,20 +2204,18 @@
             this.tabPage1.Controls.Add(this.label73);
             this.tabPage1.Controls.Add(this.label72);
             this.tabPage1.Controls.Add(this.label71);
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.comboBox19);
-            this.tabPage1.Controls.Add(this.comboBox21);
-            this.tabPage1.Controls.Add(this.button9);
-            this.tabPage1.Controls.Add(this.button11);
-            this.tabPage1.Controls.Add(this.button12);
+            this.tabPage1.Controls.Add(this.groupBoxSSRubrique);
+            this.tabPage1.Controls.Add(this.comboBoxSousRubriqueListe);
+            this.tabPage1.Controls.Add(this.comboBoxRubriqueListe2);
+            this.tabPage1.Controls.Add(this.buttonSSRubriqueModifier);
+            this.tabPage1.Controls.Add(this.buttonSSRubriqueAjouter);
             this.tabPage1.Controls.Add(this.label68);
             this.tabPage1.Controls.Add(this.label67);
             this.tabPage1.Controls.Add(this.label66);
             this.tabPage1.Controls.Add(this.groupBoxRubrique);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.comboBox18);
+            this.tabPage1.Controls.Add(this.buttonRubriqueModifier);
+            this.tabPage1.Controls.Add(this.buttonRubriqueAjouter);
+            this.tabPage1.Controls.Add(this.comboBoxRubriqueListe1);
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -2096,16 +2253,32 @@
             this.label71.TabIndex = 3;
             this.label71.Text = "Rubrique mère";
             // 
-            // groupBox3
+            // groupBoxSSRubrique
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox3.Controls.Add(this.label70);
-            this.groupBox3.Controls.Add(this.textBox26);
-            this.groupBox3.Location = new System.Drawing.Point(612, 450);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(442, 227);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
+            this.groupBoxSSRubrique.BackColor = System.Drawing.Color.LightGray;
+            this.groupBoxSSRubrique.Controls.Add(this.buttonSSRubriqueAnnuler);
+            this.groupBoxSSRubrique.Controls.Add(this.label70);
+            this.groupBoxSSRubrique.Controls.Add(this.buttonSSRubriqueValider);
+            this.groupBoxSSRubrique.Controls.Add(this.textBoxSSRubrique);
+            this.groupBoxSSRubrique.Location = new System.Drawing.Point(612, 450);
+            this.groupBoxSSRubrique.Name = "groupBoxSSRubrique";
+            this.groupBoxSSRubrique.Size = new System.Drawing.Size(445, 227);
+            this.groupBoxSSRubrique.TabIndex = 11;
+            this.groupBoxSSRubrique.TabStop = false;
+            // 
+            // buttonSSRubriqueAnnuler
+            // 
+            this.buttonSSRubriqueAnnuler.BackColor = System.Drawing.Color.Orange;
+            this.buttonSSRubriqueAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSSRubriqueAnnuler.FlatAppearance.BorderSize = 2;
+            this.buttonSSRubriqueAnnuler.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSSRubriqueAnnuler.Location = new System.Drawing.Point(246, 139);
+            this.buttonSSRubriqueAnnuler.Name = "buttonSSRubriqueAnnuler";
+            this.buttonSSRubriqueAnnuler.Size = new System.Drawing.Size(163, 45);
+            this.buttonSSRubriqueAnnuler.TabIndex = 168;
+            this.buttonSSRubriqueAnnuler.Text = "ANNULER";
+            this.buttonSSRubriqueAnnuler.UseVisualStyleBackColor = false;
+            this.buttonSSRubriqueAnnuler.Click += new System.EventHandler(this.buttonSSRubriqueAnnuler_Click);
             // 
             // label70
             // 
@@ -2117,67 +2290,73 @@
             this.label70.TabIndex = 2;
             this.label70.Text = "Nom";
             // 
-            // textBox26
+            // buttonSSRubriqueValider
             // 
-            this.textBox26.Location = new System.Drawing.Point(134, 60);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(275, 29);
-            this.textBox26.TabIndex = 1;
+            this.buttonSSRubriqueValider.BackColor = System.Drawing.Color.Orange;
+            this.buttonSSRubriqueValider.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSSRubriqueValider.FlatAppearance.BorderSize = 2;
+            this.buttonSSRubriqueValider.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSSRubriqueValider.Location = new System.Drawing.Point(74, 139);
+            this.buttonSSRubriqueValider.Name = "buttonSSRubriqueValider";
+            this.buttonSSRubriqueValider.Size = new System.Drawing.Size(163, 45);
+            this.buttonSSRubriqueValider.TabIndex = 167;
+            this.buttonSSRubriqueValider.Text = "VALIDER";
+            this.buttonSSRubriqueValider.UseVisualStyleBackColor = false;
+            this.buttonSSRubriqueValider.Click += new System.EventHandler(this.buttonSSRubriqueValider_Click);
             // 
-            // comboBox19
+            // textBoxSSRubrique
             // 
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(26, 620);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(315, 30);
-            this.comboBox19.TabIndex = 162;
+            this.textBoxSSRubrique.Location = new System.Drawing.Point(134, 60);
+            this.textBoxSSRubrique.Name = "textBoxSSRubrique";
+            this.textBoxSSRubrique.Size = new System.Drawing.Size(275, 29);
+            this.textBoxSSRubrique.TabIndex = 1;
+            this.textBoxSSRubrique.TextChanged += new System.EventHandler(this.textBoxSSRubrique_TextChanged);
             // 
-            // comboBox21
+            // comboBoxSousRubriqueListe
             // 
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Location = new System.Drawing.Point(26, 499);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(315, 30);
-            this.comboBox21.TabIndex = 2;
+            this.comboBoxSousRubriqueListe.FormattingEnabled = true;
+            this.comboBoxSousRubriqueListe.Location = new System.Drawing.Point(26, 620);
+            this.comboBoxSousRubriqueListe.Name = "comboBoxSousRubriqueListe";
+            this.comboBoxSousRubriqueListe.Size = new System.Drawing.Size(315, 30);
+            this.comboBoxSousRubriqueListe.TabIndex = 162;
+            this.comboBoxSousRubriqueListe.SelectedIndexChanged += new System.EventHandler(this.comboBoxSousRubriqueListe_SelectedIndexChanged);
             // 
-            // button9
+            // comboBoxRubriqueListe2
             // 
-            this.button9.BackColor = System.Drawing.Color.Orange;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button9.FlatAppearance.BorderSize = 2;
-            this.button9.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(361, 611);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(163, 45);
-            this.button9.TabIndex = 161;
-            this.button9.Text = "SUPPRIMER";
-            this.button9.UseVisualStyleBackColor = false;
+            this.comboBoxRubriqueListe2.FormattingEnabled = true;
+            this.comboBoxRubriqueListe2.Location = new System.Drawing.Point(26, 499);
+            this.comboBoxRubriqueListe2.Name = "comboBoxRubriqueListe2";
+            this.comboBoxRubriqueListe2.Size = new System.Drawing.Size(315, 30);
+            this.comboBoxRubriqueListe2.TabIndex = 2;
+            this.comboBoxRubriqueListe2.SelectedIndexChanged += new System.EventHandler(this.comboBoxRubriqueListe2_SelectedIndexChanged);
             // 
-            // button11
+            // buttonSSRubriqueModifier
             // 
-            this.button11.BackColor = System.Drawing.Color.Orange;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button11.FlatAppearance.BorderSize = 2;
-            this.button11.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(361, 536);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(163, 45);
-            this.button11.TabIndex = 160;
-            this.button11.Text = "MODIFIER";
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonSSRubriqueModifier.BackColor = System.Drawing.Color.Orange;
+            this.buttonSSRubriqueModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSSRubriqueModifier.FlatAppearance.BorderSize = 2;
+            this.buttonSSRubriqueModifier.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSSRubriqueModifier.Location = new System.Drawing.Point(361, 536);
+            this.buttonSSRubriqueModifier.Name = "buttonSSRubriqueModifier";
+            this.buttonSSRubriqueModifier.Size = new System.Drawing.Size(163, 45);
+            this.buttonSSRubriqueModifier.TabIndex = 160;
+            this.buttonSSRubriqueModifier.Text = "MODIFIER";
+            this.buttonSSRubriqueModifier.UseVisualStyleBackColor = false;
+            this.buttonSSRubriqueModifier.Click += new System.EventHandler(this.buttonSSRubriqueModifier_Click);
             // 
-            // button12
+            // buttonSSRubriqueAjouter
             // 
-            this.button12.BackColor = System.Drawing.Color.Orange;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button12.FlatAppearance.BorderSize = 2;
-            this.button12.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(361, 468);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(163, 45);
-            this.button12.TabIndex = 159;
-            this.button12.Text = "AJOUTER";
-            this.button12.UseVisualStyleBackColor = false;
+            this.buttonSSRubriqueAjouter.BackColor = System.Drawing.Color.Orange;
+            this.buttonSSRubriqueAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSSRubriqueAjouter.FlatAppearance.BorderSize = 2;
+            this.buttonSSRubriqueAjouter.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSSRubriqueAjouter.Location = new System.Drawing.Point(361, 468);
+            this.buttonSSRubriqueAjouter.Name = "buttonSSRubriqueAjouter";
+            this.buttonSSRubriqueAjouter.Size = new System.Drawing.Size(163, 45);
+            this.buttonSSRubriqueAjouter.TabIndex = 159;
+            this.buttonSSRubriqueAjouter.Text = "AJOUTER";
+            this.buttonSSRubriqueAjouter.UseVisualStyleBackColor = false;
+            this.buttonSSRubriqueAjouter.Click += new System.EventHandler(this.buttonSSRubriqueAjouter_Click);
             // 
             // label68
             // 
@@ -2214,13 +2393,43 @@
             // groupBoxRubrique
             // 
             this.groupBoxRubrique.BackColor = System.Drawing.Color.LightGray;
+            this.groupBoxRubrique.Controls.Add(this.buttonRubriqueAnnuler);
+            this.groupBoxRubrique.Controls.Add(this.buttonRubriqueValider);
             this.groupBoxRubrique.Controls.Add(this.label69);
-            this.groupBoxRubrique.Controls.Add(this.textBox17);
+            this.groupBoxRubrique.Controls.Add(this.textBoxRubrique);
             this.groupBoxRubrique.Location = new System.Drawing.Point(612, 54);
             this.groupBoxRubrique.Name = "groupBoxRubrique";
-            this.groupBoxRubrique.Size = new System.Drawing.Size(442, 227);
+            this.groupBoxRubrique.Size = new System.Drawing.Size(445, 227);
             this.groupBoxRubrique.TabIndex = 10;
             this.groupBoxRubrique.TabStop = false;
+            // 
+            // buttonRubriqueAnnuler
+            // 
+            this.buttonRubriqueAnnuler.BackColor = System.Drawing.Color.Orange;
+            this.buttonRubriqueAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRubriqueAnnuler.FlatAppearance.BorderSize = 2;
+            this.buttonRubriqueAnnuler.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRubriqueAnnuler.Location = new System.Drawing.Point(246, 161);
+            this.buttonRubriqueAnnuler.Name = "buttonRubriqueAnnuler";
+            this.buttonRubriqueAnnuler.Size = new System.Drawing.Size(163, 45);
+            this.buttonRubriqueAnnuler.TabIndex = 166;
+            this.buttonRubriqueAnnuler.Text = "ANNULER";
+            this.buttonRubriqueAnnuler.UseVisualStyleBackColor = false;
+            this.buttonRubriqueAnnuler.Click += new System.EventHandler(this.buttonRubriqueAnnuler_Click);
+            // 
+            // buttonRubriqueValider
+            // 
+            this.buttonRubriqueValider.BackColor = System.Drawing.Color.Orange;
+            this.buttonRubriqueValider.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRubriqueValider.FlatAppearance.BorderSize = 2;
+            this.buttonRubriqueValider.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRubriqueValider.Location = new System.Drawing.Point(74, 161);
+            this.buttonRubriqueValider.Name = "buttonRubriqueValider";
+            this.buttonRubriqueValider.Size = new System.Drawing.Size(163, 45);
+            this.buttonRubriqueValider.TabIndex = 165;
+            this.buttonRubriqueValider.Text = "VALIDER";
+            this.buttonRubriqueValider.UseVisualStyleBackColor = false;
+            this.buttonRubriqueValider.Click += new System.EventHandler(this.buttonRubriqueValider_Click);
             // 
             // label69
             // 
@@ -2232,59 +2441,50 @@
             this.label69.TabIndex = 1;
             this.label69.Text = "Nom";
             // 
-            // textBox17
+            // textBoxRubrique
             // 
-            this.textBox17.Location = new System.Drawing.Point(134, 105);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(275, 29);
-            this.textBox17.TabIndex = 0;
+            this.textBoxRubrique.Location = new System.Drawing.Point(134, 105);
+            this.textBoxRubrique.Name = "textBoxRubrique";
+            this.textBoxRubrique.Size = new System.Drawing.Size(275, 29);
+            this.textBoxRubrique.TabIndex = 0;
+            this.textBoxRubrique.TextChanged += new System.EventHandler(this.textBoxRubrique_TextChanged);
             // 
-            // button4
+            // buttonRubriqueModifier
             // 
-            this.button4.BackColor = System.Drawing.Color.Orange;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(361, 225);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 45);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "SUPPRIMER";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonRubriqueModifier.BackColor = System.Drawing.Color.Orange;
+            this.buttonRubriqueModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRubriqueModifier.FlatAppearance.BorderSize = 2;
+            this.buttonRubriqueModifier.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRubriqueModifier.Location = new System.Drawing.Point(361, 150);
+            this.buttonRubriqueModifier.Name = "buttonRubriqueModifier";
+            this.buttonRubriqueModifier.Size = new System.Drawing.Size(163, 45);
+            this.buttonRubriqueModifier.TabIndex = 8;
+            this.buttonRubriqueModifier.Text = "MODIFIER";
+            this.buttonRubriqueModifier.UseVisualStyleBackColor = false;
+            this.buttonRubriqueModifier.Click += new System.EventHandler(this.buttonRubriqueModifier_Click);
             // 
-            // button7
+            // buttonRubriqueAjouter
             // 
-            this.button7.BackColor = System.Drawing.Color.Orange;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.FlatAppearance.BorderSize = 2;
-            this.button7.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(361, 150);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(163, 45);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "MODIFIER";
-            this.button7.UseVisualStyleBackColor = false;
+            this.buttonRubriqueAjouter.BackColor = System.Drawing.Color.Orange;
+            this.buttonRubriqueAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRubriqueAjouter.FlatAppearance.BorderSize = 2;
+            this.buttonRubriqueAjouter.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRubriqueAjouter.Location = new System.Drawing.Point(361, 82);
+            this.buttonRubriqueAjouter.Name = "buttonRubriqueAjouter";
+            this.buttonRubriqueAjouter.Size = new System.Drawing.Size(163, 45);
+            this.buttonRubriqueAjouter.TabIndex = 7;
+            this.buttonRubriqueAjouter.Text = "AJOUTER";
+            this.buttonRubriqueAjouter.UseVisualStyleBackColor = false;
+            this.buttonRubriqueAjouter.Click += new System.EventHandler(this.buttonRubriqueAjouter_Click);
             // 
-            // button8
+            // comboBoxRubriqueListe1
             // 
-            this.button8.BackColor = System.Drawing.Color.Orange;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button8.FlatAppearance.BorderSize = 2;
-            this.button8.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(361, 82);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(163, 45);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "AJOUTER";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // comboBox18
-            // 
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(26, 150);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(315, 30);
-            this.comboBox18.TabIndex = 0;
+            this.comboBoxRubriqueListe1.FormattingEnabled = true;
+            this.comboBoxRubriqueListe1.Location = new System.Drawing.Point(26, 150);
+            this.comboBoxRubriqueListe1.Name = "comboBoxRubriqueListe1";
+            this.comboBoxRubriqueListe1.Size = new System.Drawing.Size(315, 30);
+            this.comboBoxRubriqueListe1.TabIndex = 0;
+            this.comboBoxRubriqueListe1.SelectedIndexChanged += new System.EventHandler(this.comboBoxRubriqueListe1_SelectedIndexChanged);
             // 
             // pictureBox4
             // 
@@ -2408,7 +2608,7 @@
             this.groupBoxFour.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFour.Location = new System.Drawing.Point(611, 41);
             this.groupBoxFour.Name = "groupBoxFour";
-            this.groupBoxFour.Size = new System.Drawing.Size(508, 344);
+            this.groupBoxFour.Size = new System.Drawing.Size(500, 344);
             this.groupBoxFour.TabIndex = 150;
             this.groupBoxFour.TabStop = false;
             this.groupBoxFour.Text = "Informations fournisseur";
@@ -2849,9 +3049,30 @@
             this.label104.TabIndex = 1;
             this.label104.Text = "Chiffre d\'affaire total de tous les fournisseurs";
             // 
-            // openFileDialog1
+            // timer1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 5;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 5;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form2
             // 
@@ -2890,18 +3111,24 @@
             this.tabPage4.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage14.ResumeLayout(false);
-            this.tabPage14.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panelProduit2.ResumeLayout(false);
+            this.panelProduit2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduit)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.panelProduit1.ResumeLayout(false);
+            this.panelProduit1.PerformLayout();
+            this.groupBoxPub.ResumeLayout(false);
+            this.groupBoxPub.PerformLayout();
+            this.groupBoxEtat.ResumeLayout(false);
+            this.groupBoxEtat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduit)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBoxSSRubrique.ResumeLayout(false);
+            this.groupBoxSSRubrique.PerformLayout();
             this.groupBoxRubrique.ResumeLayout(false);
             this.groupBoxRubrique.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2953,14 +3180,6 @@
         private System.Windows.Forms.TabPage tabPage14;
         private System.Windows.Forms.TabControl tabControl6;
         private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.Label label92;
@@ -3057,40 +3276,13 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.ComboBox comboBoxProduitSSRub;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button buttonModifier;
+        private System.Windows.Forms.Button buttonAjouterProduit;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ComboBox comboBox16;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox17;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox comboBoxProduitID;
+        private System.Windows.Forms.ComboBox comboBoxProduitRub;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -3149,27 +3341,78 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox19;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.GroupBox groupBoxSSRubrique;
+        private System.Windows.Forms.ComboBox comboBoxSousRubriqueListe;
+        private System.Windows.Forms.Button buttonSSRubriqueModifier;
+        private System.Windows.Forms.Button buttonSSRubriqueAjouter;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.GroupBox groupBoxRubrique;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.Button buttonRubriqueModifier;
+        private System.Windows.Forms.Button buttonRubriqueAjouter;
+        private System.Windows.Forms.ComboBox comboBoxRubriqueListe1;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.ComboBox comboBox21;
+        private System.Windows.Forms.TextBox textBoxSSRubrique;
+        private System.Windows.Forms.ComboBox comboBoxRubriqueListe2;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBoxRubrique;
         private System.Windows.Forms.DataGridView dataGridViewCAFour;
+        private System.Windows.Forms.Button buttonSSRubriqueAnnuler;
+        private System.Windows.Forms.Button buttonSSRubriqueValider;
+        private System.Windows.Forms.Button buttonRubriqueAnnuler;
+        private System.Windows.Forms.Button buttonRubriqueValider;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.DataGridView dataGridViewProduit;
+        private System.Windows.Forms.GroupBox groupBoxEtat;
+        private System.Windows.Forms.RadioButton radioButtonInactif;
+        private System.Windows.Forms.RadioButton radioButtonActif1;
+        private System.Windows.Forms.GroupBox groupBoxPub;
+        private System.Windows.Forms.RadioButton radioButtonPasCatalogue;
+        private System.Windows.Forms.RadioButton radioButtonCatalogue;
+        private System.Windows.Forms.Label labelPrix;
+        private System.Windows.Forms.TextBox textBoxProduitPrixMini;
+        private System.Windows.Forms.Label labelPrixMini;
+        private System.Windows.Forms.TextBox textBoxProduitPrixMax;
+        private System.Windows.Forms.Button buttonProduitChercher;
+        private System.Windows.Forms.Panel panelProduit1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Panel panelProduit2;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ComboBox comboBoxProduitRubriqueAM;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBoxProduitNomcourtAM;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBoxNomFichier;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button buttonAjouterPhoto;
+        private System.Windows.Forms.TextBox textBoxProduitPrixVenteHTAM;
+        private System.Windows.Forms.PictureBox pictureBoxProduit;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBoxProduitSSRubriqueAM;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBoxProduitNomlongAM;
+        private System.Windows.Forms.TextBox textBoxProduitNumAM;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButtonProduitNonPubAM;
+        private System.Windows.Forms.RadioButton radioButtonProduitPubAM;
+        private System.Windows.Forms.TextBox textBoxProduitPrixAchatAM;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton radioButtonProduitInactifAM;
+        private System.Windows.Forms.RadioButton radioButtonProduitActifAM;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.ComboBox comboBoxProduitTVAAM;
+        private System.Windows.Forms.ComboBox comboBoxProduitFournisseurAM;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
     }
 }

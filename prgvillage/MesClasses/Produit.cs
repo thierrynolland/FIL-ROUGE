@@ -9,8 +9,8 @@ namespace MesClasses
     public class Produit
     {
         public int Id { get; set; }
-        public string NomCourt { get; set; }
         public string NomLong { get; set; }
+        public string NomCourt { get; set; }       
         public double PrixAchat { get; set; }
         public double PrixVenteHT { get; set; }
         public string Photo { get; set; }
@@ -19,7 +19,7 @@ namespace MesClasses
         public int IDTVA { get; set; }
         public int IDFournisseur { get; set; }
         public int IDSousRubrique { get; set; }
-
+        public int IDRubrique { get; set; }
 
     }
 }

@@ -4,7 +4,7 @@ go
 use villagegreen
 create table fournisseur (
 	fournisseur_id 		int identity primary key not null,
-	fournisseur_nom 	varchar(50) not null
+	fournisseur_nom 	varchar(50) not null,
 	fournisseur_adresse varchar(100),
 	fournisseur_cp varchar(5),
 	fournisseur_ville varchar(100)
@@ -39,7 +39,7 @@ create table commercial(
 go
 
 create table produit (
-	produit_id 			int primary key not null,
+	produit_id 			int identity primary key not null,
 	produit_nomcourt 	varchar(10) not null,
 	produit_nom 		varchar(100) not null,
 	produit_photo 		varchar (25),
@@ -54,7 +54,7 @@ create table produit (
 go
 
 create table client(
-	client_id 			int primary key not null,
+	client_id 			int identity primary key not null,
 	client_categorie 	int not null,
 	client_nom 			varchar(50) not null,
 	client_prenom 		varchar(50),
@@ -115,7 +115,19 @@ create table ligne_de_commande (
 )
 go
 
+create table utilisateur (
+util_Identifiant varchar(30) primary key not null,
+util_MotPasse varchar(500) not null,
+util_Email varchar(50) not null,
+util_DateInscrip datetime not null default getdate(),
+util_Confirm bit default 0,
+util_Type varchar(14) not null,
+util_IdPerso int not null default 0,
+util_Nom varchar(50) not null,
+util_Prenom varchar(50) not null
 
+)
+go
 
 /* ____________________  */
 
@@ -398,103 +410,103 @@ GO
       4     0           2010-10-03 
 */
 /* 1-1*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (1,'YAMB1PWH','YAMAHA B1PWH - blanc brillant','1.jpg',2500,1, 3000,'true',1,1,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (2,'YAMB1SG','YAMAHA - B1SG2PE - noir brillant','2.jpg',3000,1, 3500,'true',1,1,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (3,'YAMB1-PEBL','YAMAHA - B1-PE - black','3.jpg',3500,1, 4500,'true',1,2,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('YAMB1PWH','YAMAHA B1PWH - blanc brillant','1.jpg',2500,1, 3000,'true',1,1,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('YAMB1SG','YAMAHA - B1SG2PE - noir brillant','2.jpg',3000,1, 3500,'true',1,1,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('YAMB1-PEBL','YAMAHA - B1-PE - black','3.jpg',3500,1, 4500,'true',1,2,1)
 
 
 /* 1-2*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	values (4,'YAMB1PWH','YAMAHA - N3X - laqué noir','4.jpg',14500,1, 18000,'true',2,2,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (5,'ROLGP607','ROLAND GP607 - polished white','5.jpg',3500,1, 5000,'true',2,3,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	values ('YAMB1PWH','YAMAHA - N3X - laqué noir','4.jpg',14500,1, 18000,'true',2,2,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('ROLGP607','ROLAND GP607 - polished white','5.jpg',3500,1, 5000,'true',2,3,1)
 
 
 
 
 /* 1-6*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (6,'GIB1959','GIBSON Custom Shop Ltd 1959 ','6.jpg',8000,1, 9500,'true',6,4,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('GIB1959','GIBSON Custom Shop Ltd 1959 ','6.jpg',8000,1, 9500,'true',6,4,1)
 
 /* 1-7*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (7,'FENDtrio','FENDER Alkaline Trio Malibu - natural','7.jpg',250,1, 320,'true',7,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('FENDtrio','FENDER Alkaline Trio Malibu - natural','7.jpg',250,1, 320,'true',7,5,1)
 
 /* 1-17*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (17,'FENDEJAP','FENDER Japan Exclusive Jazz Bass Classic','17.jpg',1000,1, 1250,'true',17,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('FENDEJAP','FENDER Japan Exclusive Jazz Bass Classic','17.jpg',1000,1, 1250,'true',17,5,1)
 
 /* 1-22*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (22,'LEVSS43','LEVANTE SS4305','22.jpg',450,1, 560,'true',22,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('LEVSS43','LEVANTE SS4305','22.jpg',450,1, 560,'true',22,5,1)
 
 /* 1-39*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (39,'WAKDJ3335','WAKA DRUMS DJ3335','39.jpg',150,1,179,'true',39,7,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('WAKDJ3335','WAKA DRUMS DJ3335','39.jpg',150,1,179,'true',39,7,1)
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (45,'HERAS134','HERALD AS134','45.jpg',100,1, 115,'true',45,9,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('HERAS134','HERALD AS134','45.jpg',100,1, 115,'true',45,9,1)
 
 /*nouveaux produits 7 mars 2017*/
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (8,'IB1027PBF','IBANEZ Premium  CBB - cerulean blue burst','8.jpg',1000,1, 1299,'true',6,1,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (9,'IBJS24P','IBANEZ Joe Satriani CA Premium - Candy Apple - candy apple','9.jpg',1050,1,1329,'true',6,1,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('IB1027PBF','IBANEZ Premium  CBB - cerulean blue burst','8.jpg',1000,1, 1299,'true',6,1,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('IBJS24P','IBANEZ Joe Satriani CA Premium - Candy Apple - candy apple','9.jpg',1050,1,1329,'true',6,1,1)
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (10,'IBPG80PNT','IBANEZ Paul Gilbert  NT Premium Artist - natural','10.jpg',1025,1,1259,'true',6,1,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (11,'IB1027PBF','IBANEZ Steve Vai  BK Premium - black','11.jpg',1075,1, 1353,'true',6,1,1)
-
-
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (12,'TAY114CE','TAYLOR 114ce-N Walnut ','12.jpg',800,1, 899,'true',8,2,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (13,'TAY214CE','TAYLOR 214CE-N Grand Auditorium - natural gloss top','13.jpg',1075,1, 1353,'true',8,2,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (14,'GOMULSG','GODIN Multiac Nylon Encore - natural semi gloss','14.jpg',1000,1, 1059,'true',8,3,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (15,'IB1027PBF','IBANEZ Steve Vai  BK Premium - black','15.jpg',1105,1, 1199,'true',8,3,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('IBPG80PNT','IBANEZ Paul Gilbert  NT Premium Artist - natural','10.jpg',1025,1,1259,'true',6,1,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('IB1027PBF','IBANEZ Steve Vai  BK Premium - black','11.jpg',1075,1, 1353,'true',6,1,1)
 
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (16,'SMLCL400','Clarinette Etude SML CL400','16.jpg',200,1, 279,'true',23,4,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (18,'YACL450N','Clarinette Etude YAMAHA YCL-450N 02','18.jpg',625,1, 769,'true',23,4,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('TAY114CE','TAYLOR 114ce-N Walnut ','12.jpg',800,1, 899,'true',8,2,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('TAY214CE','TAYLOR 214CE-N Grand Auditorium - natural gloss top','13.jpg',1075,1, 1353,'true',8,2,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('GOMULSG','GODIN Multiac Nylon Encore - natural semi gloss','14.jpg',1000,1, 1059,'true',8,3,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('IB1027PBF','IBANEZ Steve Vai  BK Premium - black','15.jpg',1105,1, 1199,'true',8,3,1)
 
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (19,'STAEVN','Violon Electrique STAGG EVN 4/4 MBL','19.jpg',125,1, 181,'true',45,10,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (20,'STAGGVNC34','Violoncelle acoustique STAGG VNC-3/4','20.jpg',300,1, 389,'true',47,10,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (21,'STAGGECL44','Violoncelle electrique STAGG ECL4/4 BK','21.jpg',600,1, 699,'true',47,10,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('SMLCL400','Clarinette Etude SML CL400','16.jpg',200,1, 279,'true',23,4,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('YACL450N','Clarinette Etude YAMAHA YCL-450N 02','18.jpg',625,1, 769,'true',23,4,1)
+
+
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('STAEVN','Violon Electrique STAGG EVN 4/4 MBL','19.jpg',125,1, 181,'true',45,10,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('STAGGVNC34','Violoncelle acoustique STAGG VNC-3/4','20.jpg',300,1, 389,'true',47,10,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('STAGGECL44','Violoncelle electrique STAGG ECL4/4 BK','21.jpg',600,1, 699,'true',47,10,1)
 /*_______________________________________________*/
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (23,'KURKA90','Clavier arrangeur KURZWEIL KA-90','23.jpg',500,1, 599,'true',3,5,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (24,'WALBLOKB','Synthetiseur WALDORF Blofeld Keyboard','24.jpg',560,1, 629,'true',3,6,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (25,'STUSLE20','Synthetiseur STUDIOLOGIC Sledge 2.0','25.jpg',650,1, 753,'true',3,6,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (26,'GEWMONALHW','GEWA OM. MONNICH ALTO HW','26.jpg',175,1, 205,'true',46,6,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('KURKA90','Clavier arrangeur KURZWEIL KA-90','23.jpg',500,1, 599,'true',3,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('WALBLOKB','Synthetiseur WALDORF Blofeld Keyboard','24.jpg',560,1, 629,'true',3,6,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('STUSLE20','Synthetiseur STUDIOLOGIC Sledge 2.0','25.jpg',650,1, 753,'true',3,6,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('GEWMONALHW','GEWA OM. MONNICH ALTO HW','26.jpg',175,1, 205,'true',46,6,1)
 
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (27,'ROLFR4XRD','Accordeon numerique ROLAND FR-4X-RD','27.jpg',2500,1, 3799,'true',4,5,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (28,'ROLFR8XBK','Accordeon numerique ROLAND FR-8XB BK','28.jpg',3800,1, 5099,'true',4,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('ROLFR4XRD','Accordeon numerique ROLAND FR-4X-RD','27.jpg',2500,1, 3799,'true',4,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('ROLFR8XBK','Accordeon numerique ROLAND FR-8XB BK','28.jpg',3800,1, 5099,'true',4,5,1)
 
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (29,'WOPAP1','WOODBRASS Pack accessoires piano','29.jpg',25,1, 39,'true',5,5,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (30,'WOSSKST30','WOODBRASS Support Synthétiseur KST30','30.jpg',18,1, 23,'true',5,5,1)
-insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
-	 values (31,'GIBL200','GIBSON Emmylou Harris L-200- Occasion','31.jpg',1000,1, 2100,'true',9,3,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('WOPAP1','WOODBRASS Pack accessoires piano','29.jpg',25,1, 39,'true',5,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('WOSSKST30','WOODBRASS Support Synthétiseur KST30','30.jpg',18,1, 23,'true',5,5,1)
+insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
+	 values ('GIBL200','GIBSON Emmylou Harris L-200- Occasion','31.jpg',1000,1, 2100,'true',9,3,1)
 
 /*__________________________________________________*/
 
@@ -522,23 +534,23 @@ insert into produit(produit_id,produit_nomcourt,produit_nom,produit_photo,produi
 
 
 /*___________CLIENT____________________________________*/
-insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
-	values (1,1,'SKYWALKER','luc',5,'2 rue des etoiles', '80000', 'AMIENS',1)
+insert into client (client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (1,'SKYWALKER','luc',5,'2 rue des etoiles', '80000', 'AMIENS',1)
 
-insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
-	values (2,1,'KENOBI','obiwan',0,'5 avenue des constellations','80000', 'AMIENS',1)
+insert into client (client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (1,'KENOBI','obiwan',0,'5 avenue des constellations','80000', 'AMIENS',1)
 
-insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
-	values (3,1,'ORGANA','leia',10,'6 boulevard étoilé', '75000', 'PARIS',2)
+insert into client (client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (1,'ORGANA','leia',10,'6 boulevard étoilé', '75000', 'PARIS',2)
 
-insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
-	values (4,2,'FETT','boba',0,'67 rue des clones', '76000', 'ROUEN',3)
+insert into client (client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (2,'FETT','boba',0,'67 rue des clones', '76000', 'ROUEN',3)
 
-insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
-	values (5,2,'LE HUNT','Jabba',5,'36 rue des affaires', '80000', 'AMIENS',4)
+insert into client (client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (2,'LE HUNT','Jabba',5,'36 rue des affaires', '80000', 'AMIENS',4)
 
-insert into client (client_id,client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
-	values (6,2,'PALPATINE','Sheev',0,'21 rue des empereurs', '80100', 'ABBEVILLE',5)
+insert into client (client_categorie,client_nom,client_prenom,client_reduc,client_adresse,client_cp,client_ville,commercial_id)
+	values (2,'PALPATINE','Sheev',0,'21 rue des empereurs', '80100', 'ABBEVILLE',5)
 
 
 
@@ -559,20 +571,22 @@ values ( 3, 'livrée', 0, '16/01/2017', '16/01/2017', 'true', '6 boulevard étoi
 
 
 /*____________LIGNE_COMMANDE______________________________*/
+
 insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
 						values 	(1,3000,1,1)
+
 insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
 						values 	(1,9500,2,6)
+
 insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
 						values 	(2,320,2,7)
 
 insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
-						values 	(1,115,3,45)
+						values 	(1,115,3,11)
 insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
-						values 	(3,1250,3,17)
+						values 	(3,1250,3,8)
 
-
-												)
+												
 
 
 /*_____________BON_LIVRAISON____________________________________*/
@@ -584,9 +598,10 @@ insert into bon_livraison (livraison_date,commande_id)
 insert into bon_livraison (livraison_date,commande_id)
 	values ('18/01/2017',3)
 
-)
+
 
 /*______________LIGNE_LIVRAISON___________________________________*/
+
 
 
 insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
@@ -595,10 +610,10 @@ insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
 insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
 	values(2,1,7)
 insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
-	values(1,2,45)
+	values(1,2,11)
 
 insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
-	values(3,3,17)
+	values(3,3,8)
 
 
 
