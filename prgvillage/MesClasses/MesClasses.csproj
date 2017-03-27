@@ -43,6 +43,7 @@
     <Compile Include="CAFournisseur.cs" />
     <Compile Include="CAFournisseurDAO.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ClientDAO.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="Fournisseur.cs" />
     <Compile Include="FournisseurDAO.cs" />

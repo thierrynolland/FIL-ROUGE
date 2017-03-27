@@ -51,7 +51,28 @@ namespace MesClasses
             MaConnexion.Close();
             return Nouveaussrubrique;
         }
+      
+
         public List<SousRubrique> List(int id)
+        {
+            MaConnexion.Open();
+            List<SousRubrique> resultat = new List<SousRubrique>();
+            SqlCommand requete = new SqlCommand("select * from sous_rubrique", MaConnexion);
+            SqlDataReader lecture = requete.ExecuteReader();
+            while (lecture.Read())
+            {
+                SousRubrique sr = new SousRubrique();
+                sr.Id = Convert.ToInt32(lecture["ss_rubrique_id"]);
+                sr.Nom = Convert.ToString(lecture["ss_rubrique_nom"]);
+                sr.SousRubriqueId = Convert.ToInt32(Convert.ToString(lecture["rubrique_id"]));
+                resultat.Add(sr);
+            }
+            lecture.Close();
+            MaConnexion.Close();
+            return resultat;
+        }
+
+        public List<SousRubrique> ListSSparRub(int id) //pour liste reduite de sous rubriqued par rubrique
         {
             MaConnexion.Open();
             List<SousRubrique> resultat = new List<SousRubrique>();
@@ -70,8 +91,6 @@ namespace MesClasses
             MaConnexion.Close();
             return resultat;
         }
-
-
 
     }
 }

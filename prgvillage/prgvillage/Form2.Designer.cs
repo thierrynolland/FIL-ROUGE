@@ -49,7 +49,7 @@
             this.button15 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button16 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUtilFonc = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -352,10 +352,11 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.HotTrack = true;
             this.tabControl1.Location = new System.Drawing.Point(1, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1170, 808);
+            this.tabControl1.Size = new System.Drawing.Size(1182, 808);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -369,7 +370,7 @@
             this.ongletUtilisateur.Location = new System.Drawing.Point(4, 34);
             this.ongletUtilisateur.Name = "ongletUtilisateur";
             this.ongletUtilisateur.Padding = new System.Windows.Forms.Padding(3);
-            this.ongletUtilisateur.Size = new System.Drawing.Size(1162, 770);
+            this.ongletUtilisateur.Size = new System.Drawing.Size(1174, 770);
             this.ongletUtilisateur.TabIndex = 0;
             this.ongletUtilisateur.Text = "UTILISATEUR";
             // 
@@ -427,7 +428,7 @@
             this.groupBox12.Controls.Add(this.button15);
             this.groupBox12.Controls.Add(this.comboBox4);
             this.groupBox12.Controls.Add(this.button16);
-            this.groupBox12.Controls.Add(this.comboBox2);
+            this.groupBox12.Controls.Add(this.comboBoxUtilFonc);
             this.groupBox12.Controls.Add(this.label1);
             this.groupBox12.Controls.Add(this.label10);
             this.groupBox12.Controls.Add(this.textBox5);
@@ -578,13 +579,13 @@
             this.button16.Text = "VALIDER";
             this.button16.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // comboBoxUtilFonc
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(189, 163);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(335, 29);
-            this.comboBox2.TabIndex = 2;
+            this.comboBoxUtilFonc.FormattingEnabled = true;
+            this.comboBoxUtilFonc.Location = new System.Drawing.Point(189, 163);
+            this.comboBoxUtilFonc.Name = "comboBoxUtilFonc";
+            this.comboBoxUtilFonc.Size = new System.Drawing.Size(335, 29);
+            this.comboBoxUtilFonc.TabIndex = 2;
             // 
             // label1
             // 
@@ -807,7 +808,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1162, 770);
+            this.tabPage2.Size = new System.Drawing.Size(1174, 770);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "        COMMANDE       ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1241,7 +1242,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1162, 770);
+            this.tabPage3.Size = new System.Drawing.Size(1174, 770);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "         CLIENT         ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1573,7 +1574,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1162, 770);
+            this.tabPage4.Size = new System.Drawing.Size(1174, 770);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "       PRODUIT      ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1631,7 +1632,7 @@
             this.panelProduit2.Controls.Add(this.comboBoxProduitFournisseurAM);
             this.panelProduit2.Location = new System.Drawing.Point(2, 2);
             this.panelProduit2.Name = "panelProduit2";
-            this.panelProduit2.Size = new System.Drawing.Size(23, 713);
+            this.panelProduit2.Size = new System.Drawing.Size(505, 713);
             this.panelProduit2.TabIndex = 170;
             // 
             // label37
@@ -2501,7 +2502,7 @@
             this.tabPage5.Controls.Add(this.pictureBox5);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1162, 770);
+            this.tabPage5.Size = new System.Drawing.Size(1174, 770);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "     FOURNISSEUR     ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2749,7 +2750,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1162, 770);
+            this.tabPage6.Size = new System.Drawing.Size(1174, 770);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "REQUETTES";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -3083,6 +3084,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.tabControl1.ResumeLayout(false);
             this.ongletUtilisateur.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -3286,7 +3288,7 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxUtilFonc;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button buttonFourAnnuler;

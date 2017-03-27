@@ -124,8 +124,12 @@ namespace ValidEmail
             {
                 MessageBox.Show(erreur, "erreur");
             }
-        
 
-    }
+            else
+            {
+                MessageBox.Show("Email correct", "BON");
+            }
+
+        }
 }
 }

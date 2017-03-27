@@ -14,7 +14,8 @@ namespace prgvillage
 {
     public partial class Form2 : Form
     {
-        string dossier = @"C:\Users\afpa\Documents\FIL ROUGE\prgvillage\images\instrumentsdemusique\";
+      
+        string dossier2 = Application.StartupPath+ @"\images\instrumentsdemusique\";
         int choixFour = 1, choixRubrique = 1, choixSSRubrique = 1;
         bool validiteF, valNomF, valAdresseF, valVilleF, valCPF;
         bool valRubriqueNom, valSSRubriqueNom;
@@ -82,7 +83,7 @@ namespace prgvillage
             comboBoxProduitSSRub.DisplayMember = "Nom";
             SousRubriqueDAO ListeDesSousRubriques;
             ListeDesSousRubriques = new SousRubriqueDAO("server =.; database = villagegreen; Integrated Security = True");
-            comboBoxProduitSSRub.DataSource = ListeDesSousRubriques.List(Convert.ToInt32(comboBoxProduitRub.SelectedValue));
+            comboBoxProduitSSRub.DataSource = ListeDesSousRubriques.ListSSparRub(Convert.ToInt32(comboBoxProduitRub.SelectedValue));
 
         }
 
@@ -444,7 +445,7 @@ namespace prgvillage
             comboBoxSousRubriqueListe.DisplayMember = "Nom";
             SousRubriqueDAO ListeDesSousRubriques;
             ListeDesSousRubriques = new SousRubriqueDAO("server =.; database = villagegreen; Integrated Security = True");
-            comboBoxSousRubriqueListe.DataSource = ListeDesSousRubriques.List(Convert.ToInt32(comboBoxRubriqueListe2.SelectedValue.ToString()));
+            comboBoxSousRubriqueListe.DataSource = ListeDesSousRubriques.ListSSparRub(Convert.ToInt32(comboBoxRubriqueListe2.SelectedValue.ToString()));
         }
         private void comboBoxRubriqueListe2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -834,7 +835,7 @@ namespace prgvillage
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
             textBoxNomFichier.Text = openFileDialog2.SafeFileName;
-            pictureBoxProduit.ImageLocation = dossier + textBoxNomFichier.Text;
+            pictureBoxProduit.ImageLocation = dossier2 + textBoxNomFichier.Text;
 
         }
 
@@ -873,7 +874,7 @@ namespace prgvillage
         private void buttonAjouterProduit_Click(object sender, EventArgs e)
         {
             choixprod = 1;
-            pictureBoxProduit.ImageLocation = dossier + "0indisponible.jpg";
+            pictureBoxProduit.ImageLocation = dossier2 + "0indisponible.jpg";
             textBoxNomFichier.Text = "0indisponible.jpg";
             panelProduit2.Visible = true;
             panelProduit2.Width = 0;
@@ -899,7 +900,7 @@ namespace prgvillage
             comboBoxProduitSSRubriqueAM.DisplayMember = "Nom";
             SousRubriqueDAO ListeDesSousRubriques;
             ListeDesSousRubriques = new SousRubriqueDAO("server =.; database = villagegreen; Integrated Security = True");
-            comboBoxProduitSSRubriqueAM.DataSource = ListeDesSousRubriques.List(1);
+            comboBoxProduitSSRubriqueAM.DataSource = ListeDesSousRubriques.ListSSparRub(1);
 
 
             //on remplit la liste des tva
@@ -963,7 +964,7 @@ namespace prgvillage
             panelProduit2.Width = 0;
             AnimationOuvrirPanel(panelProduit2, 1190);
             int num = Convert.ToInt32(dataGridViewProduit.SelectedCells[0].Value);
-
+          
             //trouver les données du produit selectionné
             ProduitDAO trouveP;
             trouveP = new ProduitDAO("server =.; database = villagegreen; Integrated Security = True");
@@ -1001,7 +1002,7 @@ namespace prgvillage
             comboBoxProduitSSRubriqueAM.DisplayMember = "Nom";
             SousRubriqueDAO ListeDesSousRubriques;
             ListeDesSousRubriques = new SousRubriqueDAO("server =.; database = villagegreen; Integrated Security = True");
-            comboBoxProduitSSRubriqueAM.DataSource = ListeDesSousRubriques.List(rubP);
+            comboBoxProduitSSRubriqueAM.DataSource = ListeDesSousRubriques.ListSSparRub(rubP);
             //on se place sur la bonne valeur dans la liste
             comboBoxProduitSSRubriqueAM.SelectedValue = ssrubP;
             //on remplit la liste des tva
@@ -1019,7 +1020,7 @@ namespace prgvillage
             comboBoxProduitFournisseurAM.DataSource = listedesFourn.List();
 
             // on place les selection dans les combos tva,rubrique et sous rubrique
-            pictureBoxProduit.ImageLocation = dossier + textBoxNomFichier.Text;
+            pictureBoxProduit.ImageLocation = dossier2 + textBoxNomFichier.Text;
             textBoxNomFichier.Text = photoP;
             textBoxProduitPrixVenteHTAM.Text = prixventehtP;
             textBoxProduitPrixAchatAM.Text = prixachatP;
@@ -1156,10 +1157,26 @@ namespace prgvillage
                 }
 
         }
+        public void listeFonctions()
+        {
+            comboBoxUtilFonc.Items.Add("Administrateur");
+            comboBoxUtilFonc.Items.Add("Client");
+            comboBoxUtilFonc.Items.Add("Commercial");
+            comboBoxUtilFonc.Items.Add("Gestionnaire");
+           
+
+        }
+
+      
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            listeFonctions();
+        }
 
         private void textBoxNomFichier_TextChanged(object sender, EventArgs e)
         {
-            pictureBoxProduit.ImageLocation = dossier + textBoxNomFichier.Text;
+            pictureBoxProduit.ImageLocation = dossier2 + textBoxNomFichier.Text;
         }
 
         private void textBoxProduitPrixVenteHTAM_TextChanged(object sender, EventArgs e)
@@ -1222,7 +1239,7 @@ namespace prgvillage
             comboBoxProduitSSRubriqueAM.DisplayMember = "Nom";
             SousRubriqueDAO ListeDesSousRubriques;
             ListeDesSousRubriques = new SousRubriqueDAO("server =.; database = villagegreen; Integrated Security = True");
-            comboBoxProduitSSRubriqueAM.DataSource = ListeDesSousRubriques.List(Convert.ToInt32(comboBoxProduitRubriqueAM.SelectedValue));
+            comboBoxProduitSSRubriqueAM.DataSource = ListeDesSousRubriques.ListSSparRub(Convert.ToInt32(comboBoxProduitRubriqueAM.SelectedValue));
         }
 
         private void comboBoxProduitTVAAM_SelectedIndexChanged(object sender, EventArgs e)
@@ -1260,7 +1277,7 @@ namespace prgvillage
 
         private void textBoxProduitNomlongAM_TextChanged(object sender, EventArgs e)
         {
-            if ((Regex.IsMatch(textBoxProduitNomlongAM.Text, @"^[A-Z a-z0-9éèîêâô.ûœïëüäö]{1,100}$") == false) || (textBoxProduitNomlongAM.Text == ""))
+            if ((Regex.IsMatch(textBoxProduitNomlongAM.Text, @"^[A-Z a-z0-9éèîêâô.ûœïëüäö_-]{1,100}$") == false) || (textBoxProduitNomlongAM.Text == ""))
             {
                 textBoxProduitNomlongAM.BackColor = Color.Red;
                 valNomLongP = false;
@@ -1276,7 +1293,7 @@ namespace prgvillage
 
         private void textBoxProduitNomcourtAM_TextChanged(object sender, EventArgs e)
         {
-            if ((Regex.IsMatch(textBoxProduitNomcourtAM.Text, @"^[A-Z a-z0-9éèîêâôû.œïëüäö]{1,10}$") == false) || (textBoxProduitNomcourtAM.Text == ""))
+            if ((Regex.IsMatch(textBoxProduitNomcourtAM.Text, @"^[A-Z a-z0-9éèîêâôû.œïëüäö_-]{1,10}$") == false) || (textBoxProduitNomcourtAM.Text == ""))
             {
                 textBoxProduitNomcourtAM.BackColor = Color.Red;
                 valNomCourtP = false;
