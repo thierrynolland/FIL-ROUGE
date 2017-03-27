@@ -1,4 +1,4 @@
-###FIL ROUGE
+#FIL ROUGE
 
 ## MERISE
 
@@ -7,9 +7,9 @@
 ## UML
 
 ## DAO
-# Rubrique CRUD
-# Sous Rubrique CRUD
-# fournisseur CRUD 
-# Tva liste seulement
-# Produit CRUD
-# Client CRUD
+### Table Rubrique CRUD
+### Table Sous Rubrique CRUD
+### Table Fournisseur CRUD 
+### Table Tva liste,find,delete seulement
+### Table Produit CRUD
+### Table Client CRUD non testé
