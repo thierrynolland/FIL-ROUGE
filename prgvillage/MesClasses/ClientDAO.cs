@@ -50,6 +50,15 @@ namespace MesClasses
 
         }
         //ATTENTION TRAVAIL EN COURS MAIS PAS TESTE
+        public void Delete(Client cli)
+        {
+            MaConnexion.Open();
+            SqlCommand requete4 = new SqlCommand("delete from client where client_id = @id", MaConnexion);
+            requete4.Parameters.AddWithValue("@id", cli.Id);
+            requete4.ExecuteNonQuery();
+            MaConnexion.Close();
+        }
+        //ATTENTION TRAVAIL EN COURS MAIS PAS TESTE
         public Client Find(int id)
         {
             MaConnexion.Open();

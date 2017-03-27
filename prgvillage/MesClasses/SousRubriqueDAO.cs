@@ -35,6 +35,14 @@ namespace MesClasses
             MaConnexion.Close();
 
         }
+        public void Delete(Rubrique ssrub)
+        {
+            MaConnexion.Open();
+            SqlCommand requete4 = new SqlCommand("delete from sous_rubrique where ss_rubrique_id = @id", MaConnexion);
+            requete4.Parameters.AddWithValue("@id", ssrub.Id);
+            requete4.ExecuteNonQuery();
+            MaConnexion.Close();
+        }
 
         public SousRubrique Find(int id)
         {

@@ -50,7 +50,14 @@ namespace MesClasses
             MaConnexion.Close();
 
         }
-
+        public void Delete(Produit prod)
+        {
+            MaConnexion.Open();
+            SqlCommand requete4 = new SqlCommand("delete from produit where produit_id = @id", MaConnexion);
+            requete4.Parameters.AddWithValue("@id", prod.Id);
+            requete4.ExecuteNonQuery();
+            MaConnexion.Close();
+        }
         public Produit Find(int id)
         {
             MaConnexion.Open();

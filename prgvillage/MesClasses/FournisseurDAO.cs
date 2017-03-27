@@ -41,6 +41,15 @@ namespace MesClasses
 
         }
 
+        public void Delete(Fournisseur four)
+        {
+            MaConnexion.Open();
+            SqlCommand requete4 = new SqlCommand("delete from fournisseur where fournisseur_id = @id", MaConnexion);
+            requete4.Parameters.AddWithValue("@id", four.Id);
+            requete4.ExecuteNonQuery();
+            MaConnexion.Close();
+        }
+
         public Fournisseur Find(int id)
         {
             MaConnexion.Open();

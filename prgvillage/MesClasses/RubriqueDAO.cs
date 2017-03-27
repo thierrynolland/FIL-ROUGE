@@ -33,6 +33,14 @@ namespace MesClasses
             MaConnexion.Close();
 
         }
+        public void Delete(Rubrique rub)
+        {
+            MaConnexion.Open();
+            SqlCommand requete4 = new SqlCommand("delete from rubrique where rubrique_id = @id", MaConnexion);
+            requete4.Parameters.AddWithValue("@id", rub.Id);
+            requete4.ExecuteNonQuery();
+            MaConnexion.Close();
+        }
 
         public Rubrique Find(int id)
         {

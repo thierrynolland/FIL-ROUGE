@@ -33,6 +33,14 @@ namespace MesClasses
             MaConnexion.Close();
             return resultat;
         }
+        public void Delete(Rubrique tva)
+        {
+            MaConnexion.Open();
+            SqlCommand requete4 = new SqlCommand("delete from tva where tva_id = @id", MaConnexion);
+            requete4.Parameters.AddWithValue("@id", tva.Id);
+            requete4.ExecuteNonQuery();
+            MaConnexion.Close();
+        }
 
         public Tva Find(int id)
         {
