@@ -1632,7 +1632,7 @@
             this.panelProduit2.Controls.Add(this.comboBoxProduitFournisseurAM);
             this.panelProduit2.Location = new System.Drawing.Point(2, 2);
             this.panelProduit2.Name = "panelProduit2";
-            this.panelProduit2.Size = new System.Drawing.Size(505, 713);
+            this.panelProduit2.Size = new System.Drawing.Size(711, 713);
             this.panelProduit2.TabIndex = 170;
             // 
             // label37
@@ -1672,7 +1672,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(882, 246);
+            this.label30.Location = new System.Drawing.Point(855, 678);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(95, 28);
             this.label30.TabIndex = 150;
@@ -1713,9 +1713,9 @@
             // textBoxNomFichier
             // 
             this.textBoxNomFichier.Enabled = false;
-            this.textBoxNomFichier.Location = new System.Drawing.Point(830, 277);
+            this.textBoxNomFichier.Location = new System.Drawing.Point(851, 295);
             this.textBoxNomFichier.Name = "textBoxNomFichier";
-            this.textBoxNomFichier.Size = new System.Drawing.Size(210, 29);
+            this.textBoxNomFichier.Size = new System.Drawing.Size(250, 29);
             this.textBoxNomFichier.TabIndex = 4;
             this.textBoxNomFichier.TextChanged += new System.EventHandler(this.textBoxNomFichier_TextChanged);
             // 
@@ -1732,9 +1732,9 @@
             // buttonAjouterPhoto
             // 
             this.buttonAjouterPhoto.BackColor = System.Drawing.Color.Orange;
-            this.buttonAjouterPhoto.Location = new System.Drawing.Point(859, 329);
+            this.buttonAjouterPhoto.Location = new System.Drawing.Point(851, 330);
             this.buttonAjouterPhoto.Name = "buttonAjouterPhoto";
-            this.buttonAjouterPhoto.Size = new System.Drawing.Size(146, 52);
+            this.buttonAjouterPhoto.Size = new System.Drawing.Size(250, 52);
             this.buttonAjouterPhoto.TabIndex = 123;
             this.buttonAjouterPhoto.Text = "Ajouter photo Parcourir";
             this.buttonAjouterPhoto.UseVisualStyleBackColor = false;
@@ -1751,9 +1751,9 @@
             // pictureBoxProduit
             // 
             this.pictureBoxProduit.BackColor = System.Drawing.Color.White;
-            this.pictureBoxProduit.Location = new System.Drawing.Point(830, 26);
+            this.pictureBoxProduit.Location = new System.Drawing.Point(851, 14);
             this.pictureBoxProduit.Name = "pictureBoxProduit";
-            this.pictureBoxProduit.Size = new System.Drawing.Size(210, 214);
+            this.pictureBoxProduit.Size = new System.Drawing.Size(250, 250);
             this.pictureBoxProduit.TabIndex = 141;
             this.pictureBoxProduit.TabStop = false;
             // 
