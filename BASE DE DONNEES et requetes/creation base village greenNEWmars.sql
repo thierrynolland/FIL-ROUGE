@@ -1,7 +1,10 @@
+use master
+go
 
 create database villagegreen
 go
 use villagegreen
+
 create table fournisseur (
 	fournisseur_id 		int identity primary key not null,
 	fournisseur_nom 	varchar(50) not null,
@@ -177,6 +180,78 @@ create user consu for login consu
 go
 
 
+/* lES PROCEDURES STOCKEES ET VUES*/
+
+ use villagegreen
+ go
+
+ create proc CommandeClient
+ @numclient as int
+ as
+ select commande.commande_id,client.client_id,commande.commande_date,sum((ligne_de_commande.lignecom_qte*ligne_de_commande.prix_fixe)*(1+(tva.tva_taux/100))) as 'Total TTC', sum(ligne_de_commande.lignecom_qte*ligne_de_commande.prix_fixe) as 'TOTAL HT'
+ from ligne_de_commande join commande on ligne_de_commande.commande_id= commande.commande_id
+						join client on client.client_id=commande.client_id
+						join produit on produit.produit_id=ligne_de_commande.produit_id
+						join tva on tva.tva_id= produit.tva_id
+						where client.client_id = @numclient
+ group by commande.commande_id,client.client_id,commande.commande_date
+
+ go
+
+create proc CaParType
+@categorie int
+as
+select client.client_categorie,sum(ligne_de_commande.lignecom_qte*ligne_de_commande.prix_fixe) as 'TOTAL HT'
+ from ligne_de_commande join commande on ligne_de_commande.commande_id= commande.commande_id
+						join client on client.client_id=commande.client_id
+						where client.client_categorie = @categorie
+ group by client.client_categorie
+
+go
+create view LivEnCours
+as
+select produit.produit_id,sum(lignecom_qte) as quantite ,commande.commande_id 
+from commande	join ligne_de_commande on commande.commande_id=ligne_de_commande.commande_id 
+				join produit on ligne_de_commande.produit_id =produit.produit_id
+				group by commande.commande_id,produit.produit_id
+union
+select produit.produit_id,-sum(ligneliv_qte) as quantite ,bon_livraison.commande_id 
+from bon_livraison	join ligne_de_livraison on bon_livraison.livraison_id=ligne_de_livraison.livraison_id
+				join produit on ligne_de_livraison.produit_id =produit.produit_id
+				group by bon_livraison.commande_id,produit.produit_id
+go
+
+create proc ComLivEnCours
+as
+select  distinct commande_id as 'commande' 
+from LivEnCours
+group by produit_id, commande_id
+having sum(quantite) > 0
+
+go
+
+create proc ComLivEnCoursParProd
+as
+select  commande_id as 'commande' , produit_id as 'produit', sum(quantite) as 'quantite  restant à livrer'
+from LivEnCours
+group by produit_id, commande_id
+having sum(quantite) > 0
+
+go
+create view ProduitFournisseur
+as
+select fournisseur.fournisseur_id as 'num Fournisseur', fournisseur.fournisseur_nom as 'nom fpurnisseur' , produit_id, produit_nomcourt,produit_nom,  produit_prixachat,produit_prixht,produit_etat,produit_validite, produit_photo
+from produit
+join fournisseur on produit.fournisseur_id=fournisseur.fournisseur_id
+
+go
+
+
+
+
+
+
+
 /* les roles dans villagegreen */
 create role rolegestion
 	grant update on produit to rolegestion
@@ -272,13 +347,24 @@ execute sp_addrolemember 'roleconsult','consu'
 
 
 
-/* -------------------------------------------------------*/
 
-/* j'ai modifié la table produit directement avec un alter pour rajouter la tva*/
-alter table produit
- add tva_id int references tva(tva_id) not null
+ /* ----------------UTILISATEUR---------------------------------------*/
+insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('admin','titi','thierry.nolland@free.fr',1,1,0,'NOLLAND','Thierry')
+ insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('com1','aaaa','bidochon.robert@orange.fr',1,2,3,'BIDOCHON','Robert')
+ insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('com2','bbbb','gus.bil@laposte.net',1,2,4,'BILOUTE','Gustave')
+ insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('com3','cccc','jo.menoube@free.fr',1,2,8,'MENOUBE','JO')
+ insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('gest1','dddd','thomas.georges@orange.fr',1,3,0,'GEORGES','Thomas')
+ insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('gest2','eeee','alex.pigeon@apple.com',0,3,0,'PIGEON','Alex')
+insert into utilisateur (util_Identifiant,util_MotPasse,util_Email,util_Confirm,util_Type,util_IdPerso,util_Nom,util_Prenom)
+ values ('gest3','ffff','pierre.paul@free.fr',1,3,0,'PAUL','Pierre')
 
- /* -------------------------------------------------------*/
+
 
 /*__________________FOURNISSEUR_______________________________*/
 insert into fournisseur (fournisseur_nom) values ('les musicos')
@@ -307,6 +393,7 @@ insert into commercial (commercial_nom,commercial_prenom) values ('BILOUTE','gus
 insert into commercial (commercial_nom,commercial_prenom) values ('LENOTRE','robert')
 insert into commercial (commercial_nom,commercial_prenom) values ('PICOLO','sam')
 insert into commercial (commercial_nom,commercial_prenom) values ('TRINCOT','jean')
+insert into commercial (commercial_nom,commercial_prenom) values ('MENOUBE','Jean-Olivier')
 
 /*__________RUBRIQUES_______________________________________*/
 insert into rubrique (rubrique_nom) values ('Pianos et claviers')
@@ -394,21 +481,8 @@ insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie batter
 insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie violon',10)
 insert into sous_rubrique(ss_rubrique_nom,rubrique_id) values ('Librairie vents',10)
 
-/*_________PRODUIT________________________________________
- exemple en booléen
-INSERT Boolean(Boolean) VALUES (1);
-INSERT Boolean(Boolean) VALUES (0);
-INSERT Boolean(Boolean) VALUES ('TRUE');
-INSERT Boolean(Boolean) VALUES ('FALSE');
- 
-SELECT * FROM Boolean
-GO
-/*    ID Boolean     ModifiedDate
-      1     1           2010-10-03
-      2     0           2010-10-03
-      3     1           2010-10-03
-      4     0           2010-10-03 
-*/
+/*_________PRODUIT________________________________________*/
+
 /* 1-1*/
 insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
 	 values ('YAMB1PWH','YAMAHA B1PWH - blanc brillant','1.jpg',2500,1, 3000,'true',1,1,1)
@@ -508,28 +582,6 @@ insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat
 insert into produit(produit_nomcourt,produit_nom,produit_photo,produit_prixachat,produit_etat,produit_prixht,produit_validite,ss_rubrique_id,fournisseur_id,tva_id)
 	 values ('GIBL200','GIBSON Emmylou Harris L-200- Occasion','31.jpg',1000,1, 2100,'true',9,3,1)
 
-/*__________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -586,7 +638,7 @@ insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
 insert into ligne_de_commande 	(lignecom_qte,prix_fixe,commande_id,produit_id)
 						values 	(3,1250,3,8)
 
-												
+
 
 
 /*_____________BON_LIVRAISON____________________________________*/
@@ -618,17 +670,21 @@ insert into ligne_de_livraison(ligneliv_qte,livraison_id,produit_id)
 
 
 
-/*__________SAUVEGARDE___*/
+/*__________SAUVEGARDE___
 
-exec sp_addumpdevice 'disk','savfilrouge','\\serveur\DL\Thierry\FIL ROUGE\SAUVEGARDEBDD\villagegreen.bak'
+exec sp_addumpdevice 'disk','sauvegardefilrouge4','C:\Users\afpa\Documents\FIL ROUGE\SAUVEGARDEBDD\villagegreen4.bak'
+backup database villagegreen to sauvegardefilrouge4
 
-
-backup database villagegreen to savfilrouge
-
-restore database villagegreen from savfilrouge with replace
-
+-- on la restore en faisant : 
+  restore database villagegreen from savfilrouge with replace
 
 
+
+v2
+exec sp_addumpdevice 'disk','sauvegardefilrouge','C:\test\FIL ROUGE\SAUVEGARDEBDD\villagegreen.bak'
+backup database villagegreen to sauvegardefilrouge
+
+*/
 
 
 

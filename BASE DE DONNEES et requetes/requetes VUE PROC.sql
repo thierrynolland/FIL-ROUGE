@@ -137,12 +137,11 @@ from commande
 
 create view ProduitFournisseur
 as
-select fournisseur.fournisseur_id as 'num Fournisseur', fournisseur.fournisseur_nom as 'nom fpurnisseur' , produit_id, produit_nomcourt,produit_nom,  produit_prixachat,produit_prixht,produit_etat,produit_validite, produit_photo
+select fournisseur.fournisseur_id as 'num Fournisseur', fournisseur.fournisseur_nom as 'nom fournisseur' , produit_id, produit_nomcourt,produit_nom,  produit_prixachat,produit_prixht,produit_etat,produit_validite, produit_photo
 from produit
 join fournisseur on produit.fournisseur_id=fournisseur.fournisseur_id
 
 go
-
 --puis
 
 select * from ProduitFournisseur

@@ -33,8 +33,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMDP = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonConnexion = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -53,8 +53,8 @@
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxMDP);
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(297, 430);
             this.groupBox1.Name = "groupBox1";
@@ -62,7 +62,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connexion";
-            
             // 
             // label2
             // 
@@ -84,19 +83,20 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Identifiant";
             // 
-            // textBox2
+            // textBoxMDP
             // 
-            this.textBox2.Location = new System.Drawing.Point(306, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 29);
-            this.textBox2.TabIndex = 1;
+            this.textBoxMDP.Location = new System.Drawing.Point(306, 136);
+            this.textBoxMDP.Name = "textBoxMDP";
+            this.textBoxMDP.PasswordChar = '*';
+            this.textBoxMDP.Size = new System.Drawing.Size(200, 29);
+            this.textBoxMDP.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 29);
-            this.textBox1.TabIndex = 0;
+            this.textBoxID.Location = new System.Drawing.Point(39, 136);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(165, 29);
+            this.textBoxID.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -109,12 +109,14 @@
             // 
             // buttonConnexion
             // 
-            this.buttonConnexion.Location = new System.Drawing.Point(476, 691);
+            this.buttonConnexion.BackColor = System.Drawing.Color.Orange;
+            this.buttonConnexion.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConnexion.Location = new System.Drawing.Point(477, 654);
             this.buttonConnexion.Name = "buttonConnexion";
             this.buttonConnexion.Size = new System.Drawing.Size(186, 62);
             this.buttonConnexion.TabIndex = 3;
             this.buttonConnexion.Text = "Se Connecter";
-            this.buttonConnexion.UseVisualStyleBackColor = true;
+            this.buttonConnexion.UseVisualStyleBackColor = false;
             this.buttonConnexion.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
@@ -129,7 +131,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-           
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -142,8 +143,8 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMDP;
+        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;

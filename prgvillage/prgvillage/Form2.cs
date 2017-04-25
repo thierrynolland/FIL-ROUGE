@@ -1174,6 +1174,16 @@ namespace prgvillage
             listeFonctions();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBoxNomFichier_TextChanged(object sender, EventArgs e)
         {
             pictureBoxProduit.ImageLocation = dossier2 + textBoxNomFichier.Text;

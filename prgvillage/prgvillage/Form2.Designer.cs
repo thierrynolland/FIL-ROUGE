@@ -751,6 +751,7 @@
             this.button2.TabIndex = 120;
             this.button2.Text = "MODIFIER";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -764,6 +765,7 @@
             this.button1.TabIndex = 119;
             this.button1.Text = "AJOUTER";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label93
             // 
@@ -1632,7 +1634,7 @@
             this.panelProduit2.Controls.Add(this.comboBoxProduitFournisseurAM);
             this.panelProduit2.Location = new System.Drawing.Point(2, 2);
             this.panelProduit2.Name = "panelProduit2";
-            this.panelProduit2.Size = new System.Drawing.Size(711, 713);
+            this.panelProduit2.Size = new System.Drawing.Size(415, 713);
             this.panelProduit2.TabIndex = 170;
             // 
             // label37
