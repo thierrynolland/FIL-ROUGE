@@ -925,22 +925,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="ec056e72-c6e5-43a1-b5c6-ccd4368b0b71"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
-                LastKnownName="créer une nouvelle commande"
-                LastKnownLocation="UMLvillagreen.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="eda6fcac-9017-4844-b7bd-ebf664817a0c"
             name="MessageOccurrenceSpecification5">
             <covered>
               <lifelineMoniker
                 Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
                 LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ec056e72-c6e5-43a1-b5c6-ccd4368b0b71"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
                 LastKnownLocation="UMLvillagreen.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1053,22 +1053,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="9fc9833e-2846-44d2-9fc6-06528c1928e9"
-            name="MessageOccurrenceSpecification16">
-            <covered>
-              <lifelineMoniker
-                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
-                LastKnownName="commercial : Commercial"
-                LastKnownLocation="UMLvillagreen.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="1ac07281-4c75-4b24-8949-413c5e8eea4e"
             name="MessageOccurrenceSpecification15">
             <covered>
               <lifelineMoniker
                 Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
                 LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9fc9833e-2846-44d2-9fc6-06528c1928e9"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
                 LastKnownLocation="UMLvillagreen.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1512,22 +1512,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="76931ce0-720b-4a57-8268-2905d69de502"
-            name="MessageOccurrenceSpecification53">
-            <covered>
-              <lifelineMoniker
-                Id="13510b2c-fefb-4d3f-9872-7288ce195359"
-                LastKnownName="commercial1 : Commercial"
-                LastKnownLocation="UMLvillagreen.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="4e44e208-cbad-4c80-b463-90de22df7d47"
             name="MessageOccurrenceSpecification54">
             <covered>
               <lifelineMoniker
                 Id="3113957b-03e1-472d-8f0f-0efeec22f200"
                 LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="76931ce0-720b-4a57-8268-2905d69de502"
+            name="MessageOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="13510b2c-fefb-4d3f-9872-7288ce195359"
+                LastKnownName="commercial1 : Commercial"
                 LastKnownLocation="UMLvillagreen.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1678,22 +1678,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="2c281974-50db-4102-947a-6225d07912ba"
-            name="MessageOccurrenceSpecification27">
-            <covered>
-              <lifelineMoniker
-                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
-                LastKnownName="créer une nouvelle commande"
-                LastKnownLocation="UMLvillagreen.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="49d4b278-7f2d-4f7d-970b-56e385748e07"
             name="MessageOccurrenceSpecification28">
             <covered>
               <lifelineMoniker
                 Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
                 LastKnownName="commercial : Commercial"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2c281974-50db-4102-947a-6225d07912ba"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
+                LastKnownName="créer une nouvelle commande"
                 LastKnownLocation="UMLvillagreen.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2022,22 +2022,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="5dbad221-2825-4667-bfb0-abe5d09fcfe9"
-            name="MessageOccurrenceSpecification40">
-            <covered>
-              <lifelineMoniker
-                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
-                LastKnownName="commercial : Commercial"
-                LastKnownLocation="UMLvillagreen.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="a6b35cd4-a997-4339-aa67-b862ef1f935e"
             name="MessageOccurrenceSpecification39">
             <covered>
               <lifelineMoniker
                 Id="3c8a6d90-09f3-4cce-abbe-984abc2d0a6d"
                 LastKnownName="créer une nouvelle commande"
+                LastKnownLocation="UMLvillagreen.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5dbad221-2825-4667-bfb0-abe5d09fcfe9"
+            name="MessageOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="53ad7ea4-be47-4468-bcf7-7559bb048243"
+                LastKnownName="commercial : Commercial"
                 LastKnownLocation="UMLvillagreen.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3400,6 +3400,14 @@
       <class
         Id="5195b0b9-6ae3-4082-8afa-d6888bbf105f"
         name="Fournisseur"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ad1921bb-3405-47df-bb4f-072b875bba8a"
+        name="Class1"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />

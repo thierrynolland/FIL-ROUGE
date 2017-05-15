@@ -90,5 +90,10 @@ namespace prgvillage
                 }
      
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation= Application.StartupPath + @"\images\logovillagegreen.PNG";
+        }
     }
 }
